@@ -1,0 +1,36 @@
+﻿@model AtletaAsdericel.ViewModels.ModalidadeCreateViewModel
+@using AtletaAsdericel.Models.Enum
+
+@{
+    ViewBag.Title = "Create";
+}
+<h2>Cadastrar Modalidade</h2>
+<form class="user card"  asp-action="create" method="post">
+    <div class="form-group row ">
+         
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Código">
+        </div>
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <select asp-for="Sexo" type="text" asp-items="Html.GetEnumSelectList<ESexo>()" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione o tipo ...</option>
+            </select>
+        </div>
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <select asp-for="Categoria" type="text" asp-items="Html.GetEnumSelectList<ECategoria>()" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione o tipo ...</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-user  mt-8">
+        Gravar
+    </button>
+</form>
+
+<div>
+    @Html.ActionLink("Voltar para Lista", "Index")
+</div>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

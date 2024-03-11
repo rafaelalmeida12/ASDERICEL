@@ -1,0 +1,40 @@
+﻿@model List<Evento>
+
+@{
+    ViewData["Title"] = "Lista de Eventos";
+}
+
+<div class="d-flex justify-content-between">
+    <div>
+        <h2>@ViewData["Title"]</h2>
+    </div>
+    <div >
+        <a  asp-action="create" class=" btn  btn-primary mb-3 btn-user btn-block">
+        Novo
+    </a>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>DataInicio</th>
+            <th>DataTermino</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var atleta in Model)
+        {
+            <tr>
+                <td>@atleta.Nome</td>
+                <td>@atleta.Categoria</td>
+                <td>@atleta.DataInicio</td>
+                <td>@atleta.DataTermino</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>

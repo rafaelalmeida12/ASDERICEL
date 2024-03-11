@@ -1,0 +1,51 @@
+﻿@model AtletaAsdericel.ViewModels.EventoCreateViewModel
+@{
+    ViewBag.Title = "Create";
+}
+<h2>Cadastrar Evento</h2>
+<form class="user card"  asp-action="create" method="post">
+    <div class="form-group row ">
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Nome">
+        </div>
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <input type="text" asp-for=Edicao class="form-control form-control-user" placeholder="Edicao">
+        </div>
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <input type="text" asp-for=Categoria class="form-control form-control-user" placeholder="Categoria">
+        </div>
+    </div>
+    <div class="form-group row ">
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <input type="text" asp-for=Municipio class="form-control form-control-user" placeholder="Municipio">
+        </div>
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <input type="text" asp-for=Estado class="form-control form-control-user" placeholder="Estado">
+        </div>
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <input type="text" asp-for=Pais class="form-control form-control-user" placeholder="Pais">
+        </div>
+    </div>
+    <div class="form-group row ">
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <input type="text" asp-for=Promocao class="form-control form-control-user" placeholder="Promocao">
+        </div>
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <input type="date" asp-for=DataInicio class="form-control form-control-user" placeholder="DataInicio">
+        </div>
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <input type="date" asp-for=DataTermino class="form-control form-control-user" placeholder="DataTermino">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-user  mt-8">
+        Gravar
+    </button>
+</form>
+
+<div>
+    @Html.ActionLink("Voltar para Lista", "Index")
+</div>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@
