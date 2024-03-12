@@ -1,0 +1,157 @@
+﻿@model AtletaAsdericel.ViewModels.AtletaCreateViewModel
+@using AtletaAsdericel.Models.Enum
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Cadastro de Técnico</h2>
+<hr />
+
+<form class="user" asp-action="Create">
+
+    <div class="form-group row mt-4">
+        <div class="form-group row">
+            <div class="col-sm-3">
+                <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Nome">
+            </div>
+            <div class="col-sm-3">
+                <input type="text" asp-for=NomeSocial class="form-control form-control-user" placeholder="Nome Social">
+            </div>
+            <div class="col-sm-3 ">
+                <input type="text" asp-for=Apelido class="form-control form-control-user" placeholder="Apelido">
+            </div>
+            <div class="col-sm-3">
+                <input type="text" asp-for="DataNascimento" id="dt" class="form-control form-control-user date" placeholder="Data Nascimento">
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <select asp-for="Sexo" type="text" asp-items="Html.GetEnumSelectList<ESexo>()" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione o sexo ...</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=CPF class="form-control form-control-user cpf" placeholder="Cpf">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Passaporte class="form-control form-control-user cpf" placeholder="Passaporte">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=NumeroSus class="form-control form-control-user cpf" placeholder="NumeroSus">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <select asp-for="TipoSanguineo" type="text" asp-items="Html.GetEnumSelectList<ETipoSanguineo>()" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione o Tipo Sanguíneo ...</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=RG class="form-control form-control-user " placeholder="RG">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=OrgaoEmissor class="form-control form-control-user " placeholder="Orgão Emissor">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=DataExpedicao class="form-control form-control-user " placeholder="Data Expedição">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=TipoDocumento class="form-control form-control-user " placeholder="Tipo de Documento">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=CREF class="form-control form-control-user " placeholder="CREF">
+        </div>
+    </div>
+    <label>Dados Instituição</label>
+    <div class="form-group row">
+        <div class="col-sm-3">
+            <input type="text" asp-for="Escola.Nome" class="form-control form-control-user" placeholder="Nome da instituição">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Escola.Telefone class="form-control form-control-user" placeholder="Telefone">
+        </div>
+        <div class="col-sm-3">
+            <select asp-for="Escola.Municipio" asp-items="new SelectList(Model.Cidades, nameof(Estado.Id), nameof(Estado.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione a cidade ...</option>
+            </select>
+        </div>
+    </div>
+    <label>Dados endereço</label>
+    <div class="form-group row">
+        <div class="col-sm-3">
+            <input type="text" asp-for="Endereco.Cep" class="form-control form-control-user" placeholder="Cep">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Endereco.Pais class="form-control form-control-user" placeholder="Pais">
+        </div>
+        <div class="col-sm-3">
+            <select asp-for="Endereco.Estado" asp-items="new SelectList(Model.Estados, nameof(Estado.Id), nameof(Estado.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione o estado ...</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <select asp-for="Endereco.Cidade" asp-items="new SelectList(Model.Cidades, nameof(Cidade.Id), nameof(Cidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione a cidade ...</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 ">
+            <input type="text" asp-for=Endereco.Bairro class="form-control form-control-user" placeholder="Bairro">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Endereco.Numero class="form-control form-control-user" placeholder="Numero">
+        </div>
+    </div>
+    <label>Dados da Modalidade</label>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <select asp-for="ModalidadeId" type="text" asp-items="new SelectList(Model.Modalidades, nameof(Modalidade.Id), nameof(Modalidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione a modalidade ...</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Peso class="form-control form-control-user" placeholder="Peso">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Altura class="form-control form-control-user" placeholder="Altura">
+        </div>
+        <div class="col-sm-3">
+            <select asp-for="Camisa" type="text" asp-items="Html.GetEnumSelectList<ECamisa>()" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione o tamanho da Camisa ...</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <select asp-for="Calca" type="text" asp-items="Html.GetEnumSelectList<ECalca>()" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione o tamanho da Calça ...</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-user btn-block ">
+        Gravar
+    </button>
+</form>
+
+<div>
+    @Html.ActionLink("Voltar para Lista", "Index")
+</div>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@
+<script>
+    $(document).ready(function () {
+        $('#abrirmodal').click(function () {
+            $("#exampleModal").modal('show');
+        });
+
+        // Add this function to close the modal
+        $('#fecharmodal').click(function () {
+            $("#exampleModal").modal('hide');
+        });
+    });
+
+
+</script>
