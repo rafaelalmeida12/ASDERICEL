@@ -54,11 +54,10 @@ namespace AtletaAsdericel.Controllers
             var estados = _context.Estados.ToList();
             var responsaveis = _context.Responsavel.ToList();
             var modalidades = _context.Modalidades.ToList();
-            var model = new AtletaCreateViewModel()
+            var model = new DirigenteCreateViewModel()
             {
                 Cidades = cidades,
                 Estados = estados,
-                Responsaveis = responsaveis,
                 Modalidades = modalidades
             };
             return View(model);
