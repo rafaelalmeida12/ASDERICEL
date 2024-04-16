@@ -89,7 +89,7 @@
             </select>
         </div>
         <div class="col-sm-3">
-            <select asp-for="Endereco.Cidade" asp-items="new SelectList(Model.Cidades, nameof(Cidade.Id), nameof(Cidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+            <select asp-for="Endereco.Logradouro" asp-items="new SelectList(Model.Cidades, nameof(Cidade.Id), nameof(Cidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
                 <option value="">Selecione a cidade ...</option>
             </select>
         </div>

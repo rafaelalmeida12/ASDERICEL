@@ -10,7 +10,7 @@ namespace AtletaAsdericel.ViewModels
         public string? NomeSocial { get; set; }
         public string? Apelido { get; set; }
         public bool IsResponsavel { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public DateTime DataNascimento { get; set; } 
         public ESexo Sexo { get; set; }
         public string CPF { get; set; }
         public string RG { get; set; }
@@ -34,7 +34,7 @@ namespace AtletaAsdericel.ViewModels
 
         public Associado ToEntity()
         {
-          var atleta= new Associado()
+            var atleta = new Associado()
             {
                 Nome = this.Nome,
                 NomeSocial = this.NomeSocial,
@@ -43,12 +43,12 @@ namespace AtletaAsdericel.ViewModels
                 Sexo = this.Sexo,
                 CPF = this.CPF,
                 Passaporte = this.Passaporte,
-                NumeroSUS=this.NumeroSus,
+                NumeroSUS = this.NumeroSus,
                 TipoSanguineo = this.TipoSanguineo,
                 RG = this.RG,
-                OrgaoEmissor=this.OrgaoEmissor,
-                DataExpedicao=DateTime.Now,
-                TipoDocumento=this.TipoDocumento,
+                OrgaoEmissor = this.OrgaoEmissor,
+                DataExpedicao = DateTime.Now,
+                TipoDocumento = this.TipoDocumento,
                 Responsavel = this.Responsavel,
                 Endereco = this.Endereco
             };

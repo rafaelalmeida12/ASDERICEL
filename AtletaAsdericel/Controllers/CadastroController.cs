@@ -1,8 +1,11 @@
 ﻿using AtletaAsdericel.Data;
+using AtletaAsdericel.Models;
+using AtletaAsdericel.Services;
 using AtletaAsdericel.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Runtime.ConstrainedExecution;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace AtletaAsdericel.Controllers
@@ -11,9 +14,11 @@ namespace AtletaAsdericel.Controllers
     public class CadastroController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly CorreiosService _correiosService;
 
-        public CadastroController(ApplicationDbContext context)
+        public CadastroController(CorreiosService correiosService, ApplicationDbContext context)
         {
+            _correiosService = correiosService;
             _context = context;
         }
 
@@ -32,8 +37,10 @@ namespace AtletaAsdericel.Controllers
         }
 
         [HttpGet("Geral")]
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
+           var endereco = await _correiosService.BuscarEnderecoPorCep("76813040");
+
             var cidades = _context.Cidades.ToList();
             var estados = _context.Estados.ToList();
             var responsaveis = _context.Responsavel.ToList();
