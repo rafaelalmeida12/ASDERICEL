@@ -6,20 +6,19 @@ namespace AtletaAsdericel.ViewModels
     public class GeralCreateViewModel
     {
         public ETipo Tipo { get; set; }
-        public string Codigo { get; set; }
         public string Nome { get; set; }
-        public string NomeSocial { get; set; }
-        public string Apelido { get; set; }
+        public string? NomeSocial { get; set; }
+        public string? Apelido { get; set; }
         public bool IsResponsavel { get; set; }
         public DateTime DataNascimento { get; set; }
         public ESexo Sexo { get; set; }
         public string CPF { get; set; }
         public string RG { get; set; }
-        public string OrgaoEmissor { get; set; }
+        public string? OrgaoEmissor { get; set; }
         public DateTime DataExpedicao { get; set; }
-        public string TipoDocumento { get; set; }
-        public string Passaporte { get; set; }
-        public string NumeroSus { get; set; }
+        public string? TipoDocumento { get; set; }
+        public string? Passaporte { get; set; }
+        public string? NumeroSus { get; set; }
         public ETipoSanguineo TipoSanguineo { get; set; }
         //relacionamentos
         //VALIDAR
@@ -40,7 +39,7 @@ namespace AtletaAsdericel.ViewModels
                 Nome = this.Nome,
                 NomeSocial = this.NomeSocial,
                 Apelido = this.Apelido,
-                DataNascimento = this.DataNascimento,
+                DataNascimento = DateTime.Now,
                 Sexo = this.Sexo,
                 CPF = this.CPF,
                 Passaporte = this.Passaporte,
@@ -48,23 +47,18 @@ namespace AtletaAsdericel.ViewModels
                 TipoSanguineo = this.TipoSanguineo,
                 RG = this.RG,
                 OrgaoEmissor=this.OrgaoEmissor,
-                DataExpedicao=this.DataExpedicao,
+                DataExpedicao=DateTime.Now,
                 TipoDocumento=this.TipoDocumento,
                 Responsavel = this.Responsavel,
                 Endereco = this.Endereco
             };
 
-            //if (this.IsResponsavel)
-            //{
-            //    atleta.ResponsavelId = this.ResponsavelId;
-            //}
-            //else
-            //{
-            //    atleta.Responsavel = new Responsavel
-            //    {
-            //        // Preencha os dados do responsável se necessário
-            //    };
-            //}
+            if (this.IsResponsavel)
+            {
+                this.Responsavel.Nome = this.Nome;
+                atleta.ResponsavelId = this.ResponsavelId;
+            }
+
             return atleta;
         }
     }

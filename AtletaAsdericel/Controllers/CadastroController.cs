@@ -1,10 +1,9 @@
 ﻿using AtletaAsdericel.Data;
-using AtletaAsdericel.Migrations;
-using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace AtletaAsdericel.Controllers
 {
@@ -88,7 +87,10 @@ namespace AtletaAsdericel.Controllers
             try
             {
 
-
+                if (!ModelState.IsValid)
+                {
+                    return View(viewModel);
+                }
                 _context.Add(viewModel.ToEntity());
                 _context.SaveChanges();
 

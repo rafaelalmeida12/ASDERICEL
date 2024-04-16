@@ -6,18 +6,18 @@ namespace AtletaAsdericel.Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string NomeSocial { get; set; }
-        public string Apelido { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public string? NomeSocial { get; set; }
+        public string? Apelido { get; set; }
+        public DateTime DataNascimento { get; set; } = DateTime.Now;
         public ESexo Sexo { get; set; }
         public string CPF { get; set; }
         public string Passaporte { get; set; }
         public string? NumeroSUS { get; set; }
         public ETipoSanguineo TipoSanguineo { get; set; }
         public string RG { get; set; }
-        public string OrgaoEmissor { get; set; }
-        public DateTime DataExpedicao { get; set; }
-        public string TipoDocumento { get; set; }
+        public string? OrgaoEmissor { get; set; }
+        public DateTime DataExpedicao { get; set; } = DateTime.Now;
+        public string? TipoDocumento { get; set; }
 
         //relacionamentos
         public int EnderecoId { get; set; }
