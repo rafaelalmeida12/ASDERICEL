@@ -71,7 +71,7 @@
         <div class="col-sm-3">
             <input type="text" required asp-for=Endereco.Pais class="form-control form-control-user" placeholder="Pais">
         </div>
-        <div class="col-sm-3">
+      @*  <div class="col-sm-3">
             <select required asp-for="Endereco.Estado" asp-items="new SelectList(Model.Estados, nameof(Estado.Id), nameof(Estado.Nome))" class="form-control rounded-pill" placeholder="Selecione">
                 <option value="">Selecione o estado ...</option>
             </select>
@@ -80,7 +80,7 @@
             <select required asp-for="Endereco.Logradouro" asp-items="new SelectList(Model.Cidades, nameof(Cidade.Id), nameof(Cidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
                 <option value="">Selecione a cidade ...</option>
             </select>
-        </div>
+        </div>*@
     </div>
     <div class="form-group row">
         <div class="col-sm-3 ">
@@ -179,6 +179,16 @@
         $('#fecharmodal').click(function () {
             $("#exampleModal").modal('hide');
         });
+
+        $('#isResponsavel').change(function () {
+            // Se estiver marcado, desabilita o select, caso contrário, habilita
+            $('#responsavelSelect').prop('disabled', $(this).is(':checked'));
+        });
+
+        // Desabilita o select se o checkbox estiver inicialmente marcado
+        if ($('#isResponsavel').is(':checked')) {
+            $('#responsavelSelect').prop('disabled', true);
+        }
     });
 
 

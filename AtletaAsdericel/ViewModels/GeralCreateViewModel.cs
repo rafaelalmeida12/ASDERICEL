@@ -25,10 +25,6 @@ namespace AtletaAsdericel.ViewModels
         public int ResponsavelId { get; set; }
         public List<Responsavel> Responsaveis { get; set; }
         public Responsavel Responsavel { get; set; }
-        public int CidadeId { get; set; }
-        public List<Cidade> Cidades { get; set; }
-        public int EstadoId { get; set; }
-        public List<Estado> Estados { get; set; }
         public Endereco Endereco { get; set; }
         //demais dados
 

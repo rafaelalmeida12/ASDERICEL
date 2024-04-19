@@ -46,8 +46,8 @@ namespace AtletaAsdericel.Controllers
             var responsaveis = _context.Responsavel.ToList();
             var model = new GeralCreateViewModel()
             {
-                Cidades = cidades,
-                Estados = estados,
+                //Cidades = cidades,
+                //Estados = estados,
                 Responsaveis = responsaveis
             };
             return View(model);
