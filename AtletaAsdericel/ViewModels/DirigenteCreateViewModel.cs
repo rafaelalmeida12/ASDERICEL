@@ -9,6 +9,9 @@ namespace AtletaAsdericel.ViewModels
         public string Codigo { get; set; }
         public string Nome { get; set; }
         public string NomeSocial { get; set; }
+        public string Profissao { get; set; }
+        public string Pai { get; set; }
+        public string Mae { get; set; }
         public string Apelido { get; set; }
         public bool IsResponsavel { get; set; }
         public DateTime DataNascimento { get; set; }
@@ -24,8 +27,11 @@ namespace AtletaAsdericel.ViewModels
         public string Altura { get; set; }
         public string CREF { get; set; }
         public ETipoSanguineo TipoSanguineo { get; set; }
+        public EStadoCivil EstadoCivil { get; set; }
+
         public ECamisa Camisa { get; set; }
         public ECalca Calca { get; set; }
+        public EEnsino Ensino { get; set; }
         //relacionamentos
 
         public Endereco Endereco { get; set; }

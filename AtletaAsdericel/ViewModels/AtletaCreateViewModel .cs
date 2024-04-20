@@ -7,7 +7,10 @@ namespace AtletaAsdericel.ViewModels
     {
         public ETipo Tipo { get; set; }
         public string Codigo { get; set; }
+        public string Pai { get; set; }
+        public string Mae { get; set; }
         public string Nome { get; set; }
+        public string Profissao { get; set; }
         public string NomeSocial { get; set; }
         public string Apelido { get; set; }
         public bool IsResponsavel { get; set; }
@@ -23,6 +26,8 @@ namespace AtletaAsdericel.ViewModels
         public string Peso { get; set; }
         public string Altura { get; set; }
         public ETipoSanguineo TipoSanguineo { get; set; }
+        public EStadoCivil EstadoCivil { get; set; }
+
         public ECamisa Camisa { get; set; }
         public ECalca Calca { get; set; }
         //relacionamentos
@@ -59,8 +64,10 @@ namespace AtletaAsdericel.ViewModels
                 DataExpedicao=this.DataExpedicao,
                 TipoDocumento=this.TipoDocumento,
                 Responsavel = this.Responsavel,
-                Endereco = this.Endereco
-            };
+                Endereco = this.Endereco,
+                Pai=this.Pai,
+               EstadoCivil=this.EstadoCivil
+          };
                    
             return atleta;
         }

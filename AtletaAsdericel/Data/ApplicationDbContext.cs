@@ -19,6 +19,7 @@ namespace AtletaAsdericel.Data
         public DbSet<Escola> Escolas { get; set; }
         public DbSet<Cidade> Cidades { get; set; }
         public DbSet<Estado> Estados { get; set; }
+        public DbSet<Prova> Provas { get; set; }
         public DbSet<Responsavel> Responsavel { get; set; }
         public DbSet<Evento> Evento { get; set; }
 

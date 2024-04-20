@@ -5,6 +5,8 @@ namespace AtletaAsdericel.Models
     public class Associado
     {
         public int Id { get; set; }
+        public string Pai { get; set; }
+        public int Mae { get; set; }
         public string Nome { get; set; }
         public string? NomeSocial { get; set; }
         public string? Apelido { get; set; }
@@ -14,6 +16,7 @@ namespace AtletaAsdericel.Models
         public string Passaporte { get; set; }
         public string? NumeroSUS { get; set; }
         public ETipoSanguineo TipoSanguineo { get; set; }
+        public EStadoCivil EstadoCivil { get; set; }
         public string RG { get; set; }
         public string? OrgaoEmissor { get; set; }
         public DateTime DataExpedicao { get; set; } = DateTime.Now;
