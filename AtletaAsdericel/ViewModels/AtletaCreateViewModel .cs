@@ -30,6 +30,8 @@ namespace AtletaAsdericel.ViewModels
 
         public ECamisa Camisa { get; set; }
         public ECalca Calca { get; set; }
+        public EEnsino Ensino { get; set; }
+
         //relacionamentos
 
         public Endereco Endereco { get; set; }

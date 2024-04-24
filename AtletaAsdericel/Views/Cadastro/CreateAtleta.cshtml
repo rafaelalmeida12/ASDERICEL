@@ -11,7 +11,7 @@
     <div class="form-group row mt-4">
         <div class="form-group row">
             <div class="col-sm-3">
-                <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Nome">
+                <input type="text" asp-for=Nome class="form-control form-control-user" required placeholder="Nome">
             </div>
             <div class="col-sm-3">
                 <input type="text" asp-for=NomeSocial class="form-control form-control-user" placeholder="Nome Social">
@@ -20,37 +20,39 @@
                 <input type="text" asp-for=Apelido class="form-control form-control-user" placeholder="Apelido">
             </div>
             <div class="col-sm-3">
-                <input type="text" asp-for="DataNascimento" id="dt" class="form-control form-control-user date" placeholder="Data Nascimento">
+                <input type="text" asp-for="DataNascimento" class="form-control form-control-user date" required placeholder="Data de Nascimento">
             </div>
         </div>
     </div>
+
     <div class="form-group row">
         <div class="col-sm-3">
-            <input type="text" asp-for="Pai" id="dt" class="form-control form-control-user " placeholder="Nome do Pai">
+            <input type="text" asp-for="Mae"  class="form-control form-control-user date" required placeholder="Nome da mãe">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for="Mae" id="dt" class="form-control form-control-user date" placeholder="Nome da mãe">
+            <input type="text" asp-for="Pai"  class="form-control form-control-user" placeholder="Nome do Pai">
         </div>
         <div class="col-md-3">
-            <select asp-for="EstadoCivil" type="text" asp-items="Html.GetEnumSelectList<EStadoCivil>()" class="form-control rounded-pill" placeholder="Selecione">
+            <select asp-for="EstadoCivil" type="text" asp-items="Html.GetEnumSelectList<EStadoCivil>()" class="form-control rounded-pill" required placeholder="Selecione">
                 <option value="">Selecione o estado civil ...</option>
             </select>
         </div>
         <div class="col-md-3">
-            <select asp-for="Sexo" type="text" asp-items="Html.GetEnumSelectList<ESexo>()" class="form-control rounded-pill" placeholder="Selecione">
+            <select asp-for="Sexo" type="text" asp-items="Html.GetEnumSelectList<ESexo>()" class="form-control rounded-pill" required placeholder="Selecione">
                 <option value="">Selecione o sexo ...</option>
             </select>
         </div>
     </div>
+
     <div class="form-group row">
         <div class="col-sm-3">
             <input type="text" asp-for=Profissao class="form-control form-control-user " placeholder="Profissão">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=CPF class="form-control form-control-user cpf" placeholder="Cpf">
+            <input type="text" asp-for=CPF class="form-control form-control-user cpf" required placeholder="Cpf">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=RG class="form-control form-control-user" placeholder="RG">
+            <input type="text" asp-for=RG class="form-control form-control-user" required placeholder="RG">
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=OrgaoEmissor class="form-control form-control-user " placeholder="Orgão emissor">
@@ -62,13 +64,13 @@
             <input type="text" asp-for=DataExpedicao class="form-control form-control-user " placeholder="Data Expedição">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Passaporte class="form-control form-control-user " placeholder="Passaporte">
+            <input type="text" asp-for=Passaporte class="form-control form-control-user " placeholder=" Nº Passaporte">
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=TipoDocumento class="form-control form-control-user " placeholder="Tipo de Documento">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=NumeroSus class="form-control form-control-user " placeholder="NumeroSus">
+            <input type="text" asp-for=NumeroSus class="form-control form-control-user "  required placeholder="Numero do Sus">
         </div>
     </div>
 
@@ -78,14 +80,24 @@
                 <option value="">Selecione o Tipo Sanguíneo ...</option>
             </select>
         </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Ensino class="form-control form-control-user " placeholder="Nivel de ensino">
+        </div>
     </div>
+
     <label>Dados Instituição</label>
     <div class="form-group row">
         <div class="col-sm-3">
-            <input type="text" asp-for="Escola.Nome" class="form-control form-control-user" placeholder="Nome da instituição">
+            <input type="text" asp-for="Escola.Nome" class="form-control form-control-user" placeholder="Instituição de ensino">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Escola.Telefone class="form-control form-control-user" placeholder="Telefone">
+            <input type="text" asp-for=Escola.INEP class="form-control form-control-user" placeholder="Código INEP">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Escola.Telefone class="form-control form-control-user" placeholder="Telefone da instituição">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Escola.Municipio class="form-control form-control-user" placeholder="Município">
         </div>
         <div class="col-sm-3">
             @*<select asp-for="Escola.Municipio" asp-items="new SelectList(Model.Cidades, nameof(Estado.Id), nameof(Estado.Nome))" class="form-control rounded-pill" placeholder="Selecione">
@@ -93,10 +105,11 @@
             </select>*@
         </div>
     </div>
+
     <label>Dados endereço</label>
     <div class="form-group row">
         <div class="col-sm-3">
-            <input type="text" asp-for="Endereco.Cep" class="form-control form-control-user" placeholder="Cep">
+            <input type="text" asp-for="Endereco.Cep" class="form-control form-control-user" required placeholder="Cep">
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=Endereco.Logradouro class="form-control form-control-user" placeholder="Rua">
@@ -107,6 +120,8 @@
         <div class="col-sm-3">
             <input type="text" asp-for=Endereco.Localidade class="form-control form-control-user" placeholder="Cidade">
         </div>
+    </div>
+    <div class="form-group row">
         <div class="col-sm-3">
             <input type="text" asp-for=Endereco.Uf class="form-control form-control-user" placeholder="Estado">
         </div>
@@ -127,9 +142,9 @@
     <label>Dados da Modalidade</label>
     <div class="form-group row">
         <div class="col-md-3">
-            @*  <select asp-for="ModalidadeId" type="text" asp-items="new SelectList(Model.Modalidades, nameof(Modalidade.Id), nameof(Modalidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
-            <option value="">Selecione a modalidade ...</option>
-            </select>*@
+            <select asp-for="ModalidadeId" type="text" asp-items="new SelectList(Model.Modalidades, nameof(Modalidade.Id), nameof(Modalidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione a modalidade ...</option>
+            </select>
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=Peso class="form-control form-control-user" placeholder="Peso">
@@ -149,71 +164,6 @@
         </div>
     </div>
 
-    <div class="form-group row">
-        <div class="form-check">
-            <div class="form-check mb-2">
-                <input type="checkbox" asp-for=IsResponsavel class="form-check-input">
-                <label class="form-check-label" for="flexCheckDefault">
-                    Sou meu responsável
-                </label>
-            </div>
-        </div>
-        <div class="col-sm-4 divresponsavel">
-            @* <select asp-for="ResponsavelId" type="text" asp-items="new SelectList(Model.Responsaveis, nameof(Responsavel.Id), nameof(Responsavel.Nome))" class="form-control rounded-pill" placeholder="Selecione">
-            <option value="">Selecione o responsável  ...</option>
-            </select>*@
-        </div>
-        <div class="col-sm-4 divresponsavel">
-            <button type="button" class="btn-custom-orange " data-toggle="modal" id="abrirmodal" data-target="#exampleModal">
-                + Novo Responsável
-            </button>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Dados do responsável</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group row">
-                        <div class="col-sm-6  ">
-                            <input type="text" asp-for=Responsavel.Nome class="form-control form-control-user" placeholder="Nome">
-                        </div>
-                        <div class="col-sm-6  ">
-                            <input type="text" asp-for=Responsavel.Parentesco class="form-control form-control-user" placeholder="Parentesco">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <input type="text" asp-for=Responsavel.RG class="form-control form-control-user" placeholder="RG">
-                        </div>
-                        <div class="col-sm-6 ">
-                            <input type="text" asp-for=Responsavel.CPF class="form-control form-control-user" placeholder="CPF">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <input type="text" asp-for=Responsavel.Telefone class="form-control form-control-user" placeholder="Telefone">
-                        </div>
-                        <div class="col-sm-6">
-                            <input type="text" asp-for=Responsavel.Email class="form-control form-control-user cpf" placeholder="Email">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="fecharmodal">Fechar</button>
-                    <button type="button" class="btn btn-primary" id="fecharmodal">Salvar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <button type="submit" class="btn btn-primary btn-user btn-block ">
         Gravar
     </button>
@@ -228,25 +178,6 @@
 }*@
 <script>
     $(document).ready(function () {
-        $('#abrirmodal').click(function () {
-            $("#exampleModal").modal('show');
-        });
-
-        // Add this function to close the modal
-        $('#fecharmodal').click(function () {
-            $("#exampleModal").modal('hide');
-        });
-
-        $('#IsResponsavel').change(function () {
-            // Se estiver marcado, desabilita o select, caso contrário, habilita
-            $('.divresponsavel').prop('disabled', $(this).is(':checked'));
-        });
-
-        // Desabilita o select se o checkbox estiver inicialmente marcado
-        if ($('#IsResponsavel').is(':checked')) {
-            $('.divresponsavel').prop('disabled', true);
-        }
-
         $('#Endereco_Cep').on('blur', function () {
             // Pega o valor do campo de CEP
             const cep = this.value;

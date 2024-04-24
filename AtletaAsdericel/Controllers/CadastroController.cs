@@ -56,15 +56,15 @@ namespace AtletaAsdericel.Controllers
         [HttpGet("Dirigente")]
         public ActionResult CreateDirigente()
         {
-            //var cidades = _context.Cidades.ToList();
-            //var estados = _context.Estados.ToList();
-            //var responsaveis = _context.Responsavel.ToList();
-            //var modalidades = _context.Modalidades.ToList();
+            var cidades = _context.Cidades.ToList();
+            var estados = _context.Estados.ToList();
+            var responsaveis = _context.Responsavel.ToList();
+            var modalidades = _context.Modalidades.ToList();
             var model = new DirigenteCreateViewModel()
             {
-                //Cidades = cidades,
-                //Estados = estados,
-                //Modalidades = modalidades
+                Cidades = cidades,
+                Estados = estados,
+                Modalidades = modalidades
             };
             return View(model);
         }
@@ -75,13 +75,13 @@ namespace AtletaAsdericel.Controllers
             //var cidades = _context.Cidades.ToList();
             //var estados = _context.Estados.ToList();
             //var responsaveis = _context.Responsavel.ToList();
-            //var modalidades = _context.Modalidades.ToList();
+            var modalidades = _context.Modalidades.ToList();
             var model = new AtletaCreateViewModel()
             {
                 //Cidades = cidades,
                 //Estados = estados,
                 //Responsaveis = responsaveis,
-                //Modalidades = modalidades
+                Modalidades = modalidades
             };
             return View(model);
         }
