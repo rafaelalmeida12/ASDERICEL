@@ -5,6 +5,10 @@ namespace AtletaAsdericel.ViewModels
 {
     public class DirigenteCreateViewModel
     {
+        public DirigenteCreateViewModel(List<Modalidade> modalidades)
+        {
+            Modalidades = modalidades;
+        }
         public ETipo Tipo { get; set; }
         public string Codigo { get; set; }
         public string Nome { get; set; }
@@ -47,7 +51,7 @@ namespace AtletaAsdericel.ViewModels
 
         public Associado ToEntity()
         {
-          var atleta= new Associado()
+            var atleta = new Associado()
             {
                 Nome = this.Nome,
                 NomeSocial = this.NomeSocial,
@@ -56,15 +60,15 @@ namespace AtletaAsdericel.ViewModels
                 Sexo = this.Sexo,
                 CPF = this.CPF,
                 Passaporte = this.Passaporte,
-                NumeroSUS=this.NumeroSus,
+                NumeroSUS = this.NumeroSus,
                 TipoSanguineo = this.TipoSanguineo,
                 RG = this.RG,
-                OrgaoEmissor=this.OrgaoEmissor,
-                DataExpedicao=this.DataExpedicao,
-                TipoDocumento=this.TipoDocumento,
+                OrgaoEmissor = this.OrgaoEmissor,
+                DataExpedicao = this.DataExpedicao,
+                TipoDocumento = this.TipoDocumento,
                 Endereco = this.Endereco
             };
-                   
+
             return atleta;
         }
     }

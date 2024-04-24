@@ -5,6 +5,10 @@ namespace AtletaAsdericel.ViewModels
 {
     public class AtletaCreateViewModel
     {
+        public AtletaCreateViewModel(List<Modalidade> modalidades)
+        {
+            Modalidades=modalidades;
+        }
         public ETipo Tipo { get; set; }
         public string Codigo { get; set; }
         public string Pai { get; set; }
