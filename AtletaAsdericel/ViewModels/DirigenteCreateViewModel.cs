@@ -49,9 +49,9 @@ namespace AtletaAsdericel.ViewModels
         public List<Modalidade> Modalidades { get; set; }
         //demais dados
 
-        public Associado ToEntity()
+        public Dirigente ToEntity()
         {
-            var atleta = new Associado()
+            var atleta = new Dirigente()
             {
                 Nome = this.Nome,
                 NomeSocial = this.NomeSocial,
@@ -66,7 +66,8 @@ namespace AtletaAsdericel.ViewModels
                 OrgaoEmissor = this.OrgaoEmissor,
                 DataExpedicao = this.DataExpedicao,
                 TipoDocumento = this.TipoDocumento,
-                Endereco = this.Endereco
+                Endereco = this.Endereco,
+                CREF=this.CREF
             };
 
             return atleta;

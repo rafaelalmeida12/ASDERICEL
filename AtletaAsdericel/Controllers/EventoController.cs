@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AtletaAsdericel.Controllers
 {
+    [Route("[controller]")]
+
     public class EventoController : Controller
     {
         private readonly ApplicationDbContext _context;

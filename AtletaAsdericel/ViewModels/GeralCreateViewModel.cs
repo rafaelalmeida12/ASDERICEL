@@ -5,11 +5,9 @@ namespace AtletaAsdericel.ViewModels
 {
     public class GeralCreateViewModel
     {
-        public ETipo Tipo { get; set; }
         public string Nome { get; set; }
         public string? NomeSocial { get; set; }
         public string? Apelido { get; set; }
-        public bool IsResponsavel { get; set; }
         public DateTime DataNascimento { get; set; } 
         public ESexo Sexo { get; set; }
         public string CPF { get; set; }
@@ -22,9 +20,6 @@ namespace AtletaAsdericel.ViewModels
         public ETipoSanguineo TipoSanguineo { get; set; }
         //relacionamentos
         //VALIDAR
-        public int ResponsavelId { get; set; }
-        public List<Responsavel> Responsaveis { get; set; }
-        public Responsavel Responsavel { get; set; }
         public Endereco Endereco { get; set; }
         //demais dados
 
@@ -45,16 +40,8 @@ namespace AtletaAsdericel.ViewModels
                 OrgaoEmissor = this.OrgaoEmissor,
                 DataExpedicao = DateTime.Now,
                 TipoDocumento = this.TipoDocumento,
-                Responsavel = this.Responsavel,
                 Endereco = this.Endereco
             };
-
-            if (this.IsResponsavel)
-            {
-                this.Responsavel.Nome = this.Nome;
-                atleta.ResponsavelId = this.ResponsavelId;
-            }
-
             return atleta;
         }
     }

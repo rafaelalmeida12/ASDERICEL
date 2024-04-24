@@ -15,17 +15,40 @@ namespace AtletaAsdericel.Controllers
             _context = context;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var atletas = await _context.Associado.Include(e => e.Endereco).ToListAsync();
             return View(atletas);
         }
 
+        [HttpGet("Criar")]
         public ActionResult Create()
         {
             var modalidades = _context.Modalidades.ToList();
             var model = new DirigenteCreateViewModel(modalidades);
             return View(model);
+        }
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult Create(DirigenteCreateViewModel viewModel)
+        {
+            try
+            {
+
+                if (!ModelState.IsValid)
+                {
+                    return View(viewModel);
+                }
+                _context.Add(viewModel.ToEntity());
+                _context.SaveChanges();
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View(viewModel);
+            }
         }
     }
 }

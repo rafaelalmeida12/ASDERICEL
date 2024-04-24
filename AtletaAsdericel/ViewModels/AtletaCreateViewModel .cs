@@ -9,15 +9,12 @@ namespace AtletaAsdericel.ViewModels
         {
             Modalidades=modalidades;
         }
-        public ETipo Tipo { get; set; }
-        public string Codigo { get; set; }
         public string Pai { get; set; }
         public string Mae { get; set; }
         public string Nome { get; set; }
         public string Profissao { get; set; }
         public string NomeSocial { get; set; }
         public string Apelido { get; set; }
-        public bool IsResponsavel { get; set; }
         public DateTime DataNascimento { get; set; }
         public ESexo Sexo { get; set; }
         public string CPF { get; set; }
@@ -27,11 +24,11 @@ namespace AtletaAsdericel.ViewModels
         public string TipoDocumento { get; set; }
         public string Passaporte { get; set; }
         public string NumeroSus { get; set; }
+
         public string Peso { get; set; }
         public string Altura { get; set; }
         public ETipoSanguineo TipoSanguineo { get; set; }
         public EStadoCivil EstadoCivil { get; set; }
-
         public ECamisa Camisa { get; set; }
         public ECalca Calca { get; set; }
         public EEnsino Ensino { get; set; }
@@ -52,9 +49,9 @@ namespace AtletaAsdericel.ViewModels
         public List<Modalidade> Modalidades { get; set; }
         //demais dados
 
-        public Associado ToEntity()
+        public Atleta ToEntity()
         {
-          var atleta= new Associado()
+          var atleta= new Atleta()
             {
                 Nome = this.Nome,
                 NomeSocial = this.NomeSocial,
@@ -69,10 +66,10 @@ namespace AtletaAsdericel.ViewModels
                 OrgaoEmissor=this.OrgaoEmissor,
                 DataExpedicao=this.DataExpedicao,
                 TipoDocumento=this.TipoDocumento,
-                Responsavel = this.Responsavel,
                 Endereco = this.Endereco,
                 Pai=this.Pai,
-               EstadoCivil=this.EstadoCivil
+                EstadoCivil=this.EstadoCivil,
+                Escola=this.Escola
           };
                    
             return atleta;

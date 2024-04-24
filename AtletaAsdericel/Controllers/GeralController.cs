@@ -17,12 +17,18 @@ namespace AtletaAsdericel.Controllers
             _correiosService = correiosService;
             _context = context;
         }
-
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
 
             var atletas = await _context.Associado.Include(e => e.Endereco).ToListAsync();
             return View(atletas);
+        }
+        [HttpGet("Criar")]
+        public async Task<ActionResult> Create()
+        {
+            var model = new GeralCreateViewModel();
+            return View(model);
         }
 
         // GET: AtletaController1/Details/5
@@ -31,14 +37,10 @@ namespace AtletaAsdericel.Controllers
             return View();
         }
 
-        public async Task<ActionResult> Create()
-        {
-            var model = new GeralCreateViewModel();
-            return View(model);
-        }
 
         // POST: AtletaController1/Create
         [ValidateAntiForgeryToken]
+        [HttpPost]
         public ActionResult Create(GeralCreateViewModel viewModel)
         {
             try
