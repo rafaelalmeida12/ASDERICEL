@@ -1,9 +1,11 @@
 ﻿using AtletaAsdericel.Models.Enum;
+using System.ComponentModel.DataAnnotations;
 
 namespace AtletaAsdericel.Models
 {
     public class Associado
     {
+        [Key]
         public int Id { get; set; }
         public string Pai { get; set; }
         public string Mae { get; set; }
@@ -23,7 +25,10 @@ namespace AtletaAsdericel.Models
         public EStadoCivil EstadoCivil { get; set; }
         public string? Profissao { get; set; }
         public EEnsino Ensino { get; set; }
-
+        public string Peso { get; set; }
+        public string Altura { get; set; }
+        public ECamisa Camisa { get; set; }
+        public ECalca Calca { get; set; }
         //relacionamentos
         public int EnderecoId { get; set; }
         public Endereco Endereco { get; set; }

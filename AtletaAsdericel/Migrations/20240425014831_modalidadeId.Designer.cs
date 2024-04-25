@@ -3,6 +3,7 @@ using System;
 using AtletaAsdericel.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AtletaAsdericel.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240425014831_modalidadeId")]
+    partial class modalidadeId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -116,7 +119,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasIndex("EquipeId");
 
-                    b.ToTable("Associado", (string)null);
+                    b.ToTable("Associado");
                 });
 
             modelBuilder.Entity("AtletaAsdericel.Models.Cidade", b =>
@@ -133,7 +136,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cidades", (string)null);
+                    b.ToTable("Cidades");
 
                     b.HasData(
                         new
@@ -206,7 +209,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Endereco", (string)null);
+                    b.ToTable("Endereco");
                 });
 
             modelBuilder.Entity("AtletaAsdericel.Models.Equipe", b =>
@@ -233,7 +236,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasIndex("ResultadoId");
 
-                    b.ToTable("Equipe", (string)null);
+                    b.ToTable("Equipe");
                 });
 
             modelBuilder.Entity("AtletaAsdericel.Models.Escola", b =>
@@ -262,7 +265,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Escolas", (string)null);
+                    b.ToTable("Escolas");
                 });
 
             modelBuilder.Entity("AtletaAsdericel.Models.Estado", b =>
@@ -283,7 +286,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Estados", (string)null);
+                    b.ToTable("Estados");
 
                     b.HasData(
                         new
@@ -494,7 +497,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Evento", (string)null);
+                    b.ToTable("Evento");
                 });
 
             modelBuilder.Entity("AtletaAsdericel.Models.Modalidade", b =>
@@ -520,7 +523,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Modalidades", (string)null);
+                    b.ToTable("Modalidades");
                 });
 
             modelBuilder.Entity("AtletaAsdericel.Models.Prova", b =>
@@ -545,7 +548,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasIndex("ModalidadeId");
 
-                    b.ToTable("Provas", (string)null);
+                    b.ToTable("Provas");
                 });
 
             modelBuilder.Entity("AtletaAsdericel.Models.Responsavel", b =>
@@ -582,7 +585,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Responsavel", (string)null);
+                    b.ToTable("Responsavel");
                 });
 
             modelBuilder.Entity("AtletaAsdericel.Models.Resultado", b =>
@@ -604,7 +607,7 @@ namespace AtletaAsdericel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Resultado", (string)null);
+                    b.ToTable("Resultado");
                 });
 
             modelBuilder.Entity("AtletaAsdericel.Models.Associado", b =>

@@ -31,14 +31,16 @@ namespace AtletaAsdericel.ViewModels
         public string TipoDocumento { get; set; }
         public string Passaporte { get; set; }
         public string NumeroSus { get; set; }
+        
         public string Peso { get; set; }
         public string Altura { get; set; }
+        public ECamisa Camisa { get; set; }
+        public ECalca Calca { get; set; }
+
         public string CREF { get; set; }
         public ETipoSanguineo TipoSanguineo { get; set; }
         public EStadoCivil EstadoCivil { get; set; }
 
-        public ECamisa Camisa { get; set; }
-        public ECalca Calca { get; set; }
         public EEnsino Ensino { get; set; }
         //relacionamentos
         public Endereco Endereco { get; set; }
@@ -69,6 +71,11 @@ namespace AtletaAsdericel.ViewModels
                 NumeroSUS = this.NumeroSus,
                 TipoSanguineo = this.TipoSanguineo,
                 Ensino=this.Ensino,
+                Peso=this.Peso,
+                Altura=this.Altura,
+                Camisa=this.Camisa,
+                Calca=this.Calca,
+                ModalidadeId=this.ModalidadeId,
                 Endereco = this.Endereco,
             };
 
