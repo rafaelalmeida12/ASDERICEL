@@ -30,7 +30,7 @@ namespace AtletaAsdericel.Controllers
             return View(model);
         }
         [ValidateAntiForgeryToken]
-        [HttpPost]
+        [HttpPost("Criar")]
         public ActionResult Create(DirigenteCreateViewModel viewModel)
         {
             try

@@ -6,7 +6,7 @@ namespace AtletaAsdericel.Models
     {
         public int Id { get; set; }
         public string Pai { get; set; }
-        public int Mae { get; set; }
+        public string Mae { get; set; }
         public string Nome { get; set; }
         public string? NomeSocial { get; set; }
         public string? Apelido { get; set; }
@@ -22,6 +22,7 @@ namespace AtletaAsdericel.Models
         public ETipoSanguineo TipoSanguineo { get; set; }
         public EStadoCivil EstadoCivil { get; set; }
         public string? Profissao { get; set; }
+        public EEnsino Ensino { get; set; }
 
         //relacionamentos
         public int EnderecoId { get; set; }

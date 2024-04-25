@@ -8,6 +8,8 @@
 <hr />
 
 <form class="user" asp-action="Create">
+    @Html.AntiForgeryToken() <!-- Gera o token anti-falsificação -->
+
     <div class="form-group row mt-4">
         <div class="form-group row">
             <div class="col-sm-3">
@@ -61,7 +63,7 @@
 
     <div class="form-group row">
         <div class="col-sm-3">
-            <input type="text" asp-for=DataExpedicao class="form-control form-control-user " placeholder="Data Expedição">
+            <input type="text" asp-for=DataExpedicao class="form-control form-control-user date" placeholder="Data Expedição">
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=CREF class="form-control form-control-user " placeholder="CREF">
@@ -83,11 +85,12 @@
                 <option value="">Selecione o Tipo Sanguíneo ...</option>
             </select>
         </div>
-        <div class="col-sm-3">
-            <input type="text" asp-for=Ensino class="form-control form-control-user " placeholder="Nivel de ensino">
+        <div class="col-md-3">
+            <select asp-for="Ensino" type="text" asp-items="Html.GetEnumSelectList<EEnsino>()" class="form-control rounded-pill" required placeholder="Selecione">
+                <option value="">Selecione o nivel de ensino ...</option>
+            </select>
         </div>
     </div>
-
 
     <label>Dados endereço</label>
     <div class="form-group row">
@@ -101,10 +104,13 @@
             <input type="text" asp-for=Endereco.Bairro class="form-control form-control-user" placeholder="Bairro">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Endereco.Localidade class="form-control form-control-user" placeholder="Cidade">
+            <input type="text" asp-for=Endereco.Numero class="form-control form-control-user" placeholder="Número">
         </div>
     </div>
     <div class="form-group row">
+        <div class="col-sm-3">
+            <input type="text" asp-for=Endereco.Localidade class="form-control form-control-user" placeholder="Cidade">
+        </div>
         <div class="col-sm-3">
             <input type="text" asp-for=Endereco.Uf class="form-control form-control-user" placeholder="Estado">
         </div>
@@ -150,15 +156,25 @@
 }*@
 <script>
     $(document).ready(function () {
-        $('#abrirmodal').click(function () {
-            $("#exampleModal").modal('show');
-        });
+        $('#Endereco_Cep').on('blur', function () {
+            // Pega o valor do campo de CEP
+            const cep = this.value;
 
-        // Add this function to close the modal
-        $('#fecharmodal').click(function () {
-            $("#exampleModal").modal('hide');
+            $.getJSON(`https://viacep.com.br/ws/${cep}/json/`, function (data) {
+                // Atualiza os campos de endereço se a busca retornar com sucesso
+                if (!data.erro) {
+                    $('#Endereco_Bairro').val(data.bairro);
+                    $('#Endereco_Logradouro').val(data.logradouro);
+                    $('#Endereco_Localidade').val(data.localidade);
+                    $('#Endereco_Uf').val(data.uf);
+                } else {
+                    // Limpa os campos de endereço se o CEP não for encontrado
+                    $('#Endereco_Bairro').val('');
+                    $('#Endereco_Logradouro').val('');
+                    $('#Endereco_Localidade').val('');
+                    $('#Endereco_Estado').val('');
+                }
+            });
         });
     });
-
-
 </script>

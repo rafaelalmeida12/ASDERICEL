@@ -5,12 +5,16 @@ namespace AtletaAsdericel.ViewModels
 {
     public class DirigenteCreateViewModel
     {
+        public DirigenteCreateViewModel()
+        {
+            
+        }
         public DirigenteCreateViewModel(List<Modalidade> modalidades)
         {
             Modalidades = modalidades;
         }
+
         public ETipo Tipo { get; set; }
-        public string Codigo { get; set; }
         public string Nome { get; set; }
         public string NomeSocial { get; set; }
         public string Profissao { get; set; }
@@ -37,14 +41,7 @@ namespace AtletaAsdericel.ViewModels
         public ECalca Calca { get; set; }
         public EEnsino Ensino { get; set; }
         //relacionamentos
-
         public Endereco Endereco { get; set; }
-        public int EscolaId { get; set; }
-        public Escola Escola { get; set; }
-        public int CidadeId { get; set; }
-        public List<Cidade> Cidades { get; set; }
-        public int EstadoId { get; set; }
-        public List<Estado> Estados { get; set; }
         public int ModalidadeId { get; set; }
         public List<Modalidade> Modalidades { get; set; }
         //demais dados
@@ -57,17 +54,22 @@ namespace AtletaAsdericel.ViewModels
                 NomeSocial = this.NomeSocial,
                 Apelido = this.Apelido,
                 DataNascimento = this.DataNascimento,
+                Mae=this.Mae,
+                Pai=this.Pai,
+                EstadoCivil=this.EstadoCivil,
                 Sexo = this.Sexo,
+                Profissao=this.Profissao,
                 CPF = this.CPF,
-                Passaporte = this.Passaporte,
-                NumeroSUS = this.NumeroSus,
-                TipoSanguineo = this.TipoSanguineo,
                 RG = this.RG,
                 OrgaoEmissor = this.OrgaoEmissor,
                 DataExpedicao = this.DataExpedicao,
+                CREF=this.CREF,
+                Passaporte = this.Passaporte,
                 TipoDocumento = this.TipoDocumento,
+                NumeroSUS = this.NumeroSus,
+                TipoSanguineo = this.TipoSanguineo,
+                Ensino=this.Ensino,
                 Endereco = this.Endereco,
-                CREF=this.CREF
             };
 
             return atleta;
