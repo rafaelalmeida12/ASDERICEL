@@ -37,5 +37,32 @@ namespace AtletaAsdericel.Models
         public Escola Escola { get; set; }
         public int ModalidadeId { get; set; }
         public Modalidade Modalidade { get; set; }
+
+
+        public void Atualiza(Atleta atleta)
+        {
+            this.Pai = atleta.Pai;
+            this.Mae = atleta.Mae;
+            this.Nome = atleta.Nome;
+            this.NomeSocial = atleta.NomeSocial;
+            this.Apelido = atleta.Apelido;
+            this.DataNascimento = atleta.DataNascimento;
+            this.Sexo = atleta.Sexo;
+            this.CPF = atleta.CPF;
+            this.RG = atleta.RG;
+            this.OrgaoEmissor = atleta.OrgaoEmissor;
+            this.DataExpedicao = atleta.DataExpedicao;
+            this.TipoDocumento = atleta.TipoDocumento;
+            this.Passaporte = atleta.Passaporte;
+            this.NumeroSUS = atleta.NumeroSUS;
+            this.TipoSanguineo = atleta.TipoSanguineo;
+            this.EstadoCivil = atleta.EstadoCivil;
+            this.Profissao = atleta.Profissao;
+            this.Ensino = atleta.Ensino;
+            this.Peso = atleta.Peso;
+            this.Altura = atleta.Altura;
+            this.Camisa = atleta.Camisa;
+            this.Calca = atleta.Calca;
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AtletaAsdericel.Data;
+using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -29,17 +30,13 @@ namespace AtletaAsdericel.Controllers
 
             return View(model);
         }
+
         [ValidateAntiForgeryToken]
         [HttpPost("Criar")]
         public ActionResult Create(AtletaCreateViewModel viewModel)
         {
             try
             {
-
-                //if (!ModelState.IsValid)
-                //{
-                //    return View(viewModel);
-                //}
                 _context.Add(viewModel.ToEntity());
                 _context.SaveChanges();
 
@@ -49,6 +46,24 @@ namespace AtletaAsdericel.Controllers
             {
                 return View(viewModel);
             }
+        }
+
+        [HttpGet("Editar")]
+        public ActionResult Edit(int id)
+        {
+            var atleta = _context.Atleta.FirstOrDefaultAsync(e => e.Id == id);
+            return View(atleta);
+        }
+
+        [HttpPost("Editar")]
+        public async Task<ActionResult> Edit(Atleta atleta)
+        {
+            var atletaBanco = await _context.Atleta.FirstOrDefaultAsync(e => e.Id == atleta.Id);
+            atletaBanco.Atualiza(atleta);
+
+            _context.Add(atletaBanco);
+           await _context.SaveChangesAsync();
+            return View();
         }
     }
 }

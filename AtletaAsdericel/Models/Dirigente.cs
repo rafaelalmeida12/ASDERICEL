@@ -36,5 +36,32 @@ namespace AtletaAsdericel.Models
         public string CREF { get; set; }
         public int ModalidadeId { get; set; }
         public Modalidade Modalidade { get; set; }
+
+        public void Atualiza(Dirigente   dirigente)
+        {
+            this.Pai = dirigente.Pai;
+            this.Mae = dirigente.Mae;
+            this.Nome = dirigente.Nome;
+            this.NomeSocial = dirigente.NomeSocial;
+            this.Apelido = dirigente.Apelido;
+            this.DataNascimento = dirigente.DataNascimento;
+            this.Sexo = dirigente.Sexo;
+            this.CPF = dirigente.CPF;
+            this.RG = dirigente.RG;
+            this.OrgaoEmissor = dirigente.OrgaoEmissor;
+            this.DataExpedicao = dirigente.DataExpedicao;
+            this.TipoDocumento = dirigente.TipoDocumento;
+            this.Passaporte = dirigente.Passaporte;
+            this.NumeroSUS = dirigente.NumeroSUS;
+            this.TipoSanguineo = dirigente.TipoSanguineo;
+            this.EstadoCivil = dirigente.EstadoCivil;
+            this.Profissao = dirigente.Profissao;
+            this.Ensino = dirigente.Ensino;
+            this.Peso = dirigente.Peso;
+            this.Altura = dirigente.Altura;
+            this.Camisa = dirigente.Camisa;
+            this.Calca = dirigente.Calca;
+            this.CREF = dirigente.CREF;
+        }
     }
 }

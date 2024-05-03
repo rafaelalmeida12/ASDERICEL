@@ -1,4 +1,6 @@
 ﻿using AtletaAsdericel.Data;
+using AtletaAsdericel.Migrations;
+using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -45,5 +47,23 @@ namespace AtletaAsdericel.Controllers
                 return View(viewModel);
             }
         }
+        [HttpGet("Editar")]
+        public ActionResult Edit(int id)
+        {
+            var dirigente = _context.Dirigente.FirstOrDefaultAsync(e => e.Id == id);
+            return View(dirigente);
+        }
+
+        [HttpPost("Editar")]
+        public async Task<ActionResult> Edit(Dirigente dirigente)
+        {
+            var dirigenteBanco = await _context.Dirigente.FirstOrDefaultAsync(e => e.Id == dirigente.id);
+            dirigenteBanco.Atualiza(dirigente);
+
+            _context.Add(dirigenteBanco);
+            await _context.SaveChangesAsync();
+            return View();
+        }
+
     }
 }
