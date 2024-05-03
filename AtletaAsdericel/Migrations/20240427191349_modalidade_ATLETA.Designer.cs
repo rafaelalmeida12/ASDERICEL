@@ -3,6 +3,7 @@ using System;
 using AtletaAsdericel.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AtletaAsdericel.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240427191349_modalidade_ATLETA")]
+    partial class modalidade_ATLETA
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -657,6 +660,10 @@ namespace AtletaAsdericel.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Categoria")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<DateTime>("DataInicio")
                         .HasColumnType("timestamp without time zone");
 
@@ -667,7 +674,11 @@ namespace AtletaAsdericel.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Local")
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Municipio")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -675,7 +686,11 @@ namespace AtletaAsdericel.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Promotor")
+                    b.Property<string>("Pais")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Promocao")
                         .IsRequired()
                         .HasColumnType("text");
 

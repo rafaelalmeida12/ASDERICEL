@@ -1,4 +1,4 @@
-﻿@model List<Associado>
+﻿@model List<Atleta>
 
 @{
     ViewData["Title"] = "Lista de Atletas";
@@ -32,6 +32,17 @@
                 <td>@atleta.DataNascimento.ToShortDateString()</td>
                 <td>@atleta.Endereco.Logradouro</td>
                 <td>@atleta.Endereco.Uf</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = atleta.Id })" class="btn btn-success btn-fab btn-round" title="Editar">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a href="@Url.Action("Delete", new { id = atleta.Id })" class="btn btn-danger btn-fab btn-round" title="Excluir">
+                        <i class="material-icons">remove_circle</i>
+                    </a>
+                </td>
+                <span class="material-symbols-outlined">
+                    edit
+                </span>
             </tr>
         }
     </tbody>

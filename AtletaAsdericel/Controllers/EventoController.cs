@@ -14,23 +14,25 @@ namespace AtletaAsdericel.Controllers
         {
             _context = context;
         }
-
+        [HttpGet("")]
         public async Task<IActionResult> Index()
         {
             var eventos = await _context.Evento.ToListAsync();
             return View(eventos);
         }
-
+        [HttpGet("Criar")]
         public IActionResult Create()
         {
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Create(EventoCreateViewModel model)
+        [HttpPost("Criar")]
+        public IActionResult Create(EventoCreateViewModel viewModel)
         {
+            _context.Add(viewModel.ToEntity());
+            _context.SaveChanges();
 
-            return View();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

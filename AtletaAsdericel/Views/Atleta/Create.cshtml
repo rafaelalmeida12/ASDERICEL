@@ -81,7 +81,9 @@
             </select>
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Ensino class="form-control form-control-user " placeholder="Nivel de ensino">
+            <select asp-for="Ensino" type="text" asp-items="Html.GetEnumSelectList<EEnsino>()" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione o nível de ensino...</option>
+            </select>
         </div>
     </div>
 
@@ -118,10 +120,14 @@
             <input type="text" asp-for=Endereco.Bairro class="form-control form-control-user" placeholder="Bairro">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Endereco.Localidade class="form-control form-control-user" placeholder="Cidade">
+            <input type="text" asp-for=Endereco.Numero class="form-control form-control-user" placeholder="Número">
         </div>
+   
     </div>
     <div class="form-group row">
+        <div class="col-sm-3">
+            <input type="text" asp-for=Endereco.Localidade class="form-control form-control-user" placeholder="Cidade">
+        </div>
         <div class="col-sm-3">
             <input type="text" asp-for=Endereco.Uf class="form-control form-control-user" placeholder="Estado">
         </div>
@@ -190,6 +196,7 @@
                     $('#Endereco_Localidade').val(data.localidade);
                     $('#Endereco_Uf').val(data.uf);
                 } else {
+                    alert("Endereco não encontrado")
                     // Limpa os campos de endereço se o CEP não for encontrado
                     $('#Endereco_Bairro').val('');
                     $('#Endereco_Logradouro').val('');

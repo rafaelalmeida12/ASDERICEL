@@ -27,7 +27,7 @@ namespace AtletaAsdericel.Controllers
         {
             _contexto.Modalidades.Add(modalidade.ToEntity());
             await _contexto.SaveChangesAsync();
-            return View();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

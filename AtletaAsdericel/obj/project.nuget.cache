@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "sat3ukgG+1J7t0fOx5i6HY//9aZJ/eYYdz1rW+cHgggaZZLE8rotQNxoHEGQWkiXNuLfU+Be0Ohk9DPYgrzKKg==",
+  "dgSpecHash": "d80iDY0PMr4SlaJ+bIObDJItUTiPOiPLteAT07cj3VVkBtc6ejsXWqIeOXGpM5rH7FiiGLAAZKqBWIoFdR8xYg==",
   "success": true,
   "projectFilePath": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\AtletaAsdericel.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\rafae\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.16\\microsoft.entityframeworkcore.7.0.16.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.16\\microsoft.entityframeworkcore.abstractions.7.0.16.nupkg.sha512",

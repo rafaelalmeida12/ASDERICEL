@@ -29,6 +29,9 @@ namespace AtletaAsdericel.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+
+
             modelBuilder.Entity<Cidade>().HasData(
                 new Cidade { Id = 1, Nome = "Porto Velho" },
                 new Cidade { Id = 2, Nome = "Ariquemes" },
@@ -67,6 +70,12 @@ namespace AtletaAsdericel.Data
                new Estado { Id = 26, Nome = "Sergipe", Sigla = "SE" },
                new Estado { Id = 27, Nome = "Tocantins", Sigla = "TO" }
            );
+            //modelBuilder.Entity<Associado>()
+            //    .ToTable("Associado")
+            //    .HasDiscriminator<string>("Discriminator")
+            //    .HasValue<Dirigente>("Dirigente")
+            //    .HasValue<Atleta>("Atleta");
+
 
             base.OnModelCreating(modelBuilder);
         }

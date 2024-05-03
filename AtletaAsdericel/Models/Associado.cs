@@ -32,6 +32,8 @@ namespace AtletaAsdericel.Models
         //relacionamentos
         public int EnderecoId { get; set; }
         public Endereco Endereco { get; set; }
+        //public string Discriminator { get; protected set; }
+
     }
 }
 

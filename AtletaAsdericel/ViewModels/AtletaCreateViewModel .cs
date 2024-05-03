@@ -5,9 +5,13 @@ namespace AtletaAsdericel.ViewModels
 {
     public class AtletaCreateViewModel
     {
+        public AtletaCreateViewModel()
+        {
+
+        }
         public AtletaCreateViewModel(List<Modalidade> modalidades)
         {
-            Modalidades=modalidades;
+            Modalidades = modalidades;
         }
         public string Pai { get; set; }
         public string Mae { get; set; }
@@ -51,27 +55,35 @@ namespace AtletaAsdericel.ViewModels
 
         public Atleta ToEntity()
         {
-          var atleta= new Atleta()
+            var atleta = new Atleta()
             {
                 Nome = this.Nome,
                 NomeSocial = this.NomeSocial,
                 Apelido = this.Apelido,
                 DataNascimento = this.DataNascimento,
+                Mae = this.Mae,
+                Pai = this.Pai,
+                EstadoCivil = this.EstadoCivil,
                 Sexo = this.Sexo,
+                Profissao = this.Profissao,
                 CPF = this.CPF,
-                Passaporte = this.Passaporte,
-                NumeroSUS=this.NumeroSus,
-                TipoSanguineo = this.TipoSanguineo,
                 RG = this.RG,
-                OrgaoEmissor=this.OrgaoEmissor,
-                DataExpedicao=this.DataExpedicao,
-                TipoDocumento=this.TipoDocumento,
+                OrgaoEmissor = this.OrgaoEmissor,
+                DataExpedicao = this.DataExpedicao,
+                Passaporte = this.Passaporte,
+                TipoDocumento = this.TipoDocumento,
+                NumeroSUS = this.NumeroSus,
+                TipoSanguineo = this.TipoSanguineo,
+                Ensino = this.Ensino,
+                Peso = this.Peso,
+                Altura = this.Altura,
+                Camisa = this.Camisa,
+                Calca = this.Calca,
+                ModalidadeId = this.ModalidadeId,
                 Endereco = this.Endereco,
-                Pai=this.Pai,
-                EstadoCivil=this.EstadoCivil,
-                Escola=this.Escola
-          };
-                   
+                Escola = this.Escola
+            };
+
             return atleta;
         }
     }
