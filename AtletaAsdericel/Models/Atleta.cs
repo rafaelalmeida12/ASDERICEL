@@ -63,6 +63,8 @@ namespace AtletaAsdericel.Models
             this.Altura = atleta.Altura;
             this.Camisa = atleta.Camisa;
             this.Calca = atleta.Calca;
+            this.Endereco = atleta.Endereco;
+            this.Escola = atleta.Escola;
         }
     }
 }

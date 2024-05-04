@@ -25,13 +25,21 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var atleta in Model)
+        @foreach (var dirigente in Model)
         {
             <tr>
-                <td>@atleta.Nome</td>
-                <td>@atleta.DataNascimento.ToShortDateString()</td>
-                <td>@atleta.Endereco.Logradouro</td>
-                <td>@atleta.Endereco.Uf</td>
+                <td>@dirigente.Nome</td>
+                <td>@dirigente.DataNascimento.ToShortDateString()</td>
+                <td>@dirigente.Endereco.Logradouro</td>
+                <td>@dirigente.Endereco.Uf</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = dirigente.Id })" class="btn btn-success btn-fab btn-round" title="Editar">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a href="@Url.Action("Delete", new { id = dirigente.Id })" class="btn btn-danger btn-fab btn-round" title="Excluir">
+                        <i class="material-icons">remove_circle</i>
+                    </a>
+                </td>
             </tr>
         }
     </tbody>

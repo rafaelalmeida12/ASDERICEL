@@ -48,19 +48,19 @@ namespace AtletaAsdericel.Controllers
             }
         }
         [HttpGet("Editar")]
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            var dirigente = _context.Dirigente.FirstOrDefaultAsync(e => e.Id == id);
+            var dirigente = await _context.Dirigente.Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == id);
             return View(dirigente);
         }
 
         [HttpPost("Editar")]
         public async Task<ActionResult> Edit(Dirigente dirigente)
         {
-            var dirigenteBanco = await _context.Dirigente.FirstOrDefaultAsync(e => e.Id == dirigente.id);
+            var dirigenteBanco = await _context.Dirigente.Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == dirigente.Id);
             dirigenteBanco.Atualiza(dirigente);
 
-            _context.Add(dirigenteBanco);
+            _context.Update(dirigenteBanco);
             await _context.SaveChangesAsync();
             return View();
         }

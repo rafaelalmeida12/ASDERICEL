@@ -62,6 +62,7 @@ namespace AtletaAsdericel.Models
             this.Camisa = dirigente.Camisa;
             this.Calca = dirigente.Calca;
             this.CREF = dirigente.CREF;
+            this.Endereco = dirigente.Endereco;
         }
     }
 }
