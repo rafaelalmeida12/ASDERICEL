@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "d80iDY0PMr4SlaJ+bIObDJItUTiPOiPLteAT07cj3VVkBtc6ejsXWqIeOXGpM5rH7FiiGLAAZKqBWIoFdR8xYg==",
+  "dgSpecHash": "wIAqirVLZTatxP71Q5hIF5i6zjhFRy7ExPc0R/fv9i7FUhOaa+KnxRoBgFTtWYYgXxAeGRgC854Vx3Zw0rXgFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\AtletaAsdericel.csproj",
   "expectedPackageFiles": [
@@ -34,7 +34,7 @@
       "code": "NU1803",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://desenvolvimento/nuget/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+      "message": "Você está executando a operação 'restore' com uma fonte 'HTTP', 'http://desenvolvimento/nuget/nuget'. O acesso não HTTPS será removido em uma versão futura. Considere migrar para uma fonte 'HTTPS'."
     }
   ]
 }

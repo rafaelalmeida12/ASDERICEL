@@ -33,7 +33,14 @@
                 <td>@avento.Edicao</td>
                 <td>@avento.DataInicio</td>
                 <td>@avento.DataTermino</td>
-               
+                <td>
+                    <a href="@Url.Action("Edit", new { id = avento.Id })" class="btn btn-success btn-fab btn-round" title="Editar">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a href="@Url.Action("Delete", new { id = avento.Id })" class="btn btn-danger btn-fab btn-round" title="Excluir">
+                        <i class="material-icons">remove_circle</i>
+                    </a>
+                </td>
             </tr>
         }
     </tbody>

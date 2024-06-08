@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AtletaAsdericel
 build_property.RootNamespace = AtletaAsdericel
 build_property.ProjectDir = C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
@@ -20,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRsZXRhXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/rafae/Documentos/OneDrive/Documentos/Projeto Youpp/YouppCore/AtletaAsdericel/AtletaAsdericel/Views/Atleta/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRsZXRhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rafae/Documentos/OneDrive/Documentos/Projeto Youpp/YouppCore/AtletaAsdericel/AtletaAsdericel/Views/Atleta/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRsZXRhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,12 +34,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyaWdlbnRlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/rafae/Documentos/OneDrive/Documentos/Projeto Youpp/YouppCore/AtletaAsdericel/AtletaAsdericel/Views/Dirigente/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyaWdlbnRlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rafae/Documentos/OneDrive/Documentos/Projeto Youpp/YouppCore/AtletaAsdericel/AtletaAsdericel/Views/Dirigente/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlyaWdlbnRlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rafae/Documentos/OneDrive/Documentos/Projeto Youpp/YouppCore/AtletaAsdericel/AtletaAsdericel/Views/Evento/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/Documentos/OneDrive/Documentos/Projeto Youpp/YouppCore/AtletaAsdericel/AtletaAsdericel/Views/Evento/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rafae/Documentos/OneDrive/Documentos/Projeto Youpp/YouppCore/AtletaAsdericel/AtletaAsdericel/Views/Evento/Index.cshtml]
@@ -62,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/rafae/Documentos/OneDrive/Documentos/Projeto Youpp/YouppCore/AtletaAsdericel/AtletaAsdericel/Views/Modalidade/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxpZGFkZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafae/Documentos/OneDrive/Documentos/Projeto Youpp/YouppCore/AtletaAsdericel/AtletaAsdericel/Views/Modalidade/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9kYWxpZGFkZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rafae/Documentos/OneDrive/Documentos/Projeto Youpp/YouppCore/AtletaAsdericel/AtletaAsdericel/Views/Modalidade/Index.cshtml]

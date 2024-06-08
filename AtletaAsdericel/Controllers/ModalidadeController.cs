@@ -1,4 +1,5 @@
 ﻿using AtletaAsdericel.Data;
+using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,23 @@ namespace AtletaAsdericel.Controllers
             _contexto.Modalidades.Add(modalidade.ToEntity());
             await _contexto.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+        [HttpGet("Editar")]
+        public async Task<ActionResult> Edit(int id)
+        {
+            var atleta = await _contexto.Modalidades.Include(a => a.Provas).FirstOrDefaultAsync(e => e.Id == id);
+            return View(atleta);
+        }
+
+        [HttpPost("Editar")]
+        public async Task<ActionResult> Edit(Modalidade modalidade)
+        {
+            var atletaBanco = await _contexto.Modalidades.Include(a => a.Provas).FirstOrDefaultAsync(e => e.Id == modalidade.Id);
+            atletaBanco.Atualiza(modalidade);
+
+            _contexto.Update(atletaBanco);
+            await _contexto.SaveChangesAsync();
+            return View();
         }
     }
 }

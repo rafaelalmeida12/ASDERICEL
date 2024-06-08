@@ -32,7 +32,6 @@ C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsde
 C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Release\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Release\net7.0\scopedcss\bundle\AtletaAsdericel.styles.css
 C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Release\net7.0\scopedcss\projectbundle\AtletaAsdericel.bundle.scp.css
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Release\net7.0\AtletaAsdericel.csproj.CopyComplete
 C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Release\net7.0\AtletaAsdericel.dll
 C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Release\net7.0\refint\AtletaAsdericel.dll
 C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Release\net7.0\AtletaAsdericel.pdb
@@ -40,3 +39,5 @@ C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsde
 C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Release\net7.0\ref\AtletaAsdericel.dll
 C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Release\net7.0\Npgsql.dll
 C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Release\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Release\net7.0\AtletaAsdericel.sourcelink.json
+C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Release\net7.0\AtletaAs.E7AE40B7.Up2Date
