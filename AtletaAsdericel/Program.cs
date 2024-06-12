@@ -9,8 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-               options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+               options.UseNpgsql(builder.Configuration.GetConnectionString("AZURE_POSTGRESQL_CONNECTIONSTRING")));
+
+//AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 builder.Services.AddHttpClient<CorreiosService>();
 
 
