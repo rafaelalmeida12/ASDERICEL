@@ -1,5 +1,4 @@
 ﻿@model List<Atleta>
-
 @{
     ViewData["Title"] = "Lista de Atletas";
 }
@@ -9,7 +8,7 @@
         <h2>@ViewData["Title"]</h2>
     </div>
     <div >
-        <a  asp-action="Criar" class=" btn  btn-primary mb-3 btn-user btn-block">
+        <a  asp-action="Criar" class=" btn  btn-primary mb-3 btn-user btn-block fa fa-plus">
         Novo
     </a>
     </div>
@@ -33,16 +32,13 @@
                 <td>@atleta.Endereco.Logradouro</td>
                 <td>@atleta.Endereco.Uf</td>
                 <td>
-                    <a href="@Url.Action("Edit", new { id = atleta.Id })" class="btn btn-success btn-fab btn-round" title="Editar">
-                        <i class="material-icons">edit</i>
+                    <a href="@Url.Action("Edit", new { id = atleta.Id })" class="btn btn-success" title="Editar">
+                        <i class="fa fa-edit"></i>
                     </a>
                     <a href="@Url.Action("Delete", new { id = atleta.Id })" class="btn btn-danger btn-fab btn-round" title="Excluir">
-                        <i class="material-icons">remove_circle</i>
+                        <i class="fa fa-remove"></i>
                     </a>
                 </td>
-                <span class="material-symbols-outlined">
-                    edit
-                </span>
             </tr>
         }
     </tbody>
