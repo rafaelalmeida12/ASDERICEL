@@ -1,5 +1,6 @@
 ﻿@model AtletaAsdericel.ViewModels.GeralCreateViewModel
 @using AtletaAsdericel.Models.Enum
+@using AtletaAsdericel.Helpers
 
 @{
     ViewBag.Title = "Create";
@@ -11,20 +12,19 @@
 <form class="user" asp-action="Create">
 
     <div class="form-group row mt-4">
-        <div class="form-group row">
             <div class="col-sm-3">
                 <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Nome" required>
             </div>
             <div class="col-sm-3">
                 <input type="text" asp-for=NomeSocial class="form-control form-control-user" placeholder="Nome Social">
             </div>
-            <div class="col-sm-3 ">
+            <div class="col-md-3 ">
                 <input type="text" asp-for=Apelido class="form-control form-control-user" placeholder="Apelido">
             </div>
-            <div class="col-sm-3">
-                <input type="text" required asp-for="DataNascimento" id="dt" class="form-control form-control-user date " placeholder="Data de Nascimento">
-            </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Mae class="form-control form-control-user" placeholder="Nome da Mãe" required>
         </div>
+          
     </div>
     <div class="form-group row">
         <div class="col-md-3">
@@ -33,64 +33,74 @@
             </select>
         </div>
         <div class="col-sm-3">
+            <input type="text" asp-for=Pai class="form-control form-control-user" placeholder="Nome do Pai" required>
+        </div>
+        <div class="col-md-3">
+            <input type="text" asp-for="DataNascimento" required class="form-control form-control-user date " placeholder="Data de Nascimento">
+        </div>
+        <div class="col-sm-3">
             <input type="text" required asp-for=CPF class="form-control form-control-user cpf" placeholder="Cpf">
         </div>
         <div class="col-sm-3">
-            <input type="text"  asp-for=Passaporte class="form-control form-control-user cpf" placeholder="Passaporte">
+            <input type="text"  asp-for=Passaporte class="form-control form-control-user " placeholder="Passaporte">
         </div>
-        <div class="col-sm-3">
-            <input type="text" asp-for=NumeroSus class="form-control form-control-user cpf" placeholder="Número do SUS">
-        </div>
+     
     </div>
     <div class="form-group row">
         <div class="col-md-3">
-            <select asp-for="TipoSanguineo" type="text" asp-items="Html.GetEnumSelectList<ETipoSanguineo>()" class="form-control rounded-pill" placeholder="Selecione">
+            <select asp-for="TipoSanguineo" type="text" asp-items="EnumHelper.GetEnumSelectList<ETipoSanguineo>()" class="form-control rounded-pill" placeholder="Selecione" required>
                 <option value="">Selecione o Tipo Sanguíneo ...</option>
             </select>
         </div>
         <div class="col-sm-3">
-            <input type="text" required asp-for=RG class="form-control form-control-user cpf" placeholder="RG">
+            <input type="text" asp-for=NumeroSus class="form-control form-control-user " placeholder="Número do SUS">
         </div>
         <div class="col-sm-3">
-            <input type="text"  asp-for=OrgaoEmissor class="form-control form-control-user cpf" placeholder="Orgão Emissor">
+            <input type="text" required asp-for=RG class="form-control form-control-user " placeholder="RG" >
         </div>
         <div class="col-sm-3">
-            <input type="text"  asp-for=DataExpedicao class="form-control form-control-user cpf" placeholder="Data Expedição">
+            <input type="text" asp-for=OrgaoEmissor class="form-control form-control-user " placeholder="Orgão Emissor" required>
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=TipoDocumento class="form-control form-control-user cpf" placeholder="Tipo de Documento">
+            <input type="text" asp-for=DataExpedicao class="form-control form-control-user " placeholder="Data Expedição" required>
         </div>
-
-
     </div>
     <label>Dados endereço</label>
     <div class="form-group row">
         <div class="col-sm-3">
-            <input type="text" required asp-for="Endereco.Cep" class="form-control form-control-user" placeholder="Cep">
+            <input type="text" asp-for="Endereco.Cep" class="form-control form-control-user" required placeholder="Cep">
         </div>
         <div class="col-sm-3">
-            <input type="text" required asp-for=Endereco.Pais class="form-control form-control-user" placeholder="Pais">
-        </div>
-      @*  <div class="col-sm-3">
-            <select required asp-for="Endereco.Estado" asp-items="new SelectList(Model.Estados, nameof(Estado.Id), nameof(Estado.Nome))" class="form-control rounded-pill" placeholder="Selecione">
-                <option value="">Selecione o estado ...</option>
-            </select>
+            <input type="text" asp-for=Endereco.Logradouro class="form-control form-control-user" placeholder="Rua">
         </div>
         <div class="col-sm-3">
-            <select required asp-for="Endereco.Logradouro" asp-items="new SelectList(Model.Cidades, nameof(Cidade.Id), nameof(Cidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
-                <option value="">Selecione a cidade ...</option>
-            </select>
-        </div>*@
+            <input type="text" asp-for=Endereco.Bairro class="form-control form-control-user" placeholder="Bairro">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Endereco.Numero class="form-control form-control-user" placeholder="Número" required>
+        </div>
     </div>
     <div class="form-group row">
-        <div class="col-sm-3 ">
-            <input required type="text" asp-for=Endereco.Bairro class="form-control form-control-user" placeholder="Bairro">
+        <div class="col-sm-3">
+            <input type="text" asp-for=Endereco.Localidade class="form-control form-control-user" placeholder="Cidade">
         </div>
         <div class="col-sm-3">
-            <input required type="text" asp-for=Endereco.Numero class="form-control form-control-user" placeholder="Numero">
+            <input type="text" asp-for=Endereco.Uf class="form-control form-control-user" placeholder="Estado">
         </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Endereco.Pais class="form-control form-control-user" placeholder="País" required>
+        </div>
+        @*     <div class="col-sm-3">
+        <select asp-for="Endereco.Localidade" asp-items="new SelectList(Model.Cidades, nameof(Cidade.Id), nameof(Cidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+        <option value="">Selecione a cidade ...</option>
+        </select>
+        <div class="col-sm-3">
+        <select asp-for="Endereco.Uf" asp-items="new SelectList(Model.Estados, nameof(Estado.Id), nameof(Estado.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+        <option value="">Selecione o estado ...</option>
+        </select>
+        </div>
+        </div>*@
     </div>
-
     <button type="submit" class="btn btn-primary btn-user btn-block ">
         Gravar
     </button>
@@ -124,7 +134,27 @@
             $('#responsavelSelect').prop('disabled', true);
         }
     });
+    $('#Endereco_Cep').on('blur', function () {
+        // Pega o valor do campo de CEP
+        const cep = this.value;
 
+        $.getJSON(`https://viacep.com.br/ws/${cep}/json/`, function (data) {
+            // Atualiza os campos de endereço se a busca retornar com sucesso
+            if (!data.erro) {
+                $('#Endereco_Bairro').val(data.bairro);
+                $('#Endereco_Logradouro').val(data.logradouro);
+                $('#Endereco_Localidade').val(data.localidade);
+                $('#Endereco_Uf').val(data.uf);
+            } else {
+                alert("Endereco não encontrado")
+                // Limpa os campos de endereço se o CEP não for encontrado
+                $('#Endereco_Bairro').val('');
+                $('#Endereco_Logradouro').val('');
+                $('#Endereco_Localidade').val('');
+                $('#Endereco_Estado').val('');
+            }
+        });
+    });
 
 
 

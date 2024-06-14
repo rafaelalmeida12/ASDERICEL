@@ -13,7 +13,8 @@ namespace AtletaAsdericel.ViewModels
 
         public Evento ToEntity()
         {
-            return new Evento { Nome = Nome, Edicao = Edicao, Promotor = Promotor, Local = Local, DataInicio = DataInicio, DataTermino = DataTermino };
+            return new Evento { Nome = Nome, Edicao = Edicao, Promotor = Promotor, Local = Local, DataInicio = DataInicio.ToUniversalTime(), DataTermino = DataTermino.ToUniversalTime()
+        };
         }
     }
 }

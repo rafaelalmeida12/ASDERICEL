@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
-
-
-
-
-
-    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
-  @*   <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="~/AtletaAsdericel.styles.css" asp-append-version="true" />
+    @* js *@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script> *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
+    @* <script src="~/js/jquery.easing.min.js"></script>  *@
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
 
+
+
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/AtletaAsdericel.styles.css" asp-append-version="true" />
+    *@
     <style>
         #wrapper {
             display: flex;
@@ -34,15 +34,23 @@
         .warning-gradient {
             background: linear-gradient(to top, #0F5FA6, #074680); /* Substitua as cores pelo seu gradiente desejado */
         }
+
+        .fundo {
+            background: #e6c1a1
+        }
+
+        .fundo-btn {
+            background: #F27127
+        }
     </style>
 </head>
-<body id="page-top">
-    <div id="wrapper">
+<body id="page-top" >
+    <div id="wrapper" >
         <ul class="navbar-nav warning-gradient sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <li class=" sidebar-brand-text mx-3 align-items-center justify-content-center">
-                <a asp-action="Index" asp-controller="Home"> <img src="~/images/logo.png" style="width: 150px; height: auto;" /> </a>
+                <a asp-action="Index" asp-controller="Home"> <img src="~/images/Logo2024.png" style="width: 80px; height: auto;" /> </a>
             </li>
 
             <!-- Divider -->
@@ -55,7 +63,19 @@
                     <span>Home</span>
                 </a>
             </li>
-
+            @*  <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Components</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+            <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Custom Components:</h6>
+            <a class="collapse-item" href="buttons.html">Buttons</a>
+            <a class="collapse-item" href="cards.html">Cards</a>
+            </div>
+            </div>
+            </li> *@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -166,8 +186,8 @@
 
 
         </ul>
-        <div id="content-wrapper" class="d-flex flex-column">
-            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <div id="content-wrapper" class="d-flex flex-column ">
+            <nav class="navbar navbar-expand navbar-light fundo topbar mb-4 static-top shadow">
 
                 <!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -179,7 +199,7 @@
                     <div class="input-group">
                         <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar..." aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
+                            <button class="btn fundo-btn" type="button">
                                 <i class="fa fa-search fa-sm"></i>
                             </button>
                         </div>
@@ -265,7 +285,7 @@
                 </ul>
 
             </nav>
-            <div class="container-fluid">
+            <div class="container-fluid ">
                 @RenderBody()
             </div>
             <footer class="border-top text-muted mt-auto py-3">
@@ -282,7 +302,7 @@
     <script>
         $(document).ready(function () {
             // Aplica a máscara de data ao campo
-            $('.date').mask('00/00/0000');
+            $('.date').mask('00/00/0000', { placeholder: "Data de Nascimento" });
             $('.cpf').mask('000.000.000-00');
         });
     </script>

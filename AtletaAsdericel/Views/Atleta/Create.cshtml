@@ -9,7 +9,6 @@
 
 <form class="user" asp-action="Create">
     <div class="form-group row mt-4">
-        <div class="form-group row">
             <div class="col-sm-3">
                 <input type="text" asp-for=Nome class="form-control form-control-user" required placeholder="Nome">
             </div>
@@ -20,9 +19,8 @@
                 <input type="text" asp-for=Apelido class="form-control form-control-user" placeholder="Apelido">
             </div>
             <div class="col-sm-3">
-                <input type="text" asp-for="DataNascimento" class="form-control form-control-user date" required placeholder="Data de Nascimento">
+                <input type="text"  class="form-control form-control-user date" required placeholder="Data de Nascimento">
             </div>
-        </div>
     </div>
 
     <div class="form-group row">
@@ -132,7 +130,7 @@
             <input type="text" asp-for=Endereco.Uf class="form-control form-control-user" placeholder="Estado">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Endereco.Pais class="form-control form-control-user" placeholder="País">
+            <input type="text" asp-for=Endereco.Pais class="form-control form-control-user" placeholder="País" required>
         </div>
         @*     <div class="col-sm-3">
         <select asp-for="Endereco.Localidade" asp-items="new SelectList(Model.Cidades, nameof(Cidade.Id), nameof(Cidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">

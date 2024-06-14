@@ -27,8 +27,7 @@ namespace AtletaAsdericel.Controllers
         [HttpGet("Criar")]
         public async Task<ActionResult> Create()
         {
-            var model = new GeralCreateViewModel();
-            return View(model);
+            return View();
         }
 
         // GET: AtletaController1/Details/5
@@ -40,7 +39,7 @@ namespace AtletaAsdericel.Controllers
 
         // POST: AtletaController1/Create
         [ValidateAntiForgeryToken]
-        [HttpPost]
+        [HttpPost("Criar")]
         public ActionResult Create(GeralCreateViewModel viewModel)
         {
             try
@@ -50,12 +49,12 @@ namespace AtletaAsdericel.Controllers
                 {
                     return View(viewModel);
                 }
-                _context.Add(viewModel.ToEntity());
+                _context.Associado.Add(viewModel.ToEntity());
                 _context.SaveChanges();
 
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch(Exception e)
             {
                 return View(viewModel);
             }

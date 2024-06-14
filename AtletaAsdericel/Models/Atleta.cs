@@ -37,7 +37,7 @@ namespace AtletaAsdericel.Models
         public Escola Escola { get; set; }
         public int ModalidadeId { get; set; }
         public Modalidade Modalidade { get; set; }
-
+        //public IEnumerable<Modalidade> Modalidades { get; set; }
 
         public void Atualiza(Atleta atleta)
         {

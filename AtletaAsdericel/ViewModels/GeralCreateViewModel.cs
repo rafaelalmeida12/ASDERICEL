@@ -8,7 +8,9 @@ namespace AtletaAsdericel.ViewModels
         public string Nome { get; set; }
         public string? NomeSocial { get; set; }
         public string? Apelido { get; set; }
-        public DateTime DataNascimento { get; set; } 
+        public string Mae { get; set; }
+        public string? Pai { get; set; }
+        public DateTime DataNascimento { get; set; }
         public ESexo Sexo { get; set; }
         public string CPF { get; set; }
         public string RG { get; set; }
@@ -30,16 +32,17 @@ namespace AtletaAsdericel.ViewModels
                 Nome = this.Nome,
                 NomeSocial = this.NomeSocial,
                 Apelido = this.Apelido,
-                DataNascimento = DateTime.Now,
+                Mae = this.Mae,
+                Pai = this.Pai,
+                DataNascimento = this.DataNascimento.ToUniversalTime(),
                 Sexo = this.Sexo,
                 CPF = this.CPF,
-                Passaporte = this.Passaporte,
+                Passaporte = this.Passaporte??string.Empty,
                 NumeroSUS = this.NumeroSus,
                 TipoSanguineo = this.TipoSanguineo,
                 RG = this.RG,
                 OrgaoEmissor = this.OrgaoEmissor,
-                DataExpedicao = DateTime.Now,
-                TipoDocumento = this.TipoDocumento,
+                DataExpedicao = this.DataExpedicao.ToUniversalTime(),
                 Endereco = this.Endereco
             };
             return atleta;

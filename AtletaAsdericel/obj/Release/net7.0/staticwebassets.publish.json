@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Rer4V5CfG2xTaeKpl1UjfcYfFrscK+DHSv3fuxoBlD8=",
+  "Hash": "LiHv1+sw9ATC9g+mjPp8YbVb3RaX4+BXXEbEpj6C23c=",
   "Source": "AtletaAsdericel",
   "BasePath": "_content/AtletaAsdericel",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\js\\jquery.easing.min.js",
+      "SourceId": "AtletaAsdericel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\",
+      "BasePath": "_content/AtletaAsdericel",
+      "RelativePath": "js/jquery.easing.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jquery.easing.min.js"
     },
     {
       "Identity": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\js\\site.js",

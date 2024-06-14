@@ -9,31 +9,31 @@
 <form class="user " asp-action="create" method="post">
     <div class="form-group row mt-4 ">
         <div class="form-group row">
-            <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="col-sm-6 mb-3 ">
                 <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Nome">
             </div>
-            <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="col-sm-6 mb-3 ">
                 <select asp-for="Categoria" type="text" asp-items="Html.GetEnumSelectList<ECategoria>()" class="form-control rounded-pill" placeholder="Selecione">
                     <option value="">Selecione a categoria ...</option>
                 </select>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="col-sm-6 mb-3 ">
                 <select asp-for="Sexo" type="text" asp-items="Html.GetEnumSelectList<ESexo>()" class="form-control rounded-pill" placeholder="Selecione">
                     <option value="">Selecione o genero ...</option>
                 </select>
             </div>
-            <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="col-sm-6 mb-3 ">
                 <select asp-for="Sexo" type="text" asp-items="Html.GetEnumSelectList<ESexo>()" class="form-control rounded-pill" placeholder="Selecione">
                     <option value="">Selecione a prova ...</option>
                 </select>
             </div>
         </div>
     </div>
+    <div class="col-sm-6 mb-3 ">
     <button type="submit" class="btn btn-primary btn-user btn-block ">
         Gravar
     </button>
+    </div>
 </form>
 
 <div>

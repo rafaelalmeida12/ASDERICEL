@@ -3,6 +3,7 @@ using System;
 using AtletaAsdericel.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AtletaAsdericel.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240614170406_paiISnULL")]
+    partial class paiISnULL
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,12 +33,22 @@ namespace AtletaAsdericel.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Altura")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Apelido")
                         .HasColumnType("text");
 
                     b.Property<string>("CPF")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("Calca")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Camisa")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("DataExpedicao")
                         .HasColumnType("timestamp with time zone");
@@ -78,6 +91,10 @@ namespace AtletaAsdericel.Migrations
                     b.Property<string>("Passaporte")
                         .HasColumnType("text");
 
+                    b.Property<string>("Peso")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Profissao")
                         .HasColumnType("text");
 
@@ -87,6 +104,9 @@ namespace AtletaAsdericel.Migrations
 
                     b.Property<int>("Sexo")
                         .HasColumnType("integer");
+
+                    b.Property<string>("TipoDocumento")
+                        .HasColumnType("text");
 
                     b.Property<int>("TipoSanguineo")
                         .HasColumnType("integer");
