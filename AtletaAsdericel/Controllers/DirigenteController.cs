@@ -37,6 +37,10 @@ namespace AtletaAsdericel.Controllers
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return View(viewModel);
+                }
                 _context.Add(viewModel.ToEntity());
                 _context.SaveChanges();
 

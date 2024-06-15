@@ -4,8 +4,8 @@
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string INEP { get; set; }
-        public string Telefone { get; set; }
+        public string? INEP { get; set; }
+        public string? Telefone { get; set; }
         public string Municipio { get; set; }
     }
 }

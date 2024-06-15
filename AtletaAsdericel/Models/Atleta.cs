@@ -19,7 +19,6 @@ namespace AtletaAsdericel.Models
         public string RG { get; set; }
         public string? OrgaoEmissor { get; set; }
         public DateTime DataExpedicao { get; set; } = DateTime.Now;
-        public string? TipoDocumento { get; set; }
         public string? Passaporte { get; set; }
         public string? NumeroSUS { get; set; }
         public ETipoSanguineo TipoSanguineo { get; set; }
@@ -52,7 +51,6 @@ namespace AtletaAsdericel.Models
             this.RG = atleta.RG;
             this.OrgaoEmissor = atleta.OrgaoEmissor;
             this.DataExpedicao = atleta.DataExpedicao;
-            this.TipoDocumento = atleta.TipoDocumento;
             this.Passaporte = atleta.Passaporte;
             this.NumeroSUS = atleta.NumeroSUS;
             this.TipoSanguineo = atleta.TipoSanguineo;

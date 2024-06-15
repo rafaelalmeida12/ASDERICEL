@@ -71,7 +71,6 @@ namespace AtletaAsdericel.ViewModels
                 OrgaoEmissor = this.OrgaoEmissor,
                 DataExpedicao = this.DataExpedicao,
                 Passaporte = this.Passaporte,
-                TipoDocumento = this.TipoDocumento,
                 NumeroSUS = this.NumeroSus,
                 TipoSanguineo = this.TipoSanguineo,
                 Ensino = this.Ensino,

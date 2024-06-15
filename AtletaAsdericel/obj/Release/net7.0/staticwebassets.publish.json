@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LiHv1+sw9ATC9g+mjPp8YbVb3RaX4+BXXEbEpj6C23c=",
+  "Hash": "UKzo358nbAG478Sspx2Hepwj+4CXJk3CYcgujMK8WsA=",
   "Source": "AtletaAsdericel",
   "BasePath": "_content/AtletaAsdericel",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\images\\Logo2024.png",
+      "SourceId": "AtletaAsdericel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\",
+      "BasePath": "_content/AtletaAsdericel",
+      "RelativePath": "images/Logo2024.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Logo2024.png"
     },
     {
       "Identity": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\js\\jquery.easing.min.js",

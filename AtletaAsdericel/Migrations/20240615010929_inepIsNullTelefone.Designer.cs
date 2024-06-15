@@ -3,6 +3,7 @@ using System;
 using AtletaAsdericel.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AtletaAsdericel.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240615010929_inepIsNullTelefone")]
+    partial class inepIsNullTelefone
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -183,6 +186,9 @@ namespace AtletaAsdericel.Migrations
                     b.Property<int>("Sexo")
                         .HasColumnType("integer");
 
+                    b.Property<string>("TipoDocumento")
+                        .HasColumnType("text");
+
                     b.Property<int>("TipoSanguineo")
                         .HasColumnType("integer");
 
@@ -266,6 +272,7 @@ namespace AtletaAsdericel.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("CREF")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Calca")
@@ -307,7 +314,6 @@ namespace AtletaAsdericel.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("OrgaoEmissor")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Pai")
@@ -329,6 +335,9 @@ namespace AtletaAsdericel.Migrations
 
                     b.Property<int>("Sexo")
                         .HasColumnType("integer");
+
+                    b.Property<string>("TipoDocumento")
+                        .HasColumnType("text");
 
                     b.Property<int>("TipoSanguineo")
                         .HasColumnType("integer");

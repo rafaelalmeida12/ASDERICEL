@@ -18,7 +18,10 @@ namespace AtletaAsdericel.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var atletas = await _context.Atleta.Include(e => e.Endereco).ToListAsync();
+            var atletas = await _context.Atleta
+                                .Include(e => e.Endereco)
+                                .Include(e => e.Modalidade)
+                                .ToListAsync();
             return View(atletas);
         }
 
