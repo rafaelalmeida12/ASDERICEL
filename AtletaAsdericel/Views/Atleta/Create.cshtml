@@ -100,10 +100,13 @@
             <input type="text" asp-for=Escola.Municipio class="form-control form-control-user" placeholder="Município" required>
         </div>
         <div class="col-sm-3">
-            @*<select asp-for="Escola.Municipio" asp-items="new SelectList(Model.Cidades, nameof(Estado.Id), nameof(Estado.Nome))" class="form-control rounded-pill" placeholder="Selecione">
-            <option value="">Selecione a cidade ...</option>
-            </select>*@
+            <input type="text" asp-for=Escola.Estado class="form-control form-control-user" placeholder="Estado" required>
         </div>
+     @*    <div class="col-sm-3">
+            <select asp-for="Escola.Municipio" asp-items="new SelectList(Model.Cidades, nameof(Estado.Id), nameof(Estado.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+            <option value="">Selecione a cidade ...</option>
+            </select>
+        </div> *@
     </div>
 
     <label>Dados endereço</label>
