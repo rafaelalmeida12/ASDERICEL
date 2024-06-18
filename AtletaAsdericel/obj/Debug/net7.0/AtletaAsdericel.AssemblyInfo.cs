@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AtletaAsdericel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e2fb3b99c948921c2b73b1a10b7d8438fa4a488")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0c5f158b7dc20177317c2fcfdf09e7f73309c40")]
 [assembly: System.Reflection.AssemblyProductAttribute("AtletaAsdericel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AtletaAsdericel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

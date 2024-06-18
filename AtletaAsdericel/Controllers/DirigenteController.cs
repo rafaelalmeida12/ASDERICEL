@@ -69,5 +69,22 @@ namespace AtletaAsdericel.Controllers
             return View();
         }
 
+
+        [HttpGet("Delete")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var atleta = await _context.Dirigente.FirstOrDefaultAsync(e => e.Id == id);
+            return View(atleta);
+        }
+
+        [HttpPost("Delete")]
+        public async Task<ActionResult> Delete(Dirigente dirigente)
+        {
+            var dirigenteBanco = await _context.Dirigente.FirstOrDefaultAsync(e => e.Id == dirigente.Id);
+            _context.Remove(dirigenteBanco);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

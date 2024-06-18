@@ -1,16 +1,16 @@
-﻿@model AtletaAsdericel.ViewModels.GeralCreateViewModel
+﻿@model AtletaAsdericel.Models.Associado
 @using AtletaAsdericel.Models.Enum
 @using AtletaAsdericel.Helpers
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Editar";
 }
 
-<h2>Cadastro Asdericel Geral</h2>
+<h2>Editar Asdericel Associado Geral</h2>
 <hr />
 
-<form class="user" asp-action="Create">
-
+<form class="user" asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
     <div class="form-group row mt-4">
             <div class="col-sm-3">
                 <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Nome" required>
@@ -53,7 +53,7 @@
             </select>
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=NumeroSus class="form-control form-control-user " placeholder="Número do SUS">
+            <input type="text" asp-for=NumeroSUS class="form-control form-control-user " placeholder="Número do SUS">
         </div>
         <div class="col-sm-3">
             <input type="text" required asp-for=RG class="form-control form-control-user " placeholder="RG" >
@@ -71,10 +71,10 @@
             <input type="text" asp-for="Endereco.Cep" class="form-control form-control-user" required placeholder="Cep">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Endereco.Logradouro class="form-control form-control-user" placeholder="Rua">
+            <input type="text" asp-for=Endereco.Logradouro class="form-control form-control-user" placeholder="Rua" required>
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Endereco.Bairro class="form-control form-control-user" placeholder="Bairro">
+            <input type="text" asp-for=Endereco.Bairro class="form-control form-control-user" placeholder="Bairro" required>
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=Endereco.Numero class="form-control form-control-user" placeholder="Número" required>
@@ -82,10 +82,10 @@
     </div>
     <div class="form-group row">
         <div class="col-sm-3">
-            <input type="text" asp-for=Endereco.Localidade class="form-control form-control-user" placeholder="Cidade">
+            <input type="text" asp-for=Endereco.Localidade class="form-control form-control-user" placeholder="Cidade" required>
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Endereco.Uf class="form-control form-control-user" placeholder="Estado">
+            <input type="text" asp-for=Endereco.Uf class="form-control form-control-user" placeholder="Estado" required>
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=Endereco.Pais class="form-control form-control-user" placeholder="País" required>

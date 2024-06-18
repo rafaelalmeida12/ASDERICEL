@@ -13,7 +13,7 @@
                 <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Nome">
             </div>
             <div class="col-sm-6">
-                <select asp-for="TipoProva" type="text" asp-items="Html.GetEnumSelectList<ETipoProva>()" class="form-control rounded-pill" placeholder="Selecione">
+                <select asp-for="TipoProva" multiple type="text" asp-items="Html.GetEnumSelectList<ETipoProva>()" class="form-control rounded-pill" placeholder="Selecione">
                     <option value="">Selecione a categoria ...</option>
                 </select>
             </div>

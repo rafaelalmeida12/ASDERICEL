@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\controllers\\atletacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\controllers\\atletacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\controllers\\modalidadecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\controllers\\modalidadecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\views\\atleta\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\views\\atleta\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\models\\modalidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\models\\modalidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\views\\atleta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\views\\atleta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\views\\modalidade\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\views\\modalidade\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,41 +66,41 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ModalidadeController.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Controllers\\ModalidadeController.cs",
+              "RelativeDocumentMoniker": "AtletaAsdericel\\Controllers\\ModalidadeController.cs",
+              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Controllers\\ModalidadeController.cs",
+              "RelativeToolTip": "AtletaAsdericel\\Controllers\\ModalidadeController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAnwB0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T20:05:00.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Views\\Atleta\\Index.cshtml",
-              "RelativeDocumentMoniker": "AtletaAsdericel\\Views\\Atleta\\Index.cshtml",
-              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Views\\Atleta\\Index.cshtml",
-              "RelativeToolTip": "AtletaAsdericel\\Views\\Atleta\\Index.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACUAAAAwAAAA",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Views\\Modalidade\\Create.cshtml",
+              "RelativeDocumentMoniker": "AtletaAsdericel\\Views\\Modalidade\\Create.cshtml",
+              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Views\\Modalidade\\Create.cshtml",
+              "RelativeToolTip": "AtletaAsdericel\\Views\\Modalidade\\Create.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-15T17:54:33.038Z",
+              "WhenOpened": "2024-06-17T20:04:06.953Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Views\\Atleta\\Delete.cshtml",
-              "RelativeDocumentMoniker": "AtletaAsdericel\\Views\\Atleta\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Views\\Atleta\\Delete.cshtml",
-              "RelativeToolTip": "AtletaAsdericel\\Views\\Atleta\\Delete.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-15T17:53:22.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AtletaController.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Controllers\\AtletaController.cs",
-              "RelativeDocumentMoniker": "AtletaAsdericel\\Controllers\\AtletaController.cs",
-              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Controllers\\AtletaController.cs",
-              "RelativeToolTip": "AtletaAsdericel\\Controllers\\AtletaController.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAywE0AAAAAAAAA",
+              "Title": "Modalidade.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Models\\Modalidade.cs",
+              "RelativeDocumentMoniker": "AtletaAsdericel\\Models\\Modalidade.cs",
+              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Models\\Modalidade.cs",
+              "RelativeToolTip": "AtletaAsdericel\\Models\\Modalidade.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T01:39:36.561Z",
+              "WhenOpened": "2024-06-17T19:43:50.186Z",
               "EditorCaption": ""
             }
           ]

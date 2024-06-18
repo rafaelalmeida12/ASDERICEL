@@ -1,4 +1,5 @@
 ﻿using AtletaAsdericel.Data;
+using AtletaAsdericel.Models;
 using AtletaAsdericel.Services;
 using AtletaAsdericel.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -54,25 +55,30 @@ namespace AtletaAsdericel.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return View(viewModel);
             }
         }
+        [HttpGet("Editar")]
 
-        // GET: AtletaController1/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var geral = await _context.Associado.Include(e=>e.Endereco).FirstOrDefaultAsync(a => a.Id == id);
+            return View(geral);
         }
-
-        // POST: AtletaController1/Edit/5
-        [HttpPost]
+        [HttpPost("Editar")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(Associado associado)
         {
             try
             {
+                var associadoBanco = await _context.Associado.Include(e => e.Endereco).FirstOrDefaultAsync(e => e.Id == associado.Id);
+                associadoBanco.Atualiza(associado);
+
+                _context.Update(associadoBanco);
+                await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -81,25 +87,22 @@ namespace AtletaAsdericel.Controllers
             }
         }
 
-        // GET: AtletaController1/Delete/5
-        public ActionResult Delete(int id)
+
+        [HttpGet("Delete")]
+        public async Task<ActionResult> Delete(int id)
         {
-            return View();
+            var associado = await _context.Associado.FirstOrDefaultAsync(e => e.Id == id);
+            return View(associado);
         }
 
-        // POST: AtletaController1/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        [HttpPost("Delete")]
+        public async Task<ActionResult> Delete(Associado associado)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            var atletaBanco = await _context.Associado.FirstOrDefaultAsync(e => e.Id == associado.Id);
+            _context.Remove(atletaBanco);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }
