@@ -5,7 +5,11 @@ namespace AtletaAsdericel.Controllers
     public class UsuarioController : Controller
     {
 
-        public IActionResult Criar()
+        public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult Registrar()
         {
             return View();
         }
