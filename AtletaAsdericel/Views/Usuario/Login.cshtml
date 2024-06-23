@@ -13,15 +13,18 @@
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                            <img src="~/images/logo2024.png" style="width: 200px; " alt="Alternate Text" />
+                        </div>
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                 </div>
-                                <form class="user">
+                                <form class="user" asp-action="Login" method="post">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user"
+                                        <input  class="form-control form-control-user"
                                                asp-for="Nome" aria-describedby="emailHelp"
                                                placeholder="Enter Email Address...">
                                     </div>

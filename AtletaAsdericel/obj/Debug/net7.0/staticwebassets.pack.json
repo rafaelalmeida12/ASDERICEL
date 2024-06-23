@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\js\\jquery.easing.min.js"
     },
     {
+      "Id": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\js\\sb-admin-2.min.js",
+      "PackagePath": "staticwebassets\\js\\sb-admin-2.min.js"
+    },
+    {
       "Id": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

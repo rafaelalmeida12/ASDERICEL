@@ -4,12 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AtletaAsdericel.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<Usuario>
     {
-        public ApplicationDbContext()
-        {
-
-        }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
          : base(options)
         {

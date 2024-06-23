@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\viewmodels\\criarusuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\viewmodels\\criarusuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\documentos\\onedrive\\documentos\\projeto youpp\\youppcore\\atletaasdericel\\atletaasdericel\\atletaasdericel.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\atletaasdericel.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,14 +75,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CriarUsuarioViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\ViewModels\\CriarUsuarioViewModel.cs",
-              "RelativeDocumentMoniker": "AtletaAsdericel\\ViewModels\\CriarUsuarioViewModel.cs",
-              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\ViewModels\\CriarUsuarioViewModel.cs",
-              "RelativeToolTip": "AtletaAsdericel\\ViewModels\\CriarUsuarioViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Views\\Usuario\\Index.cshtml",
+              "RelativeDocumentMoniker": "AtletaAsdericel\\Views\\Usuario\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Views\\Usuario\\Index.cshtml",
+              "RelativeToolTip": "AtletaAsdericel\\Views\\Usuario\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-23T00:56:49.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AtletaAsdericel\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AtletaAsdericel\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADcAAAAAAAAAAAAcwEgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-22T23:35:36.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "AtletaAsdericel\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "AtletaAsdericel\\Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAIA2wAsAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T02:24:43.377Z",
+              "WhenOpened": "2024-06-22T22:56:04.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AtletaAsdericel",
+              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\AtletaAsdericel.csproj",
+              "RelativeDocumentMoniker": "AtletaAsdericel\\AtletaAsdericel.csproj",
+              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\AtletaAsdericel.csproj",
+              "RelativeToolTip": "AtletaAsdericel\\AtletaAsdericel.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-22T23:22:13.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Program.cs",
+              "RelativeDocumentMoniker": "AtletaAsdericel\\Program.cs",
+              "ToolTip": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\Program.cs",
+              "RelativeToolTip": "AtletaAsdericel\\Program.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAA2wDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T23:00:59.112Z",
               "EditorCaption": ""
             }
           ]
