@@ -1,20 +1,20 @@
 using AtletaAsdericel.Data;
+using AtletaAsdericel.Helpers;
 using AtletaAsdericel.Models;
 using AtletaAsdericel.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie( options =>
-    {
-        options.LoginPath = "/Usuario/Login";
-        options.AccessDeniedPath = "/Usuario/AccessDenied";
-    });
+//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+//    .AddCookie( options =>
+//    {
+//        options.LoginPath = "/Usuario/Login";
+//        options.AccessDeniedPath = "/Usuario/AccessDenied";
+//    });
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -42,12 +42,14 @@ builder.Services.AddDefaultIdentity<Usuario>(options =>
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireLowercase = false;
 })
-.AddEntityFrameworkStores<ApplicationDbContext>()
+ .AddRoles<IdentityRole>()
+ .AddEntityFrameworkStores<ApplicationDbContext>()
  .AddDefaultTokenProviders();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/usuario/login"; // Set your custom login path here
+    options.AccessDeniedPath = "/usuario/acessonegado"; // Defina o caminho de acesso negado personalizado aqui
 });
 
 builder.Services.AddScoped<UserManager<Usuario>>();
@@ -55,12 +57,23 @@ builder.Services.AddScoped<SignInManager<Usuario>>();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+    var userManager = services.GetRequiredService<UserManager<Usuario>>();
+    await ApplicationDbContextSeed.SeedRolesAsync(roleManager);
+    //await ApplicationDbContextSeed.SeedAdminUserAsync(userManager, roleManager);
+}
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 

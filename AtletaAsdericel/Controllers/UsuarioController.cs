@@ -1,5 +1,7 @@
-﻿using AtletaAsdericel.Models;
+﻿using AtletaAsdericel.Migrations;
+using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,6 +16,7 @@ namespace AtletaAsdericel.Controllers
             _signInManager = signInManager;
             _userManager = userManager;
         }
+        [Authorize(Roles = "User")]
         [HttpGet]
         public IActionResult Index()
         {
@@ -54,6 +57,9 @@ namespace AtletaAsdericel.Controllers
                 ModelState.AddModelError("", "Inválido login");
                 return View(login);
             }
+            else { 
+            
+            }
             return View();
         }
         [HttpGet]
@@ -68,21 +74,22 @@ namespace AtletaAsdericel.Controllers
             {
                 Usuario usuario = new()
                 {
-                    UserName=model.Nome,
+                    UserName = model.Nome,
                     NormalizedUserName = model.Nome,
                     Email = model.Email,
-                    Nome= model.Nome,
-                    Senha=model.Senha,
-                    Perfil="ADM"
+                    Nome = model.Nome,
+                    Senha = model.Senha,
+                    Perfil = "ADM"
                 };
 
-                var result = await _userManager.CreateAsync(usuario, model.Senha!);
-                if (result.Succeeded)
+                var user = await _userManager.CreateAsync(usuario, model.Senha!);
+                if (user.Succeeded)
                 {
-                    await _signInManager.SignInAsync(usuario, false);
+                    await _userManager.AddToRoleAsync(usuario, model.Perfil);
+                    //await _signInManager.SignInAsync(usuario, false);
                     return RedirectToAction("Index", "Home");
                 }
-                foreach (var error in result.Errors)
+                foreach (var error in user.Errors)
                 {
                     ModelState.AddModelError("", error.Description);
                 }
