@@ -10,41 +10,41 @@ namespace AtletaAsdericel.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
-                name: "ModalidadeId",
-                table: "Atleta",
-                type: "integer",
-                nullable: false,
-                defaultValue: 0);
+            //migrationBuilder.AddColumn<int>(
+            //    name: "ModalidadeId",
+            //    table: "Atleta",
+            //    type: "integer",
+            //    nullable: false,
+            //    defaultValue: 0);
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Atleta_ModalidadeId",
-                table: "Atleta",
-                column: "ModalidadeId");
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_Atleta_ModalidadeId",
+            //    table: "Atleta",
+            //    column: "ModalidadeId");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_Atleta_Modalidades_ModalidadeId",
-                table: "Atleta",
-                column: "ModalidadeId",
-                principalTable: "Modalidades",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+            //migrationBuilder.AddForeignKey(
+            //    name: "FK_Atleta_Modalidades_ModalidadeId",
+            //    table: "Atleta",
+            //    column: "ModalidadeId",
+            //    principalTable: "Modalidades",
+            //    principalColumn: "Id",
+            //    onDelete: ReferentialAction.Cascade);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Atleta_Modalidades_ModalidadeId",
-                table: "Atleta");
+            //migrationBuilder.DropForeignKey(
+            //    name: "FK_Atleta_Modalidades_ModalidadeId",
+            //    table: "Atleta");
 
-            migrationBuilder.DropIndex(
-                name: "IX_Atleta_ModalidadeId",
-                table: "Atleta");
+            //migrationBuilder.DropIndex(
+            //    name: "IX_Atleta_ModalidadeId",
+            //    table: "Atleta");
 
-            migrationBuilder.DropColumn(
-                name: "ModalidadeId",
-                table: "Atleta");
+            //migrationBuilder.DropColumn(
+            //    name: "ModalidadeId",
+            //    table: "Atleta");
         }
     }
 }

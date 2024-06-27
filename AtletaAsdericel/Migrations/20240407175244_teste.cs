@@ -235,6 +235,135 @@ namespace AtletaAsdericel.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Atleta",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Pai = table.Column<string>(type: "text", nullable: true),
+                    Mae = table.Column<string>(type: "text", nullable: false),
+                    Nome = table.Column<string>(type: "text", nullable: false),
+                    NomeSocial = table.Column<string>(type: "text", nullable: true),
+                    Apelido = table.Column<string>(type: "text", nullable: true),
+                    DataNascimento = table.Column<DateTime>(type: "date", nullable: false),
+                    Sexo = table.Column<string>(type: "text", nullable: false),
+                    CPF = table.Column<string>(type: "text", nullable: false),
+                    RG = table.Column<string>(type: "text", nullable: false),
+                    OrgaoEmissor = table.Column<string>(type: "text", nullable: true),
+                    DataExpedicao = table.Column<DateTime>(type: "date", nullable: false, defaultValueSql: "CURRENT_DATE"),
+                    Passaporte = table.Column<string>(type: "text", nullable: true),
+                    NumeroSUS = table.Column<string>(type: "text", nullable: true),
+                    TipoSanguineo = table.Column<string>(type: "text", nullable: false),
+                    EstadoCivil = table.Column<string>(type: "text", nullable: false),
+                    Profissao = table.Column<string>(type: "text", nullable: true),
+                    Ensino = table.Column<string>(type: "text", nullable: false),
+                    Peso = table.Column<string>(type: "text", nullable: false),
+                    Altura = table.Column<string>(type: "text", nullable: false),
+                    Camisa = table.Column<string>(type: "text", nullable: false),
+                    Calca = table.Column<string>(type: "text", nullable: false),
+                    EnderecoId = table.Column<int>(type: "int", nullable: false),
+                    EscolaId = table.Column<int>(type: "int", nullable: false),
+                    ModalidadeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Atletas", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Atletas_Endereco_EnderecoId",
+                        column: x => x.EnderecoId,
+                        principalTable: "Endereco",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Atletas_Escolas_EscolaId",
+                        column: x => x.EscolaId,
+                        principalTable: "Escolas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Atletas_Modalidades_ModalidadeId",
+                        column: x => x.ModalidadeId,
+                        principalTable: "Modalidades",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Atletas_EnderecoId",
+                table: "Atletas",
+                column: "EnderecoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Atletas_EscolaId",
+                table: "Atletas",
+                column: "EscolaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Atletas_ModalidadeId",
+                table: "Atletas",
+                column: "ModalidadeId");
+
+            migrationBuilder.CreateTable(
+                name: "Dirigentes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Pai = table.Column<string>(type: "text", nullable: true),
+                    Mae = table.Column<string>(type: "text", nullable: false),
+                    Nome = table.Column<string>(type: "text", nullable: false),
+                    NomeSocial = table.Column<string>(type: "text", nullable: true),
+                    Apelido = table.Column<string>(type: "text", nullable: true),
+                    DataNascimento = table.Column<DateTime>(type: "date", nullable: false),
+                    Sexo = table.Column<string>(type: "text", nullable: false),
+                    CPF = table.Column<string>(type: "text", nullable: false),
+                    RG = table.Column<string>(type: "text", nullable: false),
+                    OrgaoEmissor = table.Column<string>(type: "text", nullable: false),
+                    DataExpedicao = table.Column<DateTime>(type: "date", nullable: false, defaultValueSql: "CURRENT_DATE"),
+                    Profissao = table.Column<string>(type: "text", nullable: true),
+                    Passaporte = table.Column<string>(type: "text", nullable: true),
+                    NumeroSUS = table.Column<string>(type: "text", nullable: true),
+                    CREF = table.Column<string>(type: "text", nullable: true),
+                    Peso = table.Column<string>(type: "text", nullable: false),
+                    Altura = table.Column<string>(type: "text", nullable: false),
+                    Camisa = table.Column<string>(type: "text", nullable: false),
+                    Calca = table.Column<string>(type: "text", nullable: false),
+                    TipoSanguineo = table.Column<string>(type: "text", nullable: false),
+                    EstadoCivil = table.Column<string>(type: "text", nullable: false),
+                    Ensino = table.Column<string>(type: "text", nullable: false),
+                    EnderecoId = table.Column<int>(type: "int", nullable: false),
+                    ModalidadeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Dirigentes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Dirigentes_Endereco_EnderecoId",
+                        column: x => x.EnderecoId,
+                        principalTable: "Endereco",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Dirigentes_Modalidades_ModalidadeId",
+                        column: x => x.ModalidadeId,
+                        principalTable: "Modalidades",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Dirigentes_EnderecoId",
+                table: "Dirigentes",
+                column: "EnderecoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Dirigentes_ModalidadeId",
+                table: "Dirigentes",
+                column: "ModalidadeId");
+
+
+
             migrationBuilder.InsertData(
                 table: "Cidades",
                 columns: new[] { "Id", "Nome" },
@@ -342,6 +471,12 @@ namespace AtletaAsdericel.Migrations
 
             migrationBuilder.DropTable(
                 name: "Modalidades");
+
+            migrationBuilder.DropTable(
+                name: "Atletas");
+
+            migrationBuilder.DropTable(
+                name: "Dirigentes");
 
             migrationBuilder.DropTable(
                 name: "Evento");

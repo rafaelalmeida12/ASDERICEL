@@ -27,37 +27,37 @@ namespace AtletaAsdericel.Migrations
                 oldClrType: typeof(DateTime),
                 oldType: "timestamp without time zone");
 
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "DataNascimento",
-                table: "Dirigente",
-                type: "timestamp with time zone",
-                nullable: false,
-                oldClrType: typeof(DateTime),
-                oldType: "timestamp without time zone");
+            //migrationBuilder.AlterColumn<DateTime>(
+            //    name: "DataNascimento",
+            //    table: "Dirigente",
+            //    type: "timestamp with time zone",
+            //    nullable: false,
+            //    oldClrType: typeof(DateTime),
+            //    oldType: "timestamp without time zone");
 
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "DataExpedicao",
-                table: "Dirigente",
-                type: "timestamp with time zone",
-                nullable: false,
-                oldClrType: typeof(DateTime),
-                oldType: "timestamp without time zone");
+            //migrationBuilder.AlterColumn<DateTime>(
+            //    name: "DataExpedicao",
+            //    table: "Dirigente",
+            //    type: "timestamp with time zone",
+            //    nullable: false,
+            //    oldClrType: typeof(DateTime),
+            //    oldType: "timestamp without time zone");
 
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "DataNascimento",
-                table: "Atleta",
-                type: "timestamp with time zone",
-                nullable: false,
-                oldClrType: typeof(DateTime),
-                oldType: "timestamp without time zone");
+            //migrationBuilder.AlterColumn<DateTime>(
+            //    name: "DataNascimento",
+            //    table: "Atleta",
+            //    type: "timestamp with time zone",
+            //    nullable: false,
+            //    oldClrType: typeof(DateTime),
+            //    oldType: "timestamp without time zone");
 
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "DataExpedicao",
-                table: "Atleta",
-                type: "timestamp with time zone",
-                nullable: false,
-                oldClrType: typeof(DateTime),
-                oldType: "timestamp without time zone");
+            //migrationBuilder.AlterColumn<DateTime>(
+            //    name: "DataExpedicao",
+            //    table: "Atleta",
+            //    type: "timestamp with time zone",
+            //    nullable: false,
+            //    oldClrType: typeof(DateTime),
+            //    oldType: "timestamp without time zone");
 
             migrationBuilder.AlterColumn<string>(
                 name: "Passaporte",
@@ -103,37 +103,37 @@ namespace AtletaAsdericel.Migrations
                 oldClrType: typeof(DateTime),
                 oldType: "timestamp with time zone");
 
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "DataNascimento",
-                table: "Dirigente",
-                type: "timestamp without time zone",
-                nullable: false,
-                oldClrType: typeof(DateTime),
-                oldType: "timestamp with time zone");
+            //migrationBuilder.AlterColumn<DateTime>(
+            //    name: "DataNascimento",
+            //    table: "Dirigente",
+            //    type: "timestamp without time zone",
+            //    nullable: false,
+            //    oldClrType: typeof(DateTime),
+            //    oldType: "timestamp with time zone");
 
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "DataExpedicao",
-                table: "Dirigente",
-                type: "timestamp without time zone",
-                nullable: false,
-                oldClrType: typeof(DateTime),
-                oldType: "timestamp with time zone");
+            //migrationBuilder.AlterColumn<DateTime>(
+            //    name: "DataExpedicao",
+            //    table: "Dirigente",
+            //    type: "timestamp without time zone",
+            //    nullable: false,
+            //    oldClrType: typeof(DateTime),
+            //    oldType: "timestamp with time zone");
 
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "DataNascimento",
-                table: "Atleta",
-                type: "timestamp without time zone",
-                nullable: false,
-                oldClrType: typeof(DateTime),
-                oldType: "timestamp with time zone");
+            //migrationBuilder.AlterColumn<DateTime>(
+            //    name: "DataNascimento",
+            //    table: "Atleta",
+            //    type: "timestamp without time zone",
+            //    nullable: false,
+            //    oldClrType: typeof(DateTime),
+            //    oldType: "timestamp with time zone");
 
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "DataExpedicao",
-                table: "Atleta",
-                type: "timestamp without time zone",
-                nullable: false,
-                oldClrType: typeof(DateTime),
-                oldType: "timestamp with time zone");
+            //migrationBuilder.AlterColumn<DateTime>(
+            //    name: "DataExpedicao",
+            //    table: "Atleta",
+            //    type: "timestamp without time zone",
+            //    nullable: false,
+            //    oldClrType: typeof(DateTime),
+            //    oldType: "timestamp with time zone");
 
             migrationBuilder.AlterColumn<string>(
                 name: "Passaporte",

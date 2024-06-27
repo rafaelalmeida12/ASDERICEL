@@ -12,8 +12,8 @@ namespace AtletaAsdericel.Data
         }
 
         public DbSet<Associado> Associado { get; set; }
-        public DbSet<Dirigente> Dirigente { get; set; }
-        public DbSet<Atleta> Atleta { get; set; }
+        public DbSet<Dirigente> Dirigentes { get; set; }
+        public DbSet<Atleta> Atletas { get; set; }
         public DbSet<Modalidade> Modalidades { get; set; }
         public DbSet<Escola> Escolas { get; set; }
         public DbSet<Cidade> Cidades { get; set; }
