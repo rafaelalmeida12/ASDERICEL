@@ -1,0 +1,293 @@
+﻿@model Dirigente
+
+<style>
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+        padding: 6px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    td {
+        font-size: 14px;
+        vertical-align: top;
+    }
+    @@media print {
+        .hidden-print {
+            display: none !important;
+        }
+
+        .navbar-nav, footer {
+            display: none !important;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 6px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 14px;
+            vertical-align: top;
+        }
+    }
+
+    .row-tables {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .ajuste-td{
+        margin-bottom: 20px !important;
+    }
+
+    .table-wrapper {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .table-wrapper:nth-child(odd) {
+        margin-right: 20px;
+    }
+
+    .table-wrapper table {
+        width: 100%;
+    }
+</style>
+
+<body class="bg-pattern">
+
+    <div class="container-fluid printable">
+        <div class="text-left">
+            <div class="row">
+                <div class="col-md-6 col-6 d-flex justify-content-start align-items-center">
+                    <img src="~/images/logo.png" width="200px" height="auto" alt="Asdericel - Clube de Campeões">
+                </div>
+                <div class="col-md-6 col-6 d-flex justify-content-end align-items-center">
+                    <h3 class="titulo-h3"><b>Asdericel - Associação de Desportos Reunidos Celestino José de Souza</b></h3>
+                </div>
+            </div>
+            <h2 class="mt-5 mb-5 text-center">Termo de Responsabilidade e Cessão de Direitos para Dirigente</h2>
+
+            
+            <h4>Dados do Dirigente</h4>
+            <div class="row row-tables">
+                <div class="table-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><b>Nome:</b> </td>
+                            </tr>
+                            <tr>
+                                <td><b>Nome Social:</b> </td>
+                            </tr>
+                            <tr>
+                                <td><b>RG:</b> </td>
+                            </tr>
+                            <tr>
+                                <td><b>Função:</b> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="justify-content-start"><b>CPF: </b> </td>
+                                <td class="justify-content-start" colspan="3" rowspan="1"><b> </b> </td>
+                            </tr>
+                            <tr>
+                                <td class="justify-content-start"><b>Orgão Emissor:</b> </td>
+                                <td class="justify-content-start" colspan="3"><b></b> </td>
+                            </tr>
+                            <tr>
+                                <td class="justify-content-start"><b>Data de Expedição:</b> </td>
+                                <td class="justify-content-start" rowspan="2"><b></b> </td>
+                                <td class="justify-content-start" rowspan="1"><b></b> </td>
+                            </tr>
+                            <tr>
+                                <td class="justify-content-start"><b>N° SUS:</b> </td>
+                                <td class="justify-content-start" rowspan="2"><b></b> </td>
+                                <td class="justify-content-start" rowspan="1"><b></b> </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><b>Apelido:</b> </td>
+                                <td><b>Sexo:</b> </td>
+                            </tr>
+                            <tr>
+                                <td><b>Bairro:</b> </td>
+                                <td><b>Cep:</b> </td>
+                            </tr>
+                            <tr>
+                                <td><b>Estado:</b> </td>
+                                <td><b>Cidade:</b> </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><b>Passaporte N°:</b> </td>
+                                <td><b>Tipo Passaporte:</b> </td>
+                            </tr>
+                            <tr>
+                                <td><b>Tipo Sangue:</b> </td>
+                                <td><b>Estado Civil:</b> </td>
+                            </tr>
+                            <tr>
+                                <td><b>Nacionalidade:</b> </td>
+                                <td><b>Profissão:</b> </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><b>Nível Ensino</b> </td>
+                                <td><b>Nenhum (&nbsp&nbsp) Fundamental (&nbsp&nbsp) Médio (&nbsp&nbsp) Superior (&nbsp&nbsp) Pós Graduação (&nbsp&nbsp) Mestrado (&nbsp&nbsp) Doutorado (&nbsp&nbsp) </b> <br /> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><b>Camisa</b> </td>
+                                <td><b>P (&nbsp&nbsp) M (&nbsp&nbsp) G (&nbsp&nbsp) GG (&nbsp&nbsp) EXG (&nbsp&nbsp)</b> </td>
+                            </tr>
+                            <tr>
+                                <td><b>Calça</b> </td>
+                                <td><b>P (&nbsp&nbsp) M (&nbsp&nbsp) G (&nbsp&nbsp) GG (&nbsp&nbsp) EXG (&nbsp&nbsp)</b> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+
+            <h4>Dados da Associação</h4>
+            <div class="row row-tables">
+                <div class="table-wrapper text-left">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><b>Nome do Clube:</b> Asdericel - Clube de Campeões</td>
+                            </tr>
+                            <tr>
+                                <td><b>Ano de Fundação:</b> 2001</td>
+                            </tr>
+                            <tr>
+                                <td><b>Modalidades:</b> Futsal, Basquetebol, Atletismo</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>CNPJ:</b> 08.586.377/0001-86
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <b>
+                                        Endereço: Rua Rui Barbosa, 1151
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Bairro: ARIGOLANDIA</b> </td>
+                            </tr>
+                            <tr>
+                                <td><b>Telefone: (69) 3321-7462</b> </td>
+                            </tr>
+                            <tr>
+                                <td><b>E-mail:</b> contato@asdericel.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="text-justify">
+                Pelo presente instrumento, na melhor forma de direito, o Asdericel - Clube de Campeões, através de seu representante legal acima indicado, declara que:
+                Está inscrito e participará das competições sob sua organização.
+                Através da assinatura do presente termo, autoriza em caráter universal, gratuito, irrevogável, irretratável e exclusivo, o uso do nome, voz, imagem, material biográfico, declarações, gravações, entrevistas e endossos atribuíveis ao clube para fins comerciais, promocionais e de divulgação em qualquer meio, sem limitação de tempo ou de número de vezes, conforme necessário para as atividades relacionadas ao clube.
+                Isenta os organizadores de qualquer responsabilidade por danos eventualmente causados durante as competições ou eventos associados ao Asdericel - Clube de Campeões.
+            </div>
+
+            <br><br><br>
+            <div class="text-center">
+                <b>Local:</b> ________________________________ <b>Data:</b> __________________________________
+            </div>
+         
+            <br><br>
+
+            <div class="text-center">
+                <br><br>____________________________________<br> <b>Representante do Asdericel - Clube de Campeões</b> <br>Assinatura e Carimbo
+            </div>
+
+            <br><br><br>
+        </div>
+
+        <div class="text-center hidden-print">
+            <button onclick="window.print();" class="btn btn-primary" title="Imprimir">
+                Imprimir
+            </button>
+           @* <button onclick="printDiv();" class="btn btn-primary" title="Imprimir">
+                Imprimir 2
+            </button>*@
+            <a asp-controller="Dirigente" asp-action="Index" class="btn btn-default" title="Voltar para a página anterior">Voltar</a>
+        </div>
+    </div>
+
+    <script>
+        function printDiv() {
+            var divContents = document.querySelector('.printable').innerHTML;
+            window.print(divContents);
+        }
+    </script>
+
+</body>

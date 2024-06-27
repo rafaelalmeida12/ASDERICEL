@@ -20,7 +20,7 @@ namespace AtletaAsdericel.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var atletas = await _context.Dirigente.Include(e => e.Endereco).ToListAsync();
+            var atletas = await _context.Dirigentes.Include(e => e.Endereco).ToListAsync();
             return View(atletas);
         }
 
@@ -31,16 +31,21 @@ namespace AtletaAsdericel.Controllers
             var model = new DirigenteCreateViewModel(modalidades);
             return View(model);
         }
+        [HttpGet("Termo")]
+        public ActionResult Termo(int id)
+        {
+            //var modalidades = _context.Modalidades.ToList();
+            //var model = new DirigenteCreateViewModel(modalidades);
+            //var dirigente = _context.Dirigentes.FirstOrDefault(i => i.Id == id);
+            //return View(dirigente);
+            return View();
+        }
         [ValidateAntiForgeryToken]
         [HttpPost("Criar")]
         public ActionResult Create(DirigenteCreateViewModel viewModel)
         {
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    return View(viewModel);
-                }
                 _context.Add(viewModel.ToEntity());
                 _context.SaveChanges();
 
@@ -51,17 +56,19 @@ namespace AtletaAsdericel.Controllers
                 return View(viewModel);
             }
         }
+
+
         [HttpGet("Editar")]
         public async Task<ActionResult> Edit(int id)
         {
-            var dirigente = await _context.Dirigente.Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == id);
+            var dirigente = await _context.Dirigentes.Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == id);
             return View(dirigente);
         }
 
         [HttpPost("Editar")]
         public async Task<ActionResult> Edit(Dirigente dirigente)
         {
-            var dirigenteBanco = await _context.Dirigente.Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == dirigente.Id);
+            var dirigenteBanco = await _context.Dirigentes.Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == dirigente.Id);
             dirigenteBanco.Atualiza(dirigente);
 
             _context.Update(dirigenteBanco);
@@ -73,14 +80,14 @@ namespace AtletaAsdericel.Controllers
         [HttpGet("Delete")]
         public async Task<ActionResult> Delete(int id)
         {
-            var atleta = await _context.Dirigente.FirstOrDefaultAsync(e => e.Id == id);
+            var atleta = await _context.Dirigentes.FirstOrDefaultAsync(e => e.Id == id);
             return View(atleta);
         }
 
         [HttpPost("Delete")]
         public async Task<ActionResult> Delete(Dirigente dirigente)
         {
-            var dirigenteBanco = await _context.Dirigente.FirstOrDefaultAsync(e => e.Id == dirigente.Id);
+            var dirigenteBanco = await _context.Dirigentes.FirstOrDefaultAsync(e => e.Id == dirigente.Id);
             _context.Remove(dirigenteBanco);
             await _context.SaveChangesAsync();
 
