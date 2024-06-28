@@ -18,7 +18,7 @@ namespace AtletaAsdericel.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var atletas = await _context.Atleta
+            var atletas = await _context.Atletas
                                 .Include(e => e.Endereco)
                                 .Include(e => e.Modalidade)
                                 .ToListAsync();
@@ -54,14 +54,14 @@ namespace AtletaAsdericel.Controllers
         [HttpGet("Editar")]
         public async Task<ActionResult> Edit(int id)
         {
-            var atleta = await _context.Atleta.Include(a=>a.Escola).Include(a=>a.Endereco).FirstOrDefaultAsync(e => e.Id == id);
+            var atleta = await _context.Atletas.Include(a=>a.Escola).Include(a=>a.Endereco).FirstOrDefaultAsync(e => e.Id == id);
             return View(atleta);
         }
 
         [HttpPost("Editar")]
         public async Task<ActionResult> Edit(Atleta atleta)
         {
-            var atletaBanco = await _context.Atleta.Include(a => a.Escola).Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == atleta.Id);
+            var atletaBanco = await _context.Atletas.Include(a => a.Escola).Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == atleta.Id);
             atletaBanco.Atualiza(atleta);
 
             _context.Update(atletaBanco);
@@ -72,14 +72,14 @@ namespace AtletaAsdericel.Controllers
         [HttpGet("Delete")]
         public async Task<ActionResult> Delete(int id)
         {
-            var atleta = await _context.Atleta.FirstOrDefaultAsync(e => e.Id == id);
+            var atleta = await _context.Atletas.FirstOrDefaultAsync(e => e.Id == id);
             return View(atleta);
         }
 
         [HttpPost("Delete")]
         public async Task<ActionResult> Delete(Atleta atleta)
         {
-            var atletaBanco = await _context.Atleta.FirstOrDefaultAsync(e => e.Id == atleta.Id);
+            var atletaBanco = await _context.Atletas.FirstOrDefaultAsync(e => e.Id == atleta.Id);
              _context.Remove(atletaBanco);
             await _context.SaveChangesAsync();
 

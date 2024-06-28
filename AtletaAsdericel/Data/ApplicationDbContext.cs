@@ -1,4 +1,5 @@
 ﻿using AtletaAsdericel.Models;
+using AtletaAsdericel.Models.Enum;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,8 @@ namespace AtletaAsdericel.Data
         public DbSet<Prova> Provas { get; set; }
         public DbSet<Responsavel> Responsavel { get; set; }
         public DbSet<Evento> Evento { get; set; }
+        public DbSet<Sexo> Sexo { get; set; }
+        public DbSet<CategoriaModalidade> CategoriaModalidade { get; set; }
 
         //public DbSet<ModalidadeAtleta> ModalidadesAtletas { get; set; }
 
@@ -67,12 +70,21 @@ namespace AtletaAsdericel.Data
                new Estado { Id = 26, Nome = "Sergipe", Sigla = "SE" },
                new Estado { Id = 27, Nome = "Tocantins", Sigla = "TO" }
            );
-            //modelBuilder.Entity<Associado>()
-            //    .ToTable("Associado")
-            //    .HasDiscriminator<string>("Discriminator")
-            //    .HasValue<Dirigente>("Dirigente")
-            //    .HasValue<Atleta>("Atleta");
 
+            modelBuilder.Entity<Sexo>().HasData(
+                new Sexo { Id = 1, Nome = "Masculino" },
+                new Sexo { Id = 2, Nome = "Feminino" }
+            );
+
+            modelBuilder.Entity<CategoriaModalidade>().HasData(
+                new CategoriaModalidade { Id = 1, Nome = "Mirim" },
+                new CategoriaModalidade { Id = 2, Nome = "Infantil" },
+                new CategoriaModalidade { Id = 3, Nome = "Sub13Misto" },
+                new CategoriaModalidade { Id = 4, Nome = "Sub15" },
+                new CategoriaModalidade { Id = 5, Nome = "Sub17" },
+                new CategoriaModalidade { Id = 6, Nome = "Sub20" },
+                new CategoriaModalidade { Id = 7, Nome = "Adulto" }
+            );
 
             base.OnModelCreating(modelBuilder);
         }

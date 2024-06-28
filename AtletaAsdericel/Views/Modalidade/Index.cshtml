@@ -8,10 +8,10 @@
     <div>
         <h2>@ViewData["Title"]</h2>
     </div>
-    <div >
-        <a  asp-action="create" class=" btn  btn-primary mb-3 btn-user btn-block">
-        Novo
-    </a>
+    <div>
+        <a asp-action="create" class=" btn  btn-primary mb-3 btn-user btn-block">
+            Novo
+        </a>
     </div>
 </div>
 
@@ -20,7 +20,7 @@
         <tr>
             <th>Nome</th>
             <th>Categoria</th>
-          
+
         </tr>
     </thead>
     <tbody>
@@ -28,8 +28,10 @@
         {
             <tr>
                 <td>@atleta.Nome</td>
-                <td>@atleta.Categoria</td>
-               
+                @foreach (var categoria in atleta.CategoriaModalidades)
+                {
+                    <td>@categoria.Nome</td>
+                }
             </tr>
         }
     </tbody>

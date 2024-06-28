@@ -2,6 +2,7 @@
 using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace AtletaAsdericel.Controllers
@@ -28,6 +29,10 @@ namespace AtletaAsdericel.Controllers
         {
             _contexto.Modalidades.Add(modalidade.ToEntity());
             await _contexto.SaveChangesAsync();
+         
+            _contexto.Modalidades.Add(modalidade.CategoriaIds);
+            _contexto.Sexo.Add(model);
+
             return RedirectToAction(nameof(Index));
         }
         [HttpGet("Editar")]

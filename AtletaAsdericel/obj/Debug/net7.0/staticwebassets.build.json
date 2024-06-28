@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dpRqgrbdlIQ8b9+cJSLTFRecSkVpPxif2dGnL7H0aoM=",
+  "Hash": "XblsiCnhABBGA0m4Tis72EOCKIoPleCU2aEW4ua+8KU=",
   "Source": "AtletaAsdericel",
   "BasePath": "_content/AtletaAsdericel",
   "Mode": "Default",
@@ -1269,6 +1269,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\images\\campeao.jpeg",
+      "SourceId": "AtletaAsdericel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\",
+      "BasePath": "_content/AtletaAsdericel",
+      "RelativePath": "images/campeao.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\campeao.jpeg"
     },
     {
       "Identity": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\wwwroot\\images\\logo.png",

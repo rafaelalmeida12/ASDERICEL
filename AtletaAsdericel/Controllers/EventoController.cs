@@ -39,14 +39,14 @@ namespace AtletaAsdericel.Controllers
         [HttpGet("Editar")]
         public async Task<ActionResult> Edit(int id)
         {
-            var atleta = await _context.Atleta.Include(a => a.Escola).Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == id);
+            var atleta = await _context.Atletas.Include(a => a.Escola).Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == id);
             return View(atleta);
         }
 
         [HttpPost("Editar")]
         public async Task<ActionResult> Edit(Atleta atleta)
         {
-            var atletaBanco = await _context.Atleta.Include(a => a.Escola).Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == atleta.Id);
+            var atletaBanco = await _context.Atletas.Include(a => a.Escola).Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == atleta.Id);
             atletaBanco.Atualiza(atleta);
 
             _context.Update(atletaBanco);

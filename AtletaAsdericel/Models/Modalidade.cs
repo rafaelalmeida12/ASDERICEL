@@ -1,21 +1,20 @@
-﻿using AtletaAsdericel.Models.Enum;
-
+﻿
 namespace AtletaAsdericel.Models
 {
     public class Modalidade
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public ESexo Sexo { get; set; }
-        public ECategoria Categoria { get; set; }
+        public List<Sexo> Sexos { get; set; }
+        public List<CategoriaModalidade> CategoriaModalidades { get; set; } = new();
         public int ModalidadePai { get; set; }
         //public IEnumerable<Prova> Provas { get; set; }
 
         internal void Atualiza(Modalidade modalidade)
         {
             Nome = modalidade.Nome;
-            Sexo = modalidade.Sexo;
-            Categoria = modalidade.Categoria;
+            Sexos = modalidade.Sexos;
+            CategoriaModalidades = modalidade.CategoriaModalidades;
             ModalidadePai = modalidade.ModalidadePai;
         }
     }
