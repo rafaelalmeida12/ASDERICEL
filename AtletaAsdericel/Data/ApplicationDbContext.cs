@@ -17,6 +17,7 @@ namespace AtletaAsdericel.Data
         public DbSet<Atleta> Atletas { get; set; }
         public DbSet<Modalidade> Modalidades { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Sexo> Sexo { get; set; }
         public DbSet<ModalidadeCategoria> ModalidadeCategorias { get; set; }
         public DbSet<ModalidadeSexo> ModalidadeSexos { get; set; }
         public DbSet<Escola> Escolas { get; set; }
@@ -25,7 +26,6 @@ namespace AtletaAsdericel.Data
         public DbSet<Prova> Provas { get; set; }
         public DbSet<Responsavel> Responsavel { get; set; }
         public DbSet<Evento> Evento { get; set; }
-        public DbSet<Sexo> Sexo { get; set; }
 
         //public DbSet<ModalidadeAtleta> ModalidadesAtletas { get; set; }
 

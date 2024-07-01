@@ -17,23 +17,46 @@ namespace AtletaAsdericel.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var modalidades = await _contexto.Modalidades.ToListAsync();
+            var modalidades = await _contexto.Modalidades.Include(m => m.ModalidadeCategorias).ToListAsync();
             return View(modalidades);
         }
         public IActionResult Create()
         {
-            return View();
+            var model = new ModalidadeCreateViewModel()
+            {
+                Categorias = new SelectList(_contexto.Categorias, "Id", "Nome"),
+                Sexos = new SelectList(_contexto.Sexo, "Id", "Nome")
+            };
+            return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> Create(ModalidadeCreateViewModel modalidade)
+        public async Task<IActionResult> Create(ModalidadeCreateViewModel viewModel)
         {
-            _contexto.Modalidades.Add(modalidade.ToEntity());
-            await _contexto.SaveChangesAsync();
-         
-            //_contexto.Modalidades.Add(modalidade.CategoriaIds);
-            //_contexto.Sexo.Add(model);
+           
+                var categorias = await _contexto.Categorias
+                    .Where(c => viewModel.CategoriaIds.Contains(c.Id))
+                    .ToListAsync();
 
-            return RedirectToAction(nameof(Index));
+                var sexos = await _contexto.Sexo
+                    .Where(s => viewModel.SexoIds.Contains(s.Id))
+                    .ToListAsync();
+
+                var modalidade = new Modalidade
+                {
+                    Nome = viewModel.Nome,
+                    ModalidadeCategorias = categorias.Select(c => new ModalidadeCategoria
+                    {
+                        CategoriaId = c.Id
+                    }).ToList(),
+                    ModalidadeSexos = sexos.Select(s => new ModalidadeSexo
+                    {
+                        SexoId = s.Id
+                    }).ToList()
+                };
+
+                _contexto.Modalidades.Add(modalidade);
+                await _contexto.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
         }
         [HttpGet("Editar")]
         public async Task<ActionResult> Edit(int id)

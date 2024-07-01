@@ -10,7 +10,8 @@ namespace AtletaAsdericel.ViewModels
         public bool IsModalidade { get; set; }
         public string Nome { get; set; }
         public SelectList Sexos { get; set; }
-        public SelectList CategoriaModalidades { get; set; }
+        public SelectList Categorias { get; set; }
+
         public List<int> SexoIds { get; set; } // Mudança para armazenar os IDs dos sexos selecionados
         public List<int> CategoriaIds { get; set; }
         public int ModalidadePai { get; set; }
