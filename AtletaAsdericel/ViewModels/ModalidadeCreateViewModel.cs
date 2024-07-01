@@ -6,6 +6,7 @@ namespace AtletaAsdericel.ViewModels
 {
     public class ModalidadeCreateViewModel
     {
+       
         public bool IsModalidade { get; set; }
         public string Nome { get; set; }
         public SelectList Sexos { get; set; }
@@ -14,6 +15,8 @@ namespace AtletaAsdericel.ViewModels
         public List<int> CategoriaIds { get; set; }
         public int ModalidadePai { get; set; }
         public IEnumerable<Prova> Provas { get; set; }
+
+        public ECategoria eCategoria { get; set; }
 
         internal Modalidade ToEntity()
         {

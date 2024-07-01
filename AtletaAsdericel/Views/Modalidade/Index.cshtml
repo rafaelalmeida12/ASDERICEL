@@ -28,9 +28,9 @@
         {
             <tr>
                 <td>@atleta.Nome</td>
-                @foreach (var categoria in atleta.CategoriaModalidades)
+                @foreach (var categoria in atleta.ModalidadeCategorias)
                 {
-                    <td>@categoria.Nome</td>
+                    <td>@categoria.Modalidade.Nome</td>
                 }
             </tr>
         }

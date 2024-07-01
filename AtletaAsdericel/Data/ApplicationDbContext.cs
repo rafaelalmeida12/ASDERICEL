@@ -16,6 +16,9 @@ namespace AtletaAsdericel.Data
         public DbSet<Dirigente> Dirigentes { get; set; }
         public DbSet<Atleta> Atletas { get; set; }
         public DbSet<Modalidade> Modalidades { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<ModalidadeCategoria> ModalidadeCategorias { get; set; }
+        public DbSet<ModalidadeSexo> ModalidadeSexos { get; set; }
         public DbSet<Escola> Escolas { get; set; }
         public DbSet<Cidade> Cidades { get; set; }
         public DbSet<Estado> Estados { get; set; }
@@ -23,14 +26,37 @@ namespace AtletaAsdericel.Data
         public DbSet<Responsavel> Responsavel { get; set; }
         public DbSet<Evento> Evento { get; set; }
         public DbSet<Sexo> Sexo { get; set; }
-        public DbSet<CategoriaModalidade> CategoriaModalidade { get; set; }
 
         //public DbSet<ModalidadeAtleta> ModalidadesAtletas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
+            modelBuilder.Entity<ModalidadeCategoria>()
+    .HasKey(mc => new { mc.ModalidadeId, mc.CategoriaId });
 
+            modelBuilder.Entity<ModalidadeCategoria>()
+                .HasOne(mc => mc.Modalidade)
+                .WithMany(m => m.ModalidadeCategorias)
+                .HasForeignKey(mc => mc.ModalidadeId);
+
+            modelBuilder.Entity<ModalidadeCategoria>()
+                .HasOne(mc => mc.Categoria)
+                .WithMany()
+                .HasForeignKey(mc => mc.CategoriaId);
+
+            modelBuilder.Entity<ModalidadeSexo>()
+                .HasKey(ms => new { ms.ModalidadeId, ms.SexoId });
+
+            modelBuilder.Entity<ModalidadeSexo>()
+                .HasOne(ms => ms.Modalidade)
+                .WithMany(m => m.ModalidadeSexos)
+                .HasForeignKey(ms => ms.ModalidadeId);
+
+            modelBuilder.Entity<ModalidadeSexo>()
+                .HasOne(ms => ms.Sexo)
+                .WithMany()
+                .HasForeignKey(ms => ms.SexoId);
 
             modelBuilder.Entity<Cidade>().HasData(
                 new Cidade { Id = 1, Nome = "Porto Velho" },
@@ -76,14 +102,14 @@ namespace AtletaAsdericel.Data
                 new Sexo { Id = 2, Nome = "Feminino" }
             );
 
-            modelBuilder.Entity<CategoriaModalidade>().HasData(
-                new CategoriaModalidade { Id = 1, Nome = "Mirim" },
-                new CategoriaModalidade { Id = 2, Nome = "Infantil" },
-                new CategoriaModalidade { Id = 3, Nome = "Sub13Misto" },
-                new CategoriaModalidade { Id = 4, Nome = "Sub15" },
-                new CategoriaModalidade { Id = 5, Nome = "Sub17" },
-                new CategoriaModalidade { Id = 6, Nome = "Sub20" },
-                new CategoriaModalidade { Id = 7, Nome = "Adulto" }
+            modelBuilder.Entity<Categoria>().HasData(
+                new Categoria { Id = 1, Nome = "Mirim" },
+                new Categoria { Id = 2, Nome = "Infantil" },
+                new Categoria { Id = 3, Nome = "Sub13Misto" },
+                new Categoria { Id = 4, Nome = "Sub15" },
+                new Categoria { Id = 5, Nome = "Sub17" },
+                new Categoria { Id = 6, Nome = "Sub20" },
+                new Categoria { Id = 7, Nome = "Adulto" }
             );
 
             base.OnModelCreating(modelBuilder);
