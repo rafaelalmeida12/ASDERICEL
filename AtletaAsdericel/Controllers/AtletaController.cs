@@ -50,7 +50,15 @@ namespace AtletaAsdericel.Controllers
                 return View(viewModel);
             }
         }
-
+        [HttpGet("Termo")]
+        public ActionResult Termo(int id)
+        {
+            //var modalidades = _context.Modalidades.ToList();
+            //var model = new DirigenteCreateViewModel(modalidades);
+            //var dirigente = _context.Dirigentes.FirstOrDefault(i => i.Id == id);
+            //return View(dirigente);
+            return View();
+        }
         [HttpGet("Editar")]
         public async Task<ActionResult> Edit(int id)
         {

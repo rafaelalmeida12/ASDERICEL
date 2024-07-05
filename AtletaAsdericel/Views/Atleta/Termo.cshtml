@@ -1,4 +1,4 @@
-﻿@model Dirigente
+﻿@model Atleta
 
 <style>
 
@@ -90,7 +90,7 @@
                     <h3 class="titulo-h3"><b>ASSOCIAÇÃO DE DESPORTOS REUNIDOS CELESTINO JOSE DE SOUZA</b></h3>
                 </div>
             </div>
-            <h2 class="mt-5 mb-5 text-center">TERMO CESSÃO DE DIREITOS - DIRIGENTE</h2>
+            <h2 class="mt-5 mb-5 text-center">TERMO DE RESPONSABILIDADE E CESSÃO DE DIREITOS -  ATLETA</h2>
 
 
             <div class="row row-tables">
@@ -120,8 +120,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="justify-content-start" ><b>CODIGO: </b> </td>
-                                <td class="justify-content-start" ><b>NOME:</b> </td>
+                                <td class="justify-content-start"><b>CODIGO: </b> </td>
+                                <td class="justify-content-start"><b>NOME:</b> </td>
                             </tr>
 
                             <tr>
@@ -143,54 +143,88 @@
                                 <td class="justify-content-start"><b>MAE</b> </td>
                             </tr>
                             <tr>
-                                <td ><b>ENDEREÇO</b> </td>
-                                <td ><b>CEP</b> </td>
+                                <td><b>ENDEREÇO</b> </td>
+                                <td><b>CEP</b> </td>
                             </tr>
                             <tr>
-                                <td ><b>E-mail</b> </td>
-                                <td ><b>TELEFONE</b> </td>
+                                <td><b>E-mail</b> </td>
+                                <td><b>TELEFONE</b> </td>
                             </tr>
                             <tr>
-                                <td ><b>Instituição de Ensino</b> </td>
+                                <td><b>Instituição de Ensino</b> </td>
                                 <td><b>MUNICIPIO</b> </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            </div>
-            </div>
 
-            <div class="text-justify">
-        1. Através da assinatura do presente termo, autoriza em caráter universal, gratuito, irrevogável, irretratável e exclusivo, à <b> ASDERICEL </b>,ou terceiros por estes devidamente autorizados, no Brasil e/ou exterior,
-        o direito de usar o nome, voz, imagem, material biográfico, declarações, gravações, entrevistas e endossos dados pelo participante ou a ele atribuíveis, inclusive para fins comerciais, seja durante as competições,
-        seja durante os aquecimentos, os treinamentos, a  hospedagem, o transporte ou alimentação em qualquer suporte existente ou que venha a ser criado, para divulgação e promoção nas diferentes mídias e para o material a 
-        ser captado pelas TVs na transmissão, exibição e reexibição, no todo, em extratos, trechos ou partes, ao vivo ou não, sem limitação de tempo ou de número de vezes.
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">DADOS CADASTRAIS DO RESPONSÁVEL LEGAL (ATLETA MENOR DE IDADE) </th>
+                        </tr>
+                        <tr><th></th> </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Responsável Legal</b> </td>
+                            <td><b>Parentesco</b> </td>
+                        </tr>
+                        <tr>
+                            <td><b>RG</b> </td>
+                            <td><b>CPF</b> </td>
+                            <td><b>Telefone Res.</b> </td>
+                        </tr>
+                        <tr>
+                            <td><b>E-mail</b> </td>
+                            <td><b>Telefone Cel.</b> </td>
+
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <br><br><br>
-            <div class="text-center">
-                <b>Local:</b> ________________________________ <b>Data:</b> __________________________________
-            </div>
-
-            <br><br>
-
-            <div class="text-center">
-                <br><br>______________________________________________<br> <b>Assinatura do Dirigente</b>
-            </div>
-
-            <br><br><br>
         </div>
+    </div>
 
-        <div class="text-center hidden-print">
-            <button onclick="window.print();" class="btn btn-primary" title="Imprimir">
-                Imprimir
-            </button>
-            @* <button onclick="printDiv();" class="btn btn-primary" title="Imprimir">
-            Imprimir 2
-            </button>*@
-            <a asp-controller="Dirigente" asp-action="Index" class="btn btn-default" title="Voltar para a página anterior">Voltar</a>
-        </div>
+    <div class="text-justify">
+        1. <b> Autorizo o (a) menor acima citado a participar, viajar e/ou hospedar</b>, nas atividades e competições programadas pela ASDERICEL de acordo com
+        as regulamentações de cada evento.
+    </div>
+    <div class="text-justify">
+        2. Através da assinatura do presente termo, autoriza em caráter universal, gratuito, irrevogável, irretratável e exclusivo, à <b> ASDERICEL</b>,ou terceiros por
+        estes devidamente autorizados, no Brasil e/ou exterior, o direito de usar o nome, voz, imagem, material biográfico, declarações, gravações, entrevistas e
+        endossos dados pelo participante ou a ele atribuíveis, inclusive para fins comerciais, seja durante as competições, seja durante os aquecimentos, os treinamentos,
+        a  hospedagem, o transporte ou alimentação em qualquer suporte existente ou que venha a ser criado, para divulgação e promoção nas diferentes mídias e para o
+        material a ser captado pelas TVs na transmissão, exibição e reexibição, no todo, em extratos, trechos ou partes, ao vivo ou não, sem limitação de tempo ou de número de vezes.
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="text-center">
+        <b>Local:</b> ________________________________ <b>Data:</b> __________________________________
+    </div>
+
+    <br>
+    <br>
+
+    <div class="text-center">
+        <br><br>______________________________________________<br> <b>ASSINATURA DO RESPONSÁVEL</b>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="text-center hidden-print">
+        <button onclick="window.print();" class="btn btn-primary" title="Imprimir">
+            Imprimir
+        </button>
+        @* <button onclick="printDiv();" class="btn btn-primary" title="Imprimir">
+        Imprimir 2
+        </button>*@
+        <a asp-controller="Dirigente" asp-action="Index" class="btn btn-default" title="Voltar para a página anterior">Voltar</a>
+    </div>
     </div>
 
     <script>
