@@ -1,4 +1,6 @@
 ﻿
+using AtletaAsdericel.ViewModels;
+
 namespace AtletaAsdericel.Models
 {
     public class Modalidade
@@ -10,12 +12,12 @@ namespace AtletaAsdericel.Models
         public int ModalidadePai { get; set; }
         //public IEnumerable<Prova> Provas { get; set; }
 
-        internal void Atualiza(Modalidade modalidade)
+        internal void Atualiza(ModalidadeEditViewModel modalidade)
         {
             Nome = modalidade.Nome;
-            //Sexos = modalidade.Sexos;
-            //CategoriaModalidades = modalidade.CategoriaModalidades;
-            ModalidadePai = modalidade.ModalidadePai;
+            //ModalidadeSexos = modalidade.Sexos;
+            //ModalidadeCategorias = modalidade.CategoriaModalidades;
+            //ModalidadePai = modalidade.ModalidadePai;
         }
     }
 }

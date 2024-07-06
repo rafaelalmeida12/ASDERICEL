@@ -19,19 +19,36 @@
     <thead>
         <tr>
             <th>Nome</th>
-            <th>Categoria</th>
+            <th>Categorias</th>
+            <th>Gêneros</th>
 
         </tr>
     </thead>
     <tbody>
-        @foreach (var atleta in Model)
+        @foreach (var modalidade in Model)
         {
             <tr>
-                <td>@atleta.Nome</td>
-                @foreach (var categoria in atleta.ModalidadeCategorias)
-                {
-                    <td>@categoria.Modalidade.Nome</td>
-                }
+                <td>@modalidade.Nome</td>
+                <td>
+                    @{
+                        var modalidades = string.Join(", ", modalidade.ModalidadeCategorias.Select(c => c.Categoria.Nome));
+                    }
+                    @modalidades
+                </td>
+                <td>
+                    @{
+                        var generos = string.Join(", ", modalidade.ModalidadeSexos.Select(c => c.Sexo.Nome));
+                    }
+                    @generos
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = modalidade.Id })" class="btn btn-success" title="Editar">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="@Url.Action("Delete", new { id = modalidade.Id })" class="btn btn-danger btn-fab btn-round" title="Excluir">
+                        <i class="fa fa-remove"></i>
+                    </a>
+                </td>
             </tr>
         }
     </tbody>

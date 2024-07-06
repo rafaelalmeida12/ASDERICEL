@@ -17,7 +17,10 @@ namespace AtletaAsdericel.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var modalidades = await _contexto.Modalidades.Include(m => m.ModalidadeCategorias).ToListAsync();
+            var modalidades = await _contexto.Modalidades
+                .Include(m => m.ModalidadeCategorias).ThenInclude(m => m.Categoria)
+                .Include(m => m.ModalidadeSexos).ThenInclude(m => m.Sexo)
+                .ToListAsync();
             return View(modalidades);
         }
         public IActionResult Create()
@@ -32,48 +35,87 @@ namespace AtletaAsdericel.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(ModalidadeCreateViewModel viewModel)
         {
-           
-                var categorias = await _contexto.Categorias
-                    .Where(c => viewModel.CategoriaIds.Contains(c.Id))
-                    .ToListAsync();
 
-                var sexos = await _contexto.Sexo
-                    .Where(s => viewModel.SexoIds.Contains(s.Id))
-                    .ToListAsync();
+            var categorias = await _contexto.Categorias
+                .Where(c => viewModel.CategoriaIds.Contains(c.Id))
+                .ToListAsync();
 
-                var modalidade = new Modalidade
+            var sexos = await _contexto.Sexo
+                .Where(s => viewModel.SexoIds.Contains(s.Id))
+                .ToListAsync();
+
+            var modalidade = new Modalidade
+            {
+                Nome = viewModel.Nome,
+                ModalidadeCategorias = categorias.Select(c => new ModalidadeCategoria
                 {
-                    Nome = viewModel.Nome,
-                    ModalidadeCategorias = categorias.Select(c => new ModalidadeCategoria
-                    {
-                        CategoriaId = c.Id
-                    }).ToList(),
-                    ModalidadeSexos = sexos.Select(s => new ModalidadeSexo
-                    {
-                        SexoId = s.Id
-                    }).ToList()
-                };
+                    CategoriaId = c.Id
+                }).ToList(),
+                ModalidadeSexos = sexos.Select(s => new ModalidadeSexo
+                {
+                    SexoId = s.Id
+                }).ToList()
+            };
 
-                _contexto.Modalidades.Add(modalidade);
-                await _contexto.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+            _contexto.Modalidades.Add(modalidade);
+            await _contexto.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
         [HttpGet("Editar")]
         public async Task<ActionResult> Edit(int id)
         {
-            var atleta = await _contexto.Modalidades.FirstOrDefaultAsync(e => e.Id == id);
-            return View(atleta);
+            var modalidade = await _contexto.Modalidades
+            .Include(m => m.ModalidadeCategorias).ThenInclude(m => m.Categoria)
+            .Include(m => m.ModalidadeSexos).ThenInclude(m => m.Sexo)
+            .FirstOrDefaultAsync(e => e.Id == id);
+
+            var model = new ModalidadeEditViewModel()
+            {
+                Id = id,
+                Nome = modalidade.Nome,
+                Categorias = new SelectList(_contexto.Categorias, "Id", "Nome", modalidade.ModalidadeCategorias),
+                Sexos = new SelectList(_contexto.Sexo, "Id", "Nome", modalidade.ModalidadeSexos)
+            };
+            return View(model);
         }
 
         [HttpPost("Editar")]
-        public async Task<ActionResult> Edit(Modalidade modalidade)
+        public async Task<ActionResult> Edit(ModalidadeEditViewModel viewModel)
         {
-            var atletaBanco = await _contexto.Modalidades.FirstOrDefaultAsync(e => e.Id == modalidade.Id);
-            atletaBanco.Atualiza(modalidade);
+            var modalidadeBanco = await _contexto.Modalidades
+                .Include(m => m.ModalidadeSexos)
+                .Include(m => m.ModalidadeCategorias)
+                .FirstOrDefaultAsync(e => e.Id == viewModel.Id);
 
-            _contexto.Update(atletaBanco);
+            if (modalidadeBanco == null)
+                return NotFound();
+
+            modalidadeBanco.ModalidadeSexos.Clear();
+            modalidadeBanco.ModalidadeCategorias.Clear();
+
+            var sexos = await _contexto.Sexo
+                .Where(ms => viewModel.SexoIds.Contains(ms.Id))
+                .ToListAsync();
+
+            var categorias = await _contexto.Categorias
+                .Where(mc => viewModel.CategoriaIds.Contains(mc.Id))
+                .ToListAsync();
+
+            // Atualizar a Modalidade no contexto e salvar as alterações
+            modalidadeBanco.ModalidadeCategorias = categorias.Select(c => new ModalidadeCategoria
+            {
+                CategoriaId = c.Id
+            }).ToList();
+            modalidadeBanco.ModalidadeSexos = sexos.Select(s => new ModalidadeSexo
+            {
+                SexoId = s.Id
+            }).ToList();
+            modalidadeBanco.Nome = viewModel.Nome;
+            _contexto.Modalidades.Update(modalidadeBanco);
             await _contexto.SaveChangesAsync();
-            return View();
+
+            return RedirectToAction(nameof(Index));
         }
+
     }
 }

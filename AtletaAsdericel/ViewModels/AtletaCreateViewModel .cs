@@ -25,7 +25,6 @@ namespace AtletaAsdericel.ViewModels
         public string RG { get; set; }
         public string OrgaoEmissor { get; set; }
         public DateTime DataExpedicao { get; set; }
-        public string TipoDocumento { get; set; }
         public string Passaporte { get; set; }
         public string NumeroSus { get; set; }
 
