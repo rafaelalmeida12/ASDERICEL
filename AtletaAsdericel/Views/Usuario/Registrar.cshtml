@@ -11,26 +11,35 @@
                             <h1 class="h4 text-gray-900 mb-4">Criar conta</h1>
                         </div>
                         <form class="user" asp-action="Registrar" method="post">
+                            <div asp-validation-summary="All" class="text-danger"></div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="text" class="form-control form-control-user" asp-for="Nome"
-                                           placeholder="First Name">
+                                           placeholder="Nome">
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control form-control-user" asp-for="Email"
-                                           placeholder="Last Name">
+                                           placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <select name="perfil" asp-for="Perfil">
-                                        <option value="Admin">Admin</option>
-                                        <option value="User">User</option>
+                                    <select name="perfil" asp-for="Perfil" class="form-control rounded-pill">
+                                        <option value="Admin">Administrador</option>
+                                        <option value="User">Usuário</option>
                                     </select>
                                 </div>
+
+@*                                      <div class="col-md-3">
+            <select asp-for="EstadoCivil" type="text" asp-items="Html.GetEnumSelectList<EStadoCivil>()" class="form-control rounded-pill" required placeholder="Selecione">
+                <option value="">Selecione o estado civil ...</option>
+            </select>
+        </div>
+ *@
+
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" class="form-control form-control-user" asp-for=Senha
-                                           placeholder="Password">
+                                           placeholder="Senha">
                                 </div>
 
                             </div>

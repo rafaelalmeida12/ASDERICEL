@@ -1,8 +1,12 @@
-﻿namespace AtletaAsdericel.ViewModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AtletaAsdericel.ViewModels
 {
     public class LoginViewModel
     {
-        public string Nome { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
         public string Senha { get; set; }
         public bool Lembrar { get; set; }
     }

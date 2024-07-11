@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YA65GMD1LFOc/muftpeTjLxkh5NLy4VnkBzROnCysXAlcEHrf0OBTKZWvdx0wqMt1MURmDsOz7ILCFf52xwMMg==",
+  "dgSpecHash": "TP2bMthP05YE4vbZWjWSKpoluutUdG4R/Sh5rGl+8KsEbCqDj0wEFdNdEU2wBW0kJyBzBFwqBeSp/ljAJpyEkg==",
   "success": true,
   "projectFilePath": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\AtletaAsdericel.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\rafae\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\npgsql\\7.0.2\\npgsql.7.0.2.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.3\\npgsql.entityframeworkcore.postgresql.7.0.3.nupkg.sha512",
+    "C:\\Users\\rafae\\.nuget\\packages\\piotrtrojan.aspnetcore.identityerrorlocalization.pt-pt\\1.0.7\\piotrtrojan.aspnetcore.identityerrorlocalization.pt-pt.1.0.7.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"

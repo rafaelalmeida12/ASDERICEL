@@ -1,7 +1,5 @@
-﻿using AtletaAsdericel.Migrations;
-using AtletaAsdericel.Models;
+﻿using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +14,7 @@ namespace AtletaAsdericel.Controllers
             _signInManager = signInManager;
             _userManager = userManager;
         }
-        [Authorize(Roles = "User")]
+        //[Authorize(Roles = "User")]
         [HttpGet]
         public IActionResult Index()
         {
@@ -31,36 +29,36 @@ namespace AtletaAsdericel.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel login)
         {
-            if (ModelState.IsValid)
+            var user = await _userManager.FindByEmailAsync(login.Email);
+            if (user != null)
             {
-                var result = await _signInManager.PasswordSignInAsync(login.Nome!, login.Senha!, login.Lembrar, false);
-                if (result.Succeeded)
-                    return RedirectToAction("Index", "Home");
-                else if (result.IsLockedOut)
+                if (ModelState.IsValid)
                 {
-                    ModelState.AddModelError(string.Empty, "Conta bloqueada.");
-                    return View(login);
+                    var result = await _signInManager.PasswordSignInAsync(user.Nome!, login.Senha!, login.Lembrar, false);
+                    if (result.Succeeded)
+                        return RedirectToAction("Index", "Home");
+                    else if (result.IsLockedOut)
+                    {
+                        ModelState.AddModelError(string.Empty, "Conta bloqueada.");
+                        return View(login);
+                    }
+                    else if (result.IsNotAllowed)
+                    {
+                        ModelState.AddModelError(string.Empty, "Login não permitido.");
+                        return View(login);
+                    }
+                    else if (result.RequiresTwoFactor)
+                    {
+                        return RedirectToAction("SendCode", new { RememberMe = login.Lembrar });
+                    }
                 }
-                else if (result.IsNotAllowed)
-                {
-                    ModelState.AddModelError(string.Empty, "Login não permitido.");
-                    return View(login);
-                }
-                else if (result.RequiresTwoFactor)
-                {
-                    return RedirectToAction("SendCode", new { RememberMe = login.Lembrar });
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Tentativa de login inválida.");
-                }
-                ModelState.AddModelError("", "Inválido login");
-                return View(login);
+               
             }
-            else { 
-            
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Usuário nao encontrado.");
             }
-            return View();
+            return View(login);
         }
         [HttpGet]
         public IActionResult Registrar()
@@ -79,7 +77,7 @@ namespace AtletaAsdericel.Controllers
                     Email = model.Email,
                     Nome = model.Nome,
                     Senha = model.Senha,
-                    Perfil = "ADM"
+                    Perfil = model.Perfil
                 };
 
                 var user = await _userManager.CreateAsync(usuario, model.Senha!);
@@ -87,7 +85,7 @@ namespace AtletaAsdericel.Controllers
                 {
                     await _userManager.AddToRoleAsync(usuario, model.Perfil);
                     //await _signInManager.SignInAsync(usuario, false);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index");
                 }
                 foreach (var error in user.Errors)
                 {

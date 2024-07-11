@@ -74,6 +74,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.3, )"
+            },
+            "PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT": {
+              "target": "Package",
+              "version": "[1.0.7, )"
             }
           },
           "imports": [

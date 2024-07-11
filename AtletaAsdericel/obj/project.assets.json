@@ -501,6 +501,18 @@
           }
         }
       },
+      "PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT/1.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Core": "5.0.12"
+        },
+        "compile": {
+          "lib/net5.0/PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT.dll": {}
+        }
+      },
       "System.CodeDom/4.4.0": {
         "type": "package",
         "compile": {
@@ -1328,6 +1340,18 @@
         "postgresql.png"
       ]
     },
+    "PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT/1.0.7": {
+      "sha512": "uTu8F4PTkWYX5HqBKZ1jxdqlbpB5KqlE0AaNuRG42l8qaS0hrM8BKV/WdxgCdLRErTMf1sFkttra+ahaWHuaNA==",
+      "type": "package",
+      "path": "piotrtrojan.aspnetcore.identityerrorlocalization.pt-pt/1.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT.dll",
+        "piotrtrojan.aspnetcore.identityerrorlocalization.pt-pt.1.0.7.nupkg.sha512",
+        "piotrtrojan.aspnetcore.identityerrorlocalization.pt-pt.nuspec"
+      ]
+    },
     "System.CodeDom/4.4.0": {
       "sha512": "2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
       "type": "package",
@@ -1459,7 +1483,8 @@
       "Microsoft.AspNetCore.Identity.UI >= 7.0.16",
       "Microsoft.EntityFrameworkCore >= 7.0.16",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.16",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.3"
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.3",
+      "PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT >= 1.0.7"
     ]
   },
   "packageFolders": {
@@ -1536,6 +1561,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[7.0.3, )"
+          },
+          "PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT": {
+            "target": "Package",
+            "version": "[1.0.7, )"
           }
         },
         "imports": [

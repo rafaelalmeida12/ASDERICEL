@@ -5,6 +5,7 @@ using AtletaAsdericel.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt_PT;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -44,7 +45,9 @@ builder.Services.AddDefaultIdentity<Usuario>(options =>
 })
  .AddRoles<IdentityRole>()
  .AddEntityFrameworkStores<ApplicationDbContext>()
- .AddDefaultTokenProviders();
+ .AddDefaultTokenProviders()
+ .AddErrorDescriber<PortugueseIdentityErrorDescriber>();
+
 
 builder.Services.ConfigureApplicationCookie(options =>
 {

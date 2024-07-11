@@ -13,7 +13,8 @@
           "Microsoft.AspNetCore.Identity.UI": "7.0.16",
           "Microsoft.EntityFrameworkCore": "7.0.16",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.16",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.3"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.3",
+          "PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT": "1.0.7"
         },
         "runtime": {
           "AtletaAsdericel.dll": {}
@@ -263,6 +264,17 @@
           }
         }
       },
+      "PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT/1.0.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Core": "7.0.16"
+        },
+        "runtime": {
+          "lib/net5.0/PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT.dll": {
+            "assemblyVersion": "1.0.7.0",
+            "fileVersion": "1.0.7.0"
+          }
+        }
+      },
       "System.CodeDom/4.4.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
@@ -487,6 +499,13 @@
       "sha512": "sha512-3iVz7vcPAZt6iBSjJ8XyjtIP19jilNOJqTiTCs2UHWhpTyP+FbNhnzCBE/oyD3n49McmmenjKpva+yTy7q1z/g==",
       "path": "npgsql.entityframeworkcore.postgresql/7.0.3",
       "hashPath": "npgsql.entityframeworkcore.postgresql.7.0.3.nupkg.sha512"
+    },
+    "PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT/1.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uTu8F4PTkWYX5HqBKZ1jxdqlbpB5KqlE0AaNuRG42l8qaS0hrM8BKV/WdxgCdLRErTMf1sFkttra+ahaWHuaNA==",
+      "path": "piotrtrojan.aspnetcore.identityerrorlocalization.pt-pt/1.0.7",
+      "hashPath": "piotrtrojan.aspnetcore.identityerrorlocalization.pt-pt.1.0.7.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",
