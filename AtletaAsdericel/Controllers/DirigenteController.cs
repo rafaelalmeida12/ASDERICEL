@@ -1,5 +1,4 @@
 ﻿using AtletaAsdericel.Data;
-using AtletaAsdericel.Migrations;
 using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
 using Microsoft.AspNetCore.Mvc;

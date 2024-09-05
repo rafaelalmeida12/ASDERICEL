@@ -24,13 +24,16 @@ namespace AtletaAsdericel.Helpers
         public static async Task SeedAdminUserAsync(UserManager<Usuario> userManager, RoleManager<IdentityRole> roleManager)
         {
             // Aqui você pode criar um super usuário que irá manter o aplicativo web
+            string userPassword = "Admin@123";
             var poweruser = new Usuario
             {
                 UserName = "admin@admin.com",
                 Email = "admin@admin.com",
+                Nome = "admin@admin.com",
+                Senha= userPassword,
+                Perfil= "Admin"
             };
 
-            string userPassword = "Admin@123";
             var user = await userManager.FindByEmailAsync("admin@admin.com");
 
             if (user == null)

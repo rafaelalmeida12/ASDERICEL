@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TP2bMthP05YE4vbZWjWSKpoluutUdG4R/Sh5rGl+8KsEbCqDj0wEFdNdEU2wBW0kJyBzBFwqBeSp/ljAJpyEkg==",
+  "dgSpecHash": "7BRfKGxNzAM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rafae\\Documentos\\OneDrive\\Documentos\\Projeto Youpp\\YouppCore\\AtletaAsdericel\\AtletaAsdericel\\AtletaAsdericel.csproj",
+  "projectFilePath": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\AtletaAsdericel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafae\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
