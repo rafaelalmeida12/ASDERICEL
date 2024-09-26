@@ -2,11 +2,13 @@
 using AtletaAsdericel.Models;
 using AtletaAsdericel.Services;
 using AtletaAsdericel.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace AtletaAsdericel.Controllers
 {
+    [Authorize]
     [Route("[controller]")]
     public class GeralController : Controller
     {

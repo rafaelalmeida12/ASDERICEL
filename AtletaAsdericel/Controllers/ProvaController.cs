@@ -1,10 +1,12 @@
 ﻿using AtletaAsdericel.Data;
 using AtletaAsdericel.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace AtletaAsdericel.Controllers
 {
+    [Authorize]
     public class ProvaController : Controller
     {
         private readonly ApplicationDbContext _contexto;

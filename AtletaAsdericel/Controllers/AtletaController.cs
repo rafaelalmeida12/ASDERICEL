@@ -1,11 +1,13 @@
 ﻿using AtletaAsdericel.Data;
 using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace AtletaAsdericel.Controllers
 {
+    [Authorize]
     [Route("[controller]")]
     public class AtletaController : Controller
     {
