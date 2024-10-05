@@ -1,4 +1,5 @@
-﻿using AtletaAsdericel.Models.Enum;
+﻿using AtletaAsdericel.Models;
+using AtletaAsdericel.Models.Enum;
 
 namespace AtletaAsdericel.ViewModels
 {
@@ -6,5 +7,16 @@ namespace AtletaAsdericel.ViewModels
     {
         public string Nome { get; set; }
         public ETipoProva TipoProva { get; set; }
+        public int ModalidadeId { get; set; }
+
+        internal Prova ToEntity()
+        {
+            return new Prova()
+            {
+                Nome = Nome,
+                TipoProva = TipoProva,
+                ModalidadeId= ModalidadeId
+            };
+        }
     }
 }

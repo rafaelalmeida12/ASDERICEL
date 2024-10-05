@@ -2,6 +2,7 @@
 using AtletaAsdericel.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace AtletaAsdericel.Controllers
@@ -22,14 +23,21 @@ namespace AtletaAsdericel.Controllers
         }
         public IActionResult Create()
         {
+            ViewBag.Modalidades = _contexto.Modalidades
+                                  .Select(m => new SelectListItem
+                                  {
+                                      Value = m.Id.ToString(),
+                                      Text = m.Nome
+                                  }).ToList();
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Create(ProvasCreateViewModel provas)
         {
-            //_contexto.Provas.Add(provas.ToEntity());
+            _contexto.Provas.Add(provas.ToEntity());
             await _contexto.SaveChangesAsync();
-            return View();
+            return RedirectToAction(nameof(Index));
+
         }
     }
 }

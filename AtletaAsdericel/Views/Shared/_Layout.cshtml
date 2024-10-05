@@ -15,8 +15,9 @@
     <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     @* js *@
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
     <style>
         #wrapper {
             display: flex;
@@ -65,7 +66,7 @@
                     <i class="fa fa-home"></i>
                     <span>Usuários</span>
                 </a>
-            </li>          
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -88,48 +89,22 @@
             </li>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-action="index" asp-controller="Modalidade" data-toggle="collapse" data-target="#collapseModalidade" aria-expanded="true" aria-controls="collapseModalidade">
+                <a class="nav-link collapsed" asp-action="index" asp-controller="Modalidade">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Modalidade</span>
                 </a>
-                <div id="collapseModalidade" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-                <a class="nav-link collapsed" asp-action="index" asp-controller="Prova" data-toggle="collapse" data-target="#collapseProvas" aria-expanded="true" aria-controls="collapseProvas">
+
+
+                <a class="nav-link collapsed" asp-action="index" asp-controller="Prova">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Provas</span>
                 </a>
-                <div id="collapseProvas" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-action="index" asp-controller="Evento" data-toggle="collapse" data-target="#collapseEventos" aria-expanded="true" aria-controls="collapseEventos">
+                <a class="nav-link collapsed" asp-action="index" asp-controller="Evento">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Evento</span>
                 </a>
-                <div id="collapseEventos" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
             </li>
 
             <!-- Divider -->
@@ -302,9 +277,7 @@
         </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="~/vendor/jquery/jquery.min.js"></script>
     <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)

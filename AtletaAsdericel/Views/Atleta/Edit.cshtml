@@ -8,30 +8,28 @@
 <hr />
 
 <form class="user" asp-action="Edit">
-    <div class="form-group row mt-4">
+    <div class="form-group row">
         <input type="hidden" asp-for="Id" />
-        <div class="form-group row">
-            <div class="col-sm-3">
-                <input type="text" asp-for=Nome class="form-control form-control-user" required placeholder="Nome">
-            </div>
-            <div class="col-sm-3">
-                <input type="text" asp-for=NomeSocial class="form-control form-control-user" placeholder="Nome Social">
-            </div>
-            <div class="col-sm-3 ">
-                <input type="text" asp-for=Apelido class="form-control form-control-user" placeholder="Apelido">
-            </div>
-            <div class="col-sm-3">
-                <input type="text" asp-for="DataNascimento" class="form-control form-control-user date" required placeholder="Data de Nascimento">
-            </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Nome class="form-control form-control-user" required placeholder="Nome">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=NomeSocial class="form-control form-control-user" placeholder="Nome Social">
+        </div>
+        <div class="col-sm-3 ">
+            <input type="text" asp-for=Apelido class="form-control form-control-user" placeholder="Apelido">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for="DataNascimento" class="form-control form-control-user date" required placeholder="Data de Nascimento">
         </div>
     </div>
 
     <div class="form-group row">
         <div class="col-sm-3">
-            <input type="text" asp-for="Mae"  class="form-control form-control-user " required placeholder="Nome da mãe">
+            <input type="text" asp-for="Mae" class="form-control form-control-user " required placeholder="Nome da mãe">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for="Pai"  class="form-control form-control-user" placeholder="Nome do Pai">
+            <input type="text" asp-for="Pai" class="form-control form-control-user" placeholder="Nome do Pai">
         </div>
         <div class="col-md-3">
             <select asp-for="EstadoCivil" type="text" asp-items="Html.GetEnumSelectList<EStadoCivil>()" class="form-control rounded-pill" required placeholder="Selecione">
@@ -62,13 +60,13 @@
 
     <div class="form-group row">
         <div class="col-sm-3">
-            <input type="text" asp-for=DataExpedicao class="form-control form-control-user " placeholder="Data Expedição">
+            <input type="text" asp-for=DataExpedicao class="form-control form-control-user date" placeholder="Data Expedição">
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=Passaporte class="form-control form-control-user " placeholder=" Nº Passaporte">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=NumeroSUS class="form-control form-control-user "  required placeholder="Numero do Sus">
+            <input type="text" asp-for=NumeroSUS class="form-control form-control-user " required placeholder="Numero do Sus">
         </div>
     </div>
 
@@ -102,10 +100,10 @@
         <div class="col-sm-3">
             <input type="text" asp-for=Escola.Estado class="form-control form-control-user" placeholder="Estado" required>
         </div>
-     @*    <div class="col-sm-3">
-            <select asp-for="Escola.Municipio" asp-items="new SelectList(Model.Cidades, nameof(Estado.Id), nameof(Estado.Nome))" class="form-control rounded-pill" placeholder="Selecione">
-            <option value="">Selecione a cidade ...</option>
-            </select>
+        @*    <div class="col-sm-3">
+        <select asp-for="Escola.Municipio" asp-items="new SelectList(Model.Cidades, nameof(Estado.Id), nameof(Estado.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+        <option value="">Selecione a cidade ...</option>
+        </select>
         </div> *@
     </div>
 
@@ -123,7 +121,7 @@
         <div class="col-sm-3">
             <input type="text" asp-for=Endereco.Numero class="form-control form-control-user" placeholder="Número">
         </div>
-   
+
     </div>
     <div class="form-group row">
         <div class="col-sm-3">
@@ -149,7 +147,7 @@
     <label>Dados da Modalidade</label>
     <div class="form-group row">
         <div class="col-md-3">
-            <select asp-for="ModalidadeId" type="text"  class="form-control rounded-pill" placeholder="Selecione">
+            <select asp-for="ModalidadeId" type="text" class="form-control rounded-pill" asp-items="ViewBag.Modalidades" placeholder="Selecione">
                 <option value="">Selecione a modalidade ...</option>
             </select>
         </div>

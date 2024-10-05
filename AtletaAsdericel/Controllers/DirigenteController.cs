@@ -3,6 +3,7 @@ using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace AtletaAsdericel.Controllers
@@ -63,6 +64,12 @@ namespace AtletaAsdericel.Controllers
         public async Task<ActionResult> Edit(int id)
         {
             var dirigente = await _context.Dirigentes.Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == id);
+            ViewBag.Modalidades = _context.Modalidades
+                                     .Select(m => new SelectListItem
+                                     {
+                                         Value = m.Id.ToString(),
+                                         Text = m.Nome
+                                     }).ToList();
             return View(dirigente);
         }
 
@@ -74,7 +81,8 @@ namespace AtletaAsdericel.Controllers
 
             _context.Update(dirigenteBanco);
             await _context.SaveChangesAsync();
-            return View();
+            return RedirectToAction(nameof(Index));
+
         }
 
 
