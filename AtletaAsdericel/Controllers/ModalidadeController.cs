@@ -1,12 +1,14 @@
 ﻿using AtletaAsdericel.Data;
 using AtletaAsdericel.Models;
 using AtletaAsdericel.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace AtletaAsdericel.Controllers
 {
+    [Authorize]
     public class ModalidadeController : Controller
     {
         private readonly ApplicationDbContext _contexto;
