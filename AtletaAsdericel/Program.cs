@@ -10,12 +10,12 @@ using PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt_PT;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-//    .AddCookie( options =>
-//    {
-//        options.LoginPath = "/Usuario/Login";
-//        options.AccessDeniedPath = "/Usuario/AccessDenied";
-//    });
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Usuario/Login";
+        options.AccessDeniedPath = "/Usuario/AccessDenied";
+    });
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -27,7 +27,7 @@ builder.Services.AddControllersWithViews();
 //});
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-               options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+               options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 //AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 builder.Services.AddHttpClient<CorreiosService>();
@@ -66,7 +66,7 @@ using (var scope = app.Services.CreateScope())
     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
     var userManager = services.GetRequiredService<UserManager<Usuario>>();
     await ApplicationDbContextSeed.SeedAdminUserAsync(userManager, roleManager);
-    //await ApplicationDbContextSeed.SeedRolesAsync(roleManager);
+    await ApplicationDbContextSeed.SeedRolesAsync(roleManager);
 }
 
 // Configure the HTTP request pipeline.

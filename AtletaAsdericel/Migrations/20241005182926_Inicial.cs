@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
@@ -9,7 +8,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AtletaAsdericel.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class Inicial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,10 +17,10 @@ namespace AtletaAsdericel.Migrations
                 name: "AspNetRoles",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "text", nullable: false),
-                    Name = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    NormalizedName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    ConcurrencyStamp = table.Column<string>(type: "text", nullable: true)
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -32,24 +31,24 @@ namespace AtletaAsdericel.Migrations
                 name: "AspNetUsers",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "text", nullable: false),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    Senha = table.Column<string>(type: "text", nullable: false),
-                    Perfil = table.Column<string>(type: "text", nullable: false),
-                    UserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    NormalizedUserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    Email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    NormalizedEmail = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    EmailConfirmed = table.Column<bool>(type: "boolean", nullable: false),
-                    PasswordHash = table.Column<string>(type: "text", nullable: true),
-                    SecurityStamp = table.Column<string>(type: "text", nullable: true),
-                    ConcurrencyStamp = table.Column<string>(type: "text", nullable: true),
-                    PhoneNumber = table.Column<string>(type: "text", nullable: true),
-                    PhoneNumberConfirmed = table.Column<bool>(type: "boolean", nullable: false),
-                    TwoFactorEnabled = table.Column<bool>(type: "boolean", nullable: false),
-                    LockoutEnd = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: true),
-                    LockoutEnabled = table.Column<bool>(type: "boolean", nullable: false),
-                    AccessFailedCount = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Senha = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Perfil = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    NormalizedEmail = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    EmailConfirmed = table.Column<bool>(type: "bit", nullable: false),
+                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SecurityStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(type: "bit", nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(type: "bit", nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    LockoutEnabled = table.Column<bool>(type: "bit", nullable: false),
+                    AccessFailedCount = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -60,9 +59,9 @@ namespace AtletaAsdericel.Migrations
                 name: "Categorias",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -73,9 +72,9 @@ namespace AtletaAsdericel.Migrations
                 name: "Cidades",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -86,15 +85,15 @@ namespace AtletaAsdericel.Migrations
                 name: "Endereco",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Cep = table.Column<string>(type: "text", nullable: false),
-                    Logradouro = table.Column<string>(type: "text", nullable: false),
-                    Bairro = table.Column<string>(type: "text", nullable: false),
-                    Localidade = table.Column<string>(type: "text", nullable: false),
-                    Uf = table.Column<string>(type: "text", nullable: false),
-                    Pais = table.Column<string>(type: "text", nullable: false),
-                    Numero = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Cep = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Logradouro = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Bairro = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Localidade = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Uf = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Pais = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Numero = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -105,13 +104,13 @@ namespace AtletaAsdericel.Migrations
                 name: "Escolas",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    INEP = table.Column<string>(type: "text", nullable: true),
-                    Telefone = table.Column<string>(type: "text", nullable: true),
-                    Municipio = table.Column<string>(type: "text", nullable: false),
-                    Estado = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    INEP = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Telefone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Municipio = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Estado = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -122,10 +121,10 @@ namespace AtletaAsdericel.Migrations
                 name: "Estados",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    Sigla = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Sigla = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -136,14 +135,14 @@ namespace AtletaAsdericel.Migrations
                 name: "Evento",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    Edicao = table.Column<string>(type: "text", nullable: false),
-                    Promotor = table.Column<string>(type: "text", nullable: false),
-                    Local = table.Column<string>(type: "text", nullable: false),
-                    DataInicio = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DataTermino = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Edicao = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Promotor = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Local = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DataInicio = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DataTermino = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -154,10 +153,10 @@ namespace AtletaAsdericel.Migrations
                 name: "Modalidades",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    ModalidadePai = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ModalidadePai = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -168,14 +167,14 @@ namespace AtletaAsdericel.Migrations
                 name: "Responsavel",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    Parentesco = table.Column<string>(type: "text", nullable: false),
-                    RG = table.Column<string>(type: "text", nullable: false),
-                    CPF = table.Column<string>(type: "text", nullable: false),
-                    Telefone = table.Column<string>(type: "text", nullable: false),
-                    Email = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Parentesco = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RG = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CPF = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Telefone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -186,11 +185,11 @@ namespace AtletaAsdericel.Migrations
                 name: "Resultado",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Gols = table.Column<int>(type: "integer", nullable: false),
-                    Pontos = table.Column<int>(type: "integer", nullable: false),
-                    Classificacao = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Gols = table.Column<int>(type: "int", nullable: false),
+                    Pontos = table.Column<int>(type: "int", nullable: false),
+                    Classificacao = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -201,9 +200,9 @@ namespace AtletaAsdericel.Migrations
                 name: "Sexo",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -214,11 +213,11 @@ namespace AtletaAsdericel.Migrations
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    RoleId = table.Column<string>(type: "text", nullable: false),
-                    ClaimType = table.Column<string>(type: "text", nullable: true),
-                    ClaimValue = table.Column<string>(type: "text", nullable: true)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RoleId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -235,11 +234,11 @@ namespace AtletaAsdericel.Migrations
                 name: "AspNetUserClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    ClaimType = table.Column<string>(type: "text", nullable: true),
-                    ClaimValue = table.Column<string>(type: "text", nullable: true)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -256,10 +255,10 @@ namespace AtletaAsdericel.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(type: "character varying(128)", maxLength: 128, nullable: false),
-                    ProviderKey = table.Column<string>(type: "character varying(128)", maxLength: 128, nullable: false),
-                    ProviderDisplayName = table.Column<string>(type: "text", nullable: true),
-                    UserId = table.Column<string>(type: "text", nullable: false)
+                    LoginProvider = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    ProviderKey = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    ProviderDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -276,8 +275,8 @@ namespace AtletaAsdericel.Migrations
                 name: "AspNetUserRoles",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    RoleId = table.Column<string>(type: "text", nullable: false)
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    RoleId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -300,10 +299,10 @@ namespace AtletaAsdericel.Migrations
                 name: "AspNetUserTokens",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    LoginProvider = table.Column<string>(type: "character varying(128)", maxLength: 128, nullable: false),
-                    Name = table.Column<string>(type: "character varying(128)", maxLength: 128, nullable: false),
-                    Value = table.Column<string>(type: "text", nullable: true)
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    LoginProvider = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Value = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -320,32 +319,32 @@ namespace AtletaAsdericel.Migrations
                 name: "Atletas",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Pai = table.Column<string>(type: "text", nullable: true),
-                    Mae = table.Column<string>(type: "text", nullable: false),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    NomeSocial = table.Column<string>(type: "text", nullable: true),
-                    Apelido = table.Column<string>(type: "text", nullable: true),
-                    DataNascimento = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Sexo = table.Column<int>(type: "integer", nullable: false),
-                    CPF = table.Column<string>(type: "text", nullable: false),
-                    RG = table.Column<string>(type: "text", nullable: false),
-                    OrgaoEmissor = table.Column<string>(type: "text", nullable: true),
-                    DataExpedicao = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Passaporte = table.Column<string>(type: "text", nullable: true),
-                    NumeroSUS = table.Column<string>(type: "text", nullable: true),
-                    TipoSanguineo = table.Column<int>(type: "integer", nullable: false),
-                    EstadoCivil = table.Column<int>(type: "integer", nullable: false),
-                    Profissao = table.Column<string>(type: "text", nullable: true),
-                    Ensino = table.Column<int>(type: "integer", nullable: false),
-                    Peso = table.Column<string>(type: "text", nullable: false),
-                    Altura = table.Column<string>(type: "text", nullable: false),
-                    Camisa = table.Column<int>(type: "integer", nullable: false),
-                    Calca = table.Column<int>(type: "integer", nullable: false),
-                    EnderecoId = table.Column<int>(type: "integer", nullable: false),
-                    EscolaId = table.Column<int>(type: "integer", nullable: false),
-                    ModalidadeId = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Pai = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Mae = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NomeSocial = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apelido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Sexo = table.Column<int>(type: "int", nullable: false),
+                    CPF = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RG = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OrgaoEmissor = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataExpedicao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Passaporte = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NumeroSUS = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TipoSanguineo = table.Column<int>(type: "int", nullable: false),
+                    EstadoCivil = table.Column<int>(type: "int", nullable: false),
+                    Profissao = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Ensino = table.Column<int>(type: "int", nullable: false),
+                    Peso = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Altura = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Camisa = table.Column<int>(type: "int", nullable: false),
+                    Calca = table.Column<int>(type: "int", nullable: false),
+                    EnderecoId = table.Column<int>(type: "int", nullable: false),
+                    EscolaId = table.Column<int>(type: "int", nullable: false),
+                    ModalidadeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -374,32 +373,32 @@ namespace AtletaAsdericel.Migrations
                 name: "Dirigentes",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Pai = table.Column<string>(type: "text", nullable: true),
-                    Mae = table.Column<string>(type: "text", nullable: false),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    NomeSocial = table.Column<string>(type: "text", nullable: true),
-                    Apelido = table.Column<string>(type: "text", nullable: true),
-                    DataNascimento = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Sexo = table.Column<int>(type: "integer", nullable: false),
-                    CPF = table.Column<string>(type: "text", nullable: false),
-                    RG = table.Column<string>(type: "text", nullable: false),
-                    OrgaoEmissor = table.Column<string>(type: "text", nullable: false),
-                    DataExpedicao = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Profissao = table.Column<string>(type: "text", nullable: true),
-                    Passaporte = table.Column<string>(type: "text", nullable: true),
-                    NumeroSUS = table.Column<string>(type: "text", nullable: true),
-                    CREF = table.Column<string>(type: "text", nullable: true),
-                    Peso = table.Column<string>(type: "text", nullable: false),
-                    Altura = table.Column<string>(type: "text", nullable: false),
-                    Camisa = table.Column<int>(type: "integer", nullable: false),
-                    Calca = table.Column<int>(type: "integer", nullable: false),
-                    TipoSanguineo = table.Column<int>(type: "integer", nullable: false),
-                    EstadoCivil = table.Column<int>(type: "integer", nullable: false),
-                    Ensino = table.Column<int>(type: "integer", nullable: false),
-                    EnderecoId = table.Column<int>(type: "integer", nullable: false),
-                    ModalidadeId = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Pai = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Mae = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NomeSocial = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apelido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Sexo = table.Column<int>(type: "int", nullable: false),
+                    CPF = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RG = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OrgaoEmissor = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DataExpedicao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Profissao = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Passaporte = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NumeroSUS = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CREF = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Peso = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Altura = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Camisa = table.Column<int>(type: "int", nullable: false),
+                    Calca = table.Column<int>(type: "int", nullable: false),
+                    TipoSanguineo = table.Column<int>(type: "int", nullable: false),
+                    EstadoCivil = table.Column<int>(type: "int", nullable: false),
+                    Ensino = table.Column<int>(type: "int", nullable: false),
+                    EnderecoId = table.Column<int>(type: "int", nullable: false),
+                    ModalidadeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -422,8 +421,8 @@ namespace AtletaAsdericel.Migrations
                 name: "ModalidadeCategorias",
                 columns: table => new
                 {
-                    ModalidadeId = table.Column<int>(type: "integer", nullable: false),
-                    CategoriaId = table.Column<int>(type: "integer", nullable: false)
+                    ModalidadeId = table.Column<int>(type: "int", nullable: false),
+                    CategoriaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -446,11 +445,11 @@ namespace AtletaAsdericel.Migrations
                 name: "Provas",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    ModalidadeId = table.Column<int>(type: "integer", nullable: false),
-                    TipoProva = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ModalidadeId = table.Column<int>(type: "int", nullable: false),
+                    TipoProva = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -467,11 +466,11 @@ namespace AtletaAsdericel.Migrations
                 name: "Equipe",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    ResultadoId = table.Column<int>(type: "integer", nullable: false),
-                    EventoId = table.Column<int>(type: "integer", nullable: true)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ResultadoId = table.Column<int>(type: "int", nullable: false),
+                    EventoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -493,8 +492,8 @@ namespace AtletaAsdericel.Migrations
                 name: "ModalidadeSexos",
                 columns: table => new
                 {
-                    ModalidadeId = table.Column<int>(type: "integer", nullable: false),
-                    SexoId = table.Column<int>(type: "integer", nullable: false)
+                    ModalidadeId = table.Column<int>(type: "int", nullable: false),
+                    SexoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -517,27 +516,27 @@ namespace AtletaAsdericel.Migrations
                 name: "Associado",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nome = table.Column<string>(type: "text", nullable: false),
-                    NomeSocial = table.Column<string>(type: "text", nullable: true),
-                    Apelido = table.Column<string>(type: "text", nullable: true),
-                    Mae = table.Column<string>(type: "text", nullable: false),
-                    Pai = table.Column<string>(type: "text", nullable: true),
-                    DataNascimento = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Sexo = table.Column<int>(type: "integer", nullable: false),
-                    CPF = table.Column<string>(type: "text", nullable: false),
-                    RG = table.Column<string>(type: "text", nullable: false),
-                    OrgaoEmissor = table.Column<string>(type: "text", nullable: true),
-                    DataExpedicao = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Passaporte = table.Column<string>(type: "text", nullable: true),
-                    NumeroSUS = table.Column<string>(type: "text", nullable: true),
-                    TipoSanguineo = table.Column<int>(type: "integer", nullable: false),
-                    EstadoCivil = table.Column<int>(type: "integer", nullable: false),
-                    Profissao = table.Column<string>(type: "text", nullable: true),
-                    Ensino = table.Column<int>(type: "integer", nullable: false),
-                    EnderecoId = table.Column<int>(type: "integer", nullable: false),
-                    EquipeId = table.Column<int>(type: "integer", nullable: true)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NomeSocial = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apelido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Mae = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Pai = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Sexo = table.Column<int>(type: "int", nullable: false),
+                    CPF = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RG = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OrgaoEmissor = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataExpedicao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Passaporte = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NumeroSUS = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TipoSanguineo = table.Column<int>(type: "int", nullable: false),
+                    EstadoCivil = table.Column<int>(type: "int", nullable: false),
+                    Profissao = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Ensino = table.Column<int>(type: "int", nullable: false),
+                    EnderecoId = table.Column<int>(type: "int", nullable: false),
+                    EquipeId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -634,7 +633,8 @@ namespace AtletaAsdericel.Migrations
                 name: "RoleNameIndex",
                 table: "AspNetRoles",
                 column: "NormalizedName",
-                unique: true);
+                unique: true,
+                filter: "[NormalizedName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetUserClaims_UserId",
@@ -660,7 +660,8 @@ namespace AtletaAsdericel.Migrations
                 name: "UserNameIndex",
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
-                unique: true);
+                unique: true,
+                filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Associado_EnderecoId",
