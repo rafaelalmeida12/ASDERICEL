@@ -30,7 +30,8 @@ namespace AtletaAsdericel.Controllers
         [HttpGet("Criar")]
         public async Task<ActionResult> Create()
         {
-            return View();
+            var model = new GeralCreateViewModel();
+            return View(model);
         }
 
         // GET: AtletaController1/Details/5

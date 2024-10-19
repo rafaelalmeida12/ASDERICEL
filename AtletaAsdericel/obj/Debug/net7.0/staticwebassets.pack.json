@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\all.min.css"
     },
     {
+      "Id": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\css\\bootstrap-multiselect.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-multiselect.css"
+    },
+    {
       "Id": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\css\\sb-admin-2.min.css",
       "PackagePath": "staticwebassets\\css\\sb-admin-2.min.css"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\js\\bootstrap-multiselect.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap-multiselect.js"
     },
     {
       "Id": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\js\\jquery.easing.min.js",

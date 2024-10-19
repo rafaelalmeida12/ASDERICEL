@@ -34,19 +34,20 @@ builder.Services.AddHttpClient<CorreiosService>();
 
 // Registrar IHttpContextAccessor
 builder.Services.AddHttpContextAccessor();
-
 builder.Services.AddDefaultIdentity<Usuario>(options =>
 {
-    options.Password.RequiredUniqueChars = 0;
-    options.Password.RequireUppercase = false;
-    options.Password.RequiredLength = 8;
-    options.Password.RequireNonAlphanumeric = false;
-    options.Password.RequireLowercase = false;
+    options.Password.RequiredLength = 6; // Definindo o mínimo de 6 caracteres
+    options.Password.RequiredUniqueChars = 0; // Nenhum requisito de caracteres únicos
+    options.Password.RequireUppercase = false; // Não exige letras maiúsculas
+    options.Password.RequireNonAlphanumeric = false; // Não exige caracteres especiais
+    options.Password.RequireLowercase = false; // Não exige letras minúsculas
+    options.Password.RequireDigit = false; // Não exige números
 })
- .AddRoles<IdentityRole>()
- .AddEntityFrameworkStores<ApplicationDbContext>()
- .AddDefaultTokenProviders()
- .AddErrorDescriber<PortugueseIdentityErrorDescriber>();
+.AddRoles<IdentityRole>()
+.AddEntityFrameworkStores<ApplicationDbContext>()
+.AddDefaultTokenProviders()
+.AddErrorDescriber<PortugueseIdentityErrorDescriber>();
+
 
 
 builder.Services.ConfigureApplicationCookie(options =>

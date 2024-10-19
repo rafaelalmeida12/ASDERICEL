@@ -48,7 +48,7 @@ namespace AtletaAsdericel.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch(Exception e)
             {
                 return View(viewModel);
             }

@@ -13,10 +13,11 @@
 
     <!-- Custom fonts for this template-->
     <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
     @* js *@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="~/js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="~/css/bootstrap-multiselect.css"  />
 
     <style>
         #wrapper {
@@ -150,21 +151,8 @@
                     <span>Relação dos atletas</span>
                 </a>
             </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-            <li class="nav-item">
-                <a class="nav-link" asp-action="Logout" asp-controller="Usuario">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Sair</span>
-                </a>
-            </li>
-
-
-            <!-- Sidebar Message -->
-
-
-        </ul>
+                             <!-- Sidebar Message -->
+                         </ul>
         <div id="content-wrapper" class="d-flex flex-column ">
             <nav class="navbar navbar-expand navbar-light fundo topbar mb-4 static-top shadow">
 
@@ -279,12 +267,14 @@
     <!-- Bootstrap core JavaScript-->
     <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+ 
 
     @await RenderSectionAsync("Scripts", required: false)
     <script>
         $(document).ready(function () {
             // Aplica a máscara de data ao campo
             $('.date').mask('00/00/0000', { placeholder: "Data de Nascimento" });
+            $('.dtExpedicao').mask('00/00/0000', { placeholder: "Data de Expedição" });
             $('.cpf').mask('000.000.000-00');
         });
     </script>

@@ -1,24 +1,25 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace AtletaAsdericel.Models.Enum
 {
     public enum ETipoSanguineo
     {
-        [Description("A Positivo")]
+        [Display(Name = "A +")]
         Apositovo = 1,
-        [Description("A Negativo")]
+        [Display(Name = "A -")]
         Anegativo = 2,
-        [Description("B Positivo")]
+        [Display(Name = "B +")]
         Bpositovo = 3,
-        [Description("B Negativo")]
+        [Display(Name = "B -")]
         Bnegativo = 4,
-        [Description("AB Positivo")]
+        [Display(Name = "AB +")]
         ABpositovo = 5,
-        [Description("Ab Negativo")]
+        [Display(Name = "Ab -")]
         ABnegativo = 6,
-        [Description("O Positivo")]
+        [Display(Name = "O +")]
         Opositovo = 7,
-        [Description("O Negativo")]
+        [Display(Name = "O -")]
         Onegativo = 8
 
     }

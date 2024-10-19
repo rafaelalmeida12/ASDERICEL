@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\\u00E1rea de trabalho\\projeto\\atletaasdericel\\viewmodels\\provascreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\viewmodels\\provascreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\\u00E1rea de trabalho\\projeto\\atletaasdericel\\controllers\\provacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\controllers\\provacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\\u00E1rea de trabalho\\projeto\\atletaasdericel\\views\\dirigente\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\views\\dirigente\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\\u00E1rea de trabalho\\projeto\\atletaasdericel\\views\\prova\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\views\\prova\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\\u00E1rea de trabalho\\projeto\\atletaasdericel\\controllers\\dirigentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\controllers\\dirigentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\\u00E1rea de trabalho\\projeto\\atletaasdericel\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|c:\\users\\rafae\\\u00E1rea de trabalho\\projeto\\atletaasdericel\\controllers\\geralcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7406195E-9820-47BC-AFCF-6DDEC698B282}|AtletaAsdericel\\AtletaAsdericel.csproj|solutionrelative:atletaasdericel\\controllers\\geralcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 305,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,80 +54,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Views\\Prova\\Create.cshtml",
-              "RelativeDocumentMoniker": "AtletaAsdericel\\Views\\Prova\\Create.cshtml",
-              "ToolTip": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Views\\Prova\\Create.cshtml",
-              "RelativeToolTip": "AtletaAsdericel\\Views\\Prova\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-05T20:22:27.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Views\\Dirigente\\Create.cshtml",
-              "RelativeDocumentMoniker": "AtletaAsdericel\\Views\\Dirigente\\Create.cshtml",
-              "ToolTip": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Views\\Dirigente\\Create.cshtml",
-              "RelativeToolTip": "AtletaAsdericel\\Views\\Dirigente\\Create.cshtml",
-              "ViewState": "AgIAAHMAAAAAAAAAAMAiwHYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-05T20:22:04.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProvasCreateViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\ViewModels\\ProvasCreateViewModel.cs",
-              "RelativeDocumentMoniker": "AtletaAsdericel\\ViewModels\\ProvasCreateViewModel.cs",
-              "ToolTip": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\ViewModels\\ProvasCreateViewModel.cs",
-              "RelativeToolTip": "AtletaAsdericel\\ViewModels\\ProvasCreateViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAcAAAAAAAAAA==",
+              "Title": "GeralController.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Controllers\\GeralController.cs",
+              "RelativeDocumentMoniker": "AtletaAsdericel\\Controllers\\GeralController.cs",
+              "ToolTip": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Controllers\\GeralController.cs",
+              "RelativeToolTip": "AtletaAsdericel\\Controllers\\GeralController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T20:20:14.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DirigenteController.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Controllers\\DirigenteController.cs",
-              "RelativeDocumentMoniker": "AtletaAsdericel\\Controllers\\DirigenteController.cs",
-              "ToolTip": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Controllers\\DirigenteController.cs",
-              "RelativeToolTip": "AtletaAsdericel\\Controllers\\DirigenteController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAMA3wEIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T20:18:58.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "AtletaAsdericel\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "AtletaAsdericel\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAFMAAAAAAAAAAADwv2sAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-05T20:17:53.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProvaController.cs",
-              "DocumentMoniker": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Controllers\\ProvaController.cs",
-              "RelativeDocumentMoniker": "AtletaAsdericel\\Controllers\\ProvaController.cs",
-              "ToolTip": "C:\\Users\\rafae\\\u00C1rea de Trabalho\\Projeto\\AtletaAsdericel\\Controllers\\ProvaController.cs",
-              "RelativeToolTip": "AtletaAsdericel\\Controllers\\ProvaController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAMA0wCQAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T20:11:41.181Z",
+              "WhenOpened": "2024-10-19T20:37:53.49Z",
               "EditorCaption": ""
             }
           ]

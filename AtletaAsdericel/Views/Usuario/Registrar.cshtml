@@ -36,11 +36,21 @@
             </select>
         </div>
  *@
-
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="password" class="form-control form-control-user" asp-for=Senha
-                                           placeholder="Senha">
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                            <input type="password" class="form-control" id="Password" asp-for="Senha" name="Senha" placeholder="Digite sua senha" />
+                                        <span class="input-group-text" id="togglePassword">
+                                            <i class="fa fa-eye"></i> <!-- Ícone de olho -->
+                                        </span>
+                                    </div>
+                                        <small class="form-text text-muted">
+                                            A senha deve ter no mínimo 6 caracteres.
+                                        </small>
+                                    </div>
                                 </div>
+
 
                             </div>
                             <button type="submit" class="btn btn-primary btn-user btn-block">
@@ -60,3 +70,21 @@
 <div>
     @Html.ActionLink("Voltar para Lista", "Index")
 </div>
+<script>
+        document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordInput = document.getElementById('Password');
+        const icon = this.querySelector('i');
+
+        // Alternar entre o tipo de senha e texto
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash'); // Mudar o ícone para olho fechado
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye'); // Mudar o ícone para olho aberto
+        }
+    });
+
+</script>

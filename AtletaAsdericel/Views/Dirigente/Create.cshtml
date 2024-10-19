@@ -21,7 +21,8 @@
             <input type="text" asp-for=Apelido class="form-control form-control-user" placeholder="Apelido">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for="DataNascimento" id="dt" class="form-control form-control-user date" placeholder="Data de Nascimento" required>
+            <input type="text" asp-for="DataNascimento" class="form-control form-control-user date" required placeholder="Data de Nascimento"
+                   value="@(Model.DataNascimento != DateTime.MinValue ? Model.DataNascimento.ToString("dd/MM/yyyy") : string.Empty)">
         </div>
     </div>
 
@@ -68,7 +69,8 @@
         </div>
 
         <div class="col-sm-3">
-            <input type="text" asp-for=DataExpedicao class="form-control form-control-user date" placeholder="Data Expedição" required>
+            <input type="text" asp-for="DataExpedicao" class="form-control form-control-user dtExpedicao" required placeholder="Data de Expedição"
+                   value="@(Model.DataExpedicao != DateTime.MinValue ? Model.DataExpedicao.ToString("dd/MM/yyyy") : string.Empty)">
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=NumeroSus class="form-control form-control-user " placeholder="Numero do Sus">
@@ -117,15 +119,15 @@
     <label>Dados da Modalidade</label>
     <div class="form-group row">
         <div class="col-md-3">
-            <select asp-for="ModalidadeId" type="text" asp-items="new SelectList(Model.Modalidades, nameof(Modalidade.Id), nameof(Modalidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
+            <select asp-for="ModalidadeId" required type="text" asp-items="new SelectList(Model.Modalidades, nameof(Modalidade.Id), nameof(Modalidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">
                 <option value="">Selecione a modalidade ...</option>
             </select>
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Peso class="form-control form-control-user" placeholder="Peso">
+            <input type="text" asp-for=Peso required class="form-control form-control-user" placeholder="Peso">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=Altura class="form-control form-control-user" placeholder="Altura">
+            <input type="text" asp-for=Altura required class="form-control form-control-user" placeholder="Altura">
         </div>
         <div class="col-sm-3">
             <select asp-for="Camisa" type="text" asp-items="Html.GetEnumSelectList<ECamisa>()" class="form-control rounded-pill" placeholder="Selecione">
@@ -151,6 +153,12 @@
     @Scripts.Render("~/bundles/jqueryval")
 }*@
 <script>
+    $(document).ready(function () {
+        $('#Endereco_Cep').on('input', function () {
+            $(this).val($(this).val().replace(/\D/g, '')); // Remove todos os caracteres não numéricos
+        });
+    });
+
     $(document).ready(function () {
         $('#Endereco_Cep').on('blur', function () {
             // Pega o valor do campo de CEP

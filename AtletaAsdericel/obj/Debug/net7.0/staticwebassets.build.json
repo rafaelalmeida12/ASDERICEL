@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "908MJWEUXkq1WQch8Hy801Fi9cjKl8s/1jQzRN7xj2M=",
+  "Hash": "4A/qTBHYdWcUx9SlrkGGtl1kpBFP7rtbSpPvt+DiHyQ=",
   "Source": "AtletaAsdericel",
   "BasePath": "_content/AtletaAsdericel",
   "Mode": "Default",
@@ -1214,6 +1214,25 @@
       "OriginalItemSpec": "wwwroot\\css\\all.min.css"
     },
     {
+      "Identity": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\css\\bootstrap-multiselect.css",
+      "SourceId": "AtletaAsdericel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\",
+      "BasePath": "_content/AtletaAsdericel",
+      "RelativePath": "css/bootstrap-multiselect.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap-multiselect.css"
+    },
+    {
       "Identity": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\css\\sb-admin-2.min.css",
       "SourceId": "AtletaAsdericel",
       "SourceType": "Discovered",
@@ -1326,6 +1345,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Logo2024.png"
+    },
+    {
+      "Identity": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\js\\bootstrap-multiselect.js",
+      "SourceId": "AtletaAsdericel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\",
+      "BasePath": "_content/AtletaAsdericel",
+      "RelativePath": "js/bootstrap-multiselect.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\bootstrap-multiselect.js"
     },
     {
       "Identity": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\js\\jquery.easing.min.js",

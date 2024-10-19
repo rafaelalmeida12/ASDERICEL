@@ -36,8 +36,8 @@
             <input type="text" asp-for=Pai class="form-control form-control-user" placeholder="Nome do Pai" >
         </div>
         <div class="col-md-3">
-            <input type="text" asp-for="DataNascimento" required class="form-control form-control-user date " placeholder="Data de Nascimento">
-        </div>
+      <input type="text" asp-for="DataNascimento" class="form-control form-control-user date" required placeholder="Data de Nascimento"
+           value="@(Model.DataNascimento != DateTime.MinValue ? Model.DataNascimento.ToString("dd/MM/yyyy") : string.Empty)">        </div>
         <div class="col-sm-3">
             <input type="text" required asp-for=CPF class="form-control form-control-user cpf" placeholder="Cpf">
         </div>
@@ -48,7 +48,7 @@
     </div>
     <div class="form-group row">
         <div class="col-md-3">
-            <select asp-for="TipoSanguineo" type="text" asp-items="EnumHelper.GetEnumSelectList<ETipoSanguineo>()" class="form-control rounded-pill" placeholder="Selecione" required>
+            <select asp-for="TipoSanguineo" type="text" asp-items="Html.GetEnumSelectList<ETipoSanguineo>()" class="form-control rounded-pill" placeholder="Selecione" required>
                 <option value="">Selecione o Tipo Sanguíneo ...</option>
             </select>
         </div>
@@ -62,8 +62,8 @@
             <input type="text" asp-for=OrgaoEmissor class="form-control form-control-user " placeholder="Orgão Emissor" required>
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=DataExpedicao class="form-control form-control-user " placeholder="Data Expedição" required>
-        </div>
+         <input type="text" asp-for="DataExpedicao" class="form-control form-control-user dtExpedicao" required placeholder="Data de Expedição"
+           value="@(Model.DataExpedicao != DateTime.MinValue ? Model.DataExpedicao.ToString("dd/MM/yyyy") : string.Empty)">        </div>
     </div>
     <label>Dados endereço</label>
     <div class="form-group row">
@@ -114,6 +114,12 @@
     @Scripts.Render("~/bundles/jqueryval")
 }*@
 <script>
+        $(document).ready(function () {
+    $('#Endereco_Cep').on('input', function () {
+        $(this).val($(this).val().replace(/\D/g, '')); // Remove todos os caracteres não numéricos
+    });
+});
+
     $(document).ready(function () {
         $('#abrirmodal').click(function () {
             $("#exampleModal").modal('show');
