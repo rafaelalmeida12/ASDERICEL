@@ -16,7 +16,7 @@
             <input type="text" asp-for=NomeSocial class="form-control form-control-user" placeholder="Nome Social">
         </div>
         <div class="col-sm-3 ">
-            <input type="text" asp-for=Apelido class="form-control form-control-user" placeholder="Apelido">
+            <input type="text" asp-for=NomeConhecido class="form-control form-control-user" placeholder="Apelido">
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for="DataNascimento" class="form-control form-control-user date" required placeholder="Data de Nascimento"
@@ -51,7 +51,7 @@
             <input type="text" asp-for=CPF class="form-control form-control-user cpf" required placeholder="Cpf">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=RG class="form-control form-control-user" required placeholder="RG">
+            <input type="text" asp-for=CIN_RG class="form-control form-control-user" required placeholder="RG">
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=OrgaoEmissor class="form-control form-control-user " placeholder="Orgão emissor">
@@ -134,6 +134,12 @@
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=Endereco.Pais class="form-control form-control-user" placeholder="País" required>
+        </div>
+        <div class="col-md-3">
+            <select asp-for="FederacaoId" type="text" required asp-items="new SelectList(Model.Federacao, nameof(Federacao.Id), nameof(Federacao.Sigla))" 
+                                            class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione a Federação ...</option>
+            </select>
         </div>
         @*     <div class="col-sm-3">
         <select asp-for="Endereco.Localidade" asp-items="new SelectList(Model.Cidades, nameof(Cidade.Id), nameof(Cidade.Nome))" class="form-control rounded-pill" placeholder="Selecione">

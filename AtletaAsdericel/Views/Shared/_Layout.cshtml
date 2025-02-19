@@ -29,11 +29,11 @@
         }
 
         .warning-gradient {
-            background: linear-gradient(to top, #0F5FA6, #074680); /* Substitua as cores pelo seu gradiente desejado */
+            background: linear-gradient(to top, #2E338C, #F28322); /* Substitua as cores pelo seu gradiente desejado */
         }
 
         .fundo {
-            background: #e6c1a1
+            background: linear-gradient(to right, #F28322,#0F5FA6);
         }
 
         .fundo-btn {
@@ -50,7 +50,7 @@
         <ul class="navbar-nav warning-gradient sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <li class=" sidebar-brand-text mx-3 align-items-center justify-content-center">
+            <li class=" sidebar-brand-text mx-3 align-items-center justify-content-center ">
                 <a asp-action="Index" asp-controller="Home"> <img src="~/images/Logo2024.png" style="width: 80px; height: auto;" /> </a>
             </li>
 
@@ -85,6 +85,25 @@
                         <a class="collapse-item" asp-action="Index" asp-controller="Geral">Geral</a>
                         <a class="collapse-item" asp-action="Index" asp-controller="Atleta">Atleta</a>
                         <a class="collapse-item" asp-action="Index" asp-controller="Dirigente">Dirigente</a>
+                      
+                    </div>
+                </div>
+            </li>
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Termos
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fa fa-user"></i>
+                    <span>Termo</span>
+                </a>
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" asp-action="Index" asp-controller="Geral">Atletas</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="Atleta">Dirigentes</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="Dirigente">Hospedagem</a>
+
                     </div>
                 </div>
             </li>
@@ -94,8 +113,6 @@
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Modalidade</span>
                 </a>
-
-
                 <a class="nav-link collapsed" asp-action="index" asp-controller="Prova">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Provas</span>
@@ -276,6 +293,7 @@
             $('.date').mask('00/00/0000', { placeholder: "Data de Nascimento" });
             $('.dtExpedicao').mask('00/00/0000', { placeholder: "Data de Expedição" });
             $('.cpf').mask('000.000.000-00');
+            $('.celular').mask('(00)00000-0000');
         });
     </script>
 </body>

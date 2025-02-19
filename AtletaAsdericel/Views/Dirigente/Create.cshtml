@@ -18,7 +18,7 @@
             <input type="text" asp-for=NomeSocial class="form-control form-control-user" placeholder="Nome Social">
         </div>
         <div class="col-sm-3 ">
-            <input type="text" asp-for=Apelido class="form-control form-control-user" placeholder="Apelido">
+            <input type="text" asp-for=NomeConhecido class="form-control form-control-user" placeholder="Apelido">
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for="DataNascimento" class="form-control form-control-user date" required placeholder="Data de Nascimento"
@@ -43,6 +43,12 @@
                 <option value="">Selecione o sexo ...</option>
             </select>
         </div>
+        <div class="col-md-3">
+            <select asp-for="FederacaoId" type="text" required asp-items="new SelectList(Model.Federacoes, nameof(Federacao.Id), nameof(Federacao.Sigla))"
+                    class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione a Federação ...</option>
+            </select>
+        </div>
     </div>
 
     <div class="form-group row">
@@ -62,7 +68,7 @@
 
     <div class="form-group row">
         <div class="col-sm-3">
-            <input type="text" asp-for=RG class="form-control form-control-user " placeholder="Rg" required>
+            <input type="text" asp-for=CIN_RG class="form-control form-control-user " placeholder="Rg" required>
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=OrgaoEmissor class="form-control form-control-user " placeholder="Orgão emissor" required>

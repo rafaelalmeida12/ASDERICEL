@@ -7,7 +7,7 @@ namespace AtletaAsdericel.ViewModels
     {
         public string Nome { get; set; }
         public string? NomeSocial { get; set; }
-        public string? Apelido { get; set; }
+        public string? NomeConhecido { get; set; }
         public string Mae { get; set; }
         public string? Pai { get; set; }
         public DateTime DataNascimento { get; set; }
@@ -18,8 +18,11 @@ namespace AtletaAsdericel.ViewModels
         public DateTime DataExpedicao { get; set; }
         public string? TipoDocumento { get; set; }
         public string? Passaporte { get; set; }
-        public string? NumeroSus { get; set; }
-        public ETipoSanguineo TipoSanguineo { get; set; }
+        public string Celular { get; set; }
+        public string Email { get; set; }
+        public string? Instagram { get; set; }
+        public string? Observacao { get; set; }
+        public ETipoCadastro TipoCadastro { get; set; }
         //relacionamentos
         //VALIDAR
         public Endereco Endereco { get; set; }
@@ -31,16 +34,17 @@ namespace AtletaAsdericel.ViewModels
             {
                 Nome = this.Nome,
                 NomeSocial = this.NomeSocial,
-                Apelido = this.Apelido,
+                NomeConhecido = this.NomeConhecido,
                 Mae = this.Mae,
                 Pai = this.Pai,
                 DataNascimento = this.DataNascimento.ToUniversalTime(),
                 Sexo = this.Sexo,
                 CPF = this.CPF,
                 Passaporte = this.Passaporte??string.Empty,
-                NumeroSUS = this.NumeroSus,
-                TipoSanguineo = this.TipoSanguineo,
                 RG = this.RG,
+                Celular=this.Celular,
+                Email=this.Email,
+                Instagram=this.Instagram,
                 OrgaoEmissor = this.OrgaoEmissor,
                 DataExpedicao = this.DataExpedicao.ToUniversalTime(),
                 Endereco = this.Endereco

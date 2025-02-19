@@ -17,6 +17,8 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 7.0
+build_property.EnableCodeStyleSeverity = 
 
 [C:/Users/rafae/Área de Trabalho/Projeto/AtletaAsdericel/Views/Atleta/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXRsZXRhXENyZWF0ZS5jc2h0bWw=

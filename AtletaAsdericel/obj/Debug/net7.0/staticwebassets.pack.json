@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AtletaAsdericel.bundle.scp.css",
-      "PackagePath": "staticwebassets\\AtletaAsdericel.bundle.scp.css"
+      "PackagePath": "staticwebassets\\AtletaAsdericel.8ybagisiyh.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\css\\all.min.css",
@@ -7507,6 +7507,10 @@
     {
       "Id": "C:\\Users\\rafae\\Área de Trabalho\\Projeto\\AtletaAsdericel\\wwwroot\\vendor\\jquery\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.AtletaAsdericel.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.AtletaAsdericel.Microsoft.AspNetCore.StaticWebAssets.props",

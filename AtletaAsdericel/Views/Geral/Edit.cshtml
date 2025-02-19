@@ -12,58 +12,69 @@
 <form class="user" asp-action="Edit">
     <input type="hidden" asp-for="Id" />
     <div class="form-group row mt-4">
-            <div class="col-sm-3">
-                <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Nome" required>
-            </div>
-            <div class="col-sm-3">
-                <input type="text" asp-for=NomeSocial class="form-control form-control-user" placeholder="Nome Social">
-            </div>
-            <div class="col-md-3 ">
-                <input type="text" asp-for=Apelido class="form-control form-control-user" placeholder="Apelido">
-            </div>
-        <div class="col-sm-3">
-            <input type="text" asp-for=Mae class="form-control form-control-user" placeholder="Nome da Mãe" required>
+        <div class="col-md-3">
+            <select asp-for="Sexo" required type="text" asp-items="Html.GetEnumSelectList<ETipoCadastro>()" class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione o tipo de cadastro ...</option>
+            </select>
         </div>
-          
-    </div>
-    <div class="form-group row">
+        <div class="col-sm-3">
+            <textarea asp-for=Observacao class="form-control form-control-user" placeholder="Observações" required></textarea>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Nome" required>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=NomeSocial class="form-control form-control-user" placeholder="Nome Social">
+        </div>
+        <div class="col-md-3 ">
+            <input type="text" asp-for=NomeConhecido class="form-control form-control-user" placeholder="Apelido">
+        </div>
         <div class="col-md-3">
             <select asp-for="Sexo" required type="text" asp-items="Html.GetEnumSelectList<ESexo>()" class="form-control rounded-pill" placeholder="Selecione">
                 <option value="">Selecione o sexo ...</option>
             </select>
         </div>
-        <div class="col-sm-3">
-            <input type="text" asp-for=Pai class="form-control form-control-user" placeholder="Nome do Pai" >
-        </div>
-        <div class="col-md-3">
-      <input type="text" asp-for="DataNascimento" class="form-control form-control-user date" required placeholder="Data de Nascimento"
-           value="@(Model.DataNascimento != DateTime.MinValue ? Model.DataNascimento.ToString("dd/MM/yyyy") : string.Empty)">        </div>
-        <div class="col-sm-3">
-            <input type="text" required asp-for=CPF class="form-control form-control-user cpf" placeholder="Cpf">
-        </div>
-        <div class="col-sm-3">
-            <input type="text"  asp-for=Passaporte class="form-control form-control-user " placeholder="Passaporte">
-        </div>
-     
     </div>
     <div class="form-group row">
+        <div class="col-sm-3">
+            <input type="text" asp-for=Mae class="form-control form-control-user" placeholder="Nome da Mãe" required>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Pai class="form-control form-control-user" placeholder="Nome do Pai">
+        </div>
         <div class="col-md-3">
-            <select asp-for="TipoSanguineo" type="text" asp-items="Html.GetEnumSelectList<ETipoSanguineo>()" class="form-control rounded-pill" placeholder="Selecione" required>
-                <option value="">Selecione o Tipo Sanguíneo ...</option>
-            </select>
+            <input type="text" asp-for="DataNascimento" class="form-control form-control-user date" required placeholder="Data de Nascimento"
+                   value="@(Model.DataNascimento != DateTime.MinValue ? Model.DataNascimento.ToString("dd/MM/yyyy") : string.Empty)">
         </div>
         <div class="col-sm-3">
-            <input type="text" asp-for=NumeroSUS class="form-control form-control-user " placeholder="Número do SUS">
+            <input type="text" asp-for=Celular class="form-control form-control-user celular" placeholder="Celular">
         </div>
         <div class="col-sm-3">
-            <input type="text" required asp-for=RG class="form-control form-control-user " placeholder="RG" >
+            <input type="text" asp-for=Email class="form-control form-control-user " placeholder="Email">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Instagram class="form-control form-control-user " placeholder="Instagram">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" asp-for=Passaporte class="form-control form-control-user " placeholder="Passaporte">
+        </div>
+
+    </div>
+    <div class="form-group row">
+
+        <div class="col-sm-3">
+            <input type="text" required asp-for=RG class="form-control form-control-user " placeholder="RG">
         </div>
         <div class="col-sm-3">
             <input type="text" asp-for=OrgaoEmissor class="form-control form-control-user " placeholder="Orgão Emissor" required>
         </div>
         <div class="col-sm-3">
-         <input type="text" asp-for="DataExpedicao" class="form-control form-control-user dtExpedicao" required placeholder="Data de Expedição"
-           value="@(Model.DataExpedicao != DateTime.MinValue ? Model.DataExpedicao.ToString("dd/MM/yyyy") : string.Empty)">        </div>
+            <input type="text" asp-for="DataExpedicao" class="form-control form-control-user dtExpedicao" required placeholder="Data de Expedição"
+                   value="@(Model.DataExpedicao != DateTime.MinValue ? Model.DataExpedicao.ToString("dd/MM/yyyy") : string.Empty)">
+        </div>
+        <div class="col-sm-3">
+            <input type="text" required asp-for=CPF class="form-control form-control-user cpf" placeholder="Cpf">
+        </div>
     </div>
     <label>Dados endereço</label>
     <div class="form-group row">
@@ -114,53 +125,53 @@
     @Scripts.Render("~/bundles/jqueryval")
 }*@
 <script>
+            $(document).ready(function () {
+        $('#Endereco_Cep').on('input', function () {
+            $(this).val($(this).val().replace(/\D/g, '')); // Remove todos os caracteres não numéricos
+        });
+    });
+
         $(document).ready(function () {
-    $('#Endereco_Cep').on('input', function () {
-        $(this).val($(this).val().replace(/\D/g, '')); // Remove todos os caracteres não numéricos
-    });
-});
+            $('#abrirmodal').click(function () {
+                $("#exampleModal").modal('show');
+            });
 
-    $(document).ready(function () {
-        $('#abrirmodal').click(function () {
-            $("#exampleModal").modal('show');
-        });
+            // Add this function to close the modal
+            $('#fecharmodal').click(function () {
+                $("#exampleModal").modal('hide');
+            });
 
-        // Add this function to close the modal
-        $('#fecharmodal').click(function () {
-            $("#exampleModal").modal('hide');
-        });
+            $('#isResponsavel').change(function () {
+                // Se estiver marcado, desabilita o select, caso contrário, habilita
+                $('#responsavelSelect').prop('disabled', $(this).is(':checked'));
+            });
 
-        $('#isResponsavel').change(function () {
-            // Se estiver marcado, desabilita o select, caso contrário, habilita
-            $('#responsavelSelect').prop('disabled', $(this).is(':checked'));
-        });
-
-        // Desabilita o select se o checkbox estiver inicialmente marcado
-        if ($('#isResponsavel').is(':checked')) {
-            $('#responsavelSelect').prop('disabled', true);
-        }
-    });
-    $('#Endereco_Cep').on('blur', function () {
-        // Pega o valor do campo de CEP
-        const cep = this.value;
-
-        $.getJSON(`https://viacep.com.br/ws/${cep}/json/`, function (data) {
-            // Atualiza os campos de endereço se a busca retornar com sucesso
-            if (!data.erro) {
-                $('#Endereco_Bairro').val(data.bairro);
-                $('#Endereco_Logradouro').val(data.logradouro);
-                $('#Endereco_Localidade').val(data.localidade);
-                $('#Endereco_Uf').val(data.uf);
-            } else {
-                alert("Endereco não encontrado")
-                // Limpa os campos de endereço se o CEP não for encontrado
-                $('#Endereco_Bairro').val('');
-                $('#Endereco_Logradouro').val('');
-                $('#Endereco_Localidade').val('');
-                $('#Endereco_Estado').val('');
+            // Desabilita o select se o checkbox estiver inicialmente marcado
+            if ($('#isResponsavel').is(':checked')) {
+                $('#responsavelSelect').prop('disabled', true);
             }
         });
-    });
+        $('#Endereco_Cep').on('blur', function () {
+            // Pega o valor do campo de CEP
+            const cep = this.value;
+
+            $.getJSON(`https://viacep.com.br/ws/${cep}/json/`, function (data) {
+                // Atualiza os campos de endereço se a busca retornar com sucesso
+                if (!data.erro) {
+                    $('#Endereco_Bairro').val(data.bairro);
+                    $('#Endereco_Logradouro').val(data.logradouro);
+                    $('#Endereco_Localidade').val(data.localidade);
+                    $('#Endereco_Uf').val(data.uf);
+                } else {
+                    alert("Endereco não encontrado")
+                    // Limpa os campos de endereço se o CEP não for encontrado
+                    $('#Endereco_Bairro').val('');
+                    $('#Endereco_Logradouro').val('');
+                    $('#Endereco_Localidade').val('');
+                    $('#Endereco_Estado').val('');
+                }
+            });
+        });
 
 
 

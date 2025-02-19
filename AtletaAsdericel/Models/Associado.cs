@@ -9,7 +9,7 @@ namespace AtletaAsdericel.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string? NomeSocial { get; set; }
-        public string? Apelido { get; set; }
+        public string? NomeConhecido { get; set; }
         public string Mae { get; set; }
         public string? Pai { get; set; }
         public DateTime DataNascimento { get; set; }
@@ -19,11 +19,13 @@ namespace AtletaAsdericel.Models
         public string? OrgaoEmissor { get; set; }
         public DateTime DataExpedicao { get; set; }
         public string? Passaporte { get; set; }
-        public string? NumeroSUS { get; set; }
-        public ETipoSanguineo TipoSanguineo { get; set; }
         public EStadoCivil EstadoCivil { get; set; }
         public string? Profissao { get; set; }
         public EEnsino Ensino { get; set; }
+        public string Celular { get; set; }
+        public string Email { get; set; }
+        public string? Instagram { get; set; }
+        public string? Observacao { get; set; } 
         //relacionamentos
         public int EnderecoId { get; set; }
         public Endereco Endereco { get; set; }
@@ -33,18 +35,20 @@ namespace AtletaAsdericel.Models
             return obj is Associado associado &&
                    Nome == associado.Nome &&
                    NomeSocial == associado.NomeSocial &&
-                   Apelido == associado.Apelido &&
+                   NomeConhecido == associado.NomeConhecido &&
                    Mae == associado.Mae &&
                    Pai == associado.Pai &&
                    DataNascimento == associado.DataNascimento &&
                    Sexo == associado.Sexo &&
                    CPF == associado.CPF &&
                    RG == associado.RG &&
+                   Celular == associado.Celular &&
+                   Email == associado.Email &&
+                   Instagram == associado.Instagram &&  
+                   Observacao == associado.Observacao &&
                    OrgaoEmissor == associado.OrgaoEmissor &&
                    DataExpedicao == associado.DataExpedicao &&
                    Passaporte == associado.Passaporte &&
-                   NumeroSUS == associado.NumeroSUS &&
-                   TipoSanguineo == associado.TipoSanguineo &&
                    EstadoCivil == associado.EstadoCivil &&
                    Profissao == associado.Profissao &&
                    Ensino == associado.Ensino &&
@@ -56,7 +60,7 @@ namespace AtletaAsdericel.Models
         {
             this.Nome = associado.Nome;
             this.NomeSocial = associado.NomeSocial;
-            this.Apelido = associado.Apelido;
+            this.NomeConhecido = associado.NomeConhecido;
             this.Mae = associado.Mae;
             this.Pai = associado.Pai;
             this.DataNascimento = associado.DataNascimento.ToUniversalTime();
@@ -66,8 +70,6 @@ namespace AtletaAsdericel.Models
             this.OrgaoEmissor = associado.OrgaoEmissor;
             this.DataExpedicao = associado.DataExpedicao.ToUniversalTime();
             this.Passaporte = associado.Passaporte;
-            this.NumeroSUS = associado.NumeroSUS;
-            this.TipoSanguineo = associado.TipoSanguineo;
             this.EstadoCivil = associado.EstadoCivil;
             this.Profissao = associado.Profissao;
             this.Ensino = associado.Ensino;

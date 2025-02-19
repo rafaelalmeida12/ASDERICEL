@@ -18,15 +18,17 @@ namespace AtletaAsdericel.ViewModels
         public string Nome { get; set; }
         public string Profissao { get; set; }
         public string NomeSocial { get; set; }
-        public string Apelido { get; set; }
+        public string NomeConhecido { get; set; }
         public DateTime DataNascimento { get; set; }
         public ESexo Sexo { get; set; }
         public string CPF { get; set; }
-        public string RG { get; set; }
+        public string CIN_RG { get; set; }
         public string OrgaoEmissor { get; set; }
         public DateTime DataExpedicao { get; set; }
         public string Passaporte { get; set; }
         public string NumeroSus { get; set; }
+        public string Celular { get; set; }
+        public string? Instagram { get; set; }
 
         public string Peso { get; set; }
         public string Altura { get; set; }
@@ -35,9 +37,10 @@ namespace AtletaAsdericel.ViewModels
         public ECamisa Camisa { get; set; }
         public ECalca Calca { get; set; }
         public EEnsino Ensino { get; set; }
-
+        public string Numero_Registro { get; set; }
         //relacionamentos
-
+        public int FederacaoId { get; set; }
+        public List<Federacao> Federacao { get; set; }
         public Endereco Endereco { get; set; }
         public int EscolaId { get; set; }
         public Escola Escola { get; set; }
@@ -58,7 +61,7 @@ namespace AtletaAsdericel.ViewModels
             {
                 Nome = this.Nome,
                 NomeSocial = this.NomeSocial,
-                Apelido = this.Apelido,
+                NomeConhecido = this.NomeConhecido,
                 DataNascimento = this.DataNascimento,
                 Mae = this.Mae,
                 Pai = this.Pai,
@@ -66,7 +69,7 @@ namespace AtletaAsdericel.ViewModels
                 Sexo = this.Sexo,
                 Profissao = this.Profissao,
                 CPF = this.CPF,
-                RG = this.RG,
+                CIN_RG = this.CIN_RG,
                 OrgaoEmissor = this.OrgaoEmissor,
                 DataExpedicao = this.DataExpedicao,
                 Passaporte = this.Passaporte,

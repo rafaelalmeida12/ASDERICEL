@@ -12,17 +12,19 @@ namespace AtletaAsdericel.Models
         public string Mae { get; set; }
         public string Nome { get; set; }
         public string? NomeSocial { get; set; }
-        public string? Apelido { get; set; }
+        public string? NomeConhecido { get; set; }
         public DateTime DataNascimento { get; set; }
         public ESexo Sexo { get; set; }
         public string CPF { get; set; }
-        public string RG { get; set; }
+        public string CIN_RG { get; set; }
         public string OrgaoEmissor { get; set; }
         public DateTime DataExpedicao { get; set; } = DateTime.Now;
         public string? Profissao { get; set; }
         public string? Passaporte { get; set; }
         public string? NumeroSUS { get; set; }
         public string? CREF { get; set; }
+        public string Celular { get; set; }
+        public string? Instagram { get; set; }
 
         public string Peso { get; set; }
         public string Altura { get; set; }
@@ -35,6 +37,8 @@ namespace AtletaAsdericel.Models
         public EEnsino Ensino { get; set; }
 
         //relacionamentos
+        public int FederacaoId { get; set; }
+        public Federacao Federacao { get; set; }
         public int EnderecoId { get; set; }
         public Endereco Endereco { get; set; }
         public int ModalidadeId { get; set; }
@@ -46,11 +50,11 @@ namespace AtletaAsdericel.Models
             this.Mae = dirigente.Mae;
             this.Nome = dirigente.Nome;
             this.NomeSocial = dirigente.NomeSocial;
-            this.Apelido = dirigente.Apelido;
+            this.NomeConhecido = dirigente.NomeConhecido;
             this.DataNascimento = dirigente.DataNascimento;
             this.Sexo = dirigente.Sexo;
             this.CPF = dirigente.CPF;
-            this.RG = dirigente.RG;
+            this.CIN_RG = dirigente.CIN_RG;
             this.OrgaoEmissor = dirigente.OrgaoEmissor;
             this.DataExpedicao = dirigente.DataExpedicao;
             this.Passaporte = dirigente.Passaporte;

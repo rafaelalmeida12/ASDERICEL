@@ -12,11 +12,11 @@ namespace AtletaAsdericel.Models
         public string Mae { get; set; }
         public string Nome { get; set; }
         public string? NomeSocial { get; set; }
-        public string? Apelido { get; set; }
+        public string? NomeConhecido { get; set; }
         public DateTime DataNascimento { get; set; }
         public ESexo Sexo { get; set; }
         public string CPF { get; set; }
-        public string RG { get; set; }
+        public string CIN_RG { get; set; }
         public string? OrgaoEmissor { get; set; }
         public DateTime DataExpedicao { get; set; } = DateTime.Now;
         public string? Passaporte { get; set; }
@@ -44,11 +44,11 @@ namespace AtletaAsdericel.Models
             this.Mae = atleta.Mae;
             this.Nome = atleta.Nome;
             this.NomeSocial = atleta.NomeSocial;
-            this.Apelido = atleta.Apelido;
+            this.NomeConhecido = atleta.NomeConhecido;
             this.DataNascimento = atleta.DataNascimento;
             this.Sexo = atleta.Sexo;
             this.CPF = atleta.CPF;
-            this.RG = atleta.RG;
+            this.CIN_RG = atleta.CIN_RG;
             this.OrgaoEmissor = atleta.OrgaoEmissor;
             this.DataExpedicao = atleta.DataExpedicao;
             this.Passaporte = atleta.Passaporte;

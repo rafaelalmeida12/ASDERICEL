@@ -1,114 +1,32 @@
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\appsettings.json
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.staticwebassets.runtime.json
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.exe
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.deps.json
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.runtimeconfig.json
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.pdb
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Humanizer.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Mono.TextTemplating.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Npgsql.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\System.CodeDom.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.csproj.AssemblyReference.cache
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.AssemblyInfoInputs.cache
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.AssemblyInfo.cs
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.csproj.CoreCompileInputs.cache
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.RazorAssemblyInfo.cache
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.RazorAssemblyInfo.cs
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.sourcelink.json
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.build.json
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.AtletaAsdericel.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.build.AtletaAsdericel.props
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.AtletaAsdericel.props
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.AtletaAsdericel.props
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\scopedcss\Views\Shared\_LayoutExterno.cshtml.rz.scp.css
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\scopedcss\bundle\AtletaAsdericel.styles.css
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\scopedcss\projectbundle\AtletaAsdericel.bundle.scp.css
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAs.E7AE40B7.Up2Date
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\refint\AtletaAsdericel.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.pdb
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.genruntimeconfig.cache
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\obj\Debug\net7.0\ref\AtletaAsdericel.dll
-C:\Users\rafae\Documentos\OneDrive\Documentos\Projeto Youpp\YouppCore\AtletaAsdericel\AtletaAsdericel\bin\Debug\net7.0\PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\appsettings.json
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\libman.json
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.staticwebassets.runtime.json
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.staticwebassets.endpoints.json
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.exe
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.deps.json
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.runtimeconfig.json
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\AtletaAsdericel.pdb
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Humanizer.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Mono.TextTemplating.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\System.CodeDom.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.csproj.AssemblyReference.cache
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.AssemblyInfoInputs.cache
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.AssemblyInfo.cs
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.csproj.CoreCompileInputs.cache
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.RazorAssemblyInfo.cache
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.RazorAssemblyInfo.cs
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.sourcelink.json
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.build.json
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.AtletaAsdericel.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.build.AtletaAsdericel.props
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.AtletaAsdericel.props
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.AtletaAsdericel.props
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\scopedcss\Views\Shared\_LayoutExterno.cshtml.rz.scp.css
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\scopedcss\bundle\AtletaAsdericel.styles.css
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\scopedcss\projectbundle\AtletaAsdericel.bundle.scp.css
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAs.E7AE40B7.Up2Date
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\refint\AtletaAsdericel.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.pdb
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.genruntimeconfig.cache
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\ref\AtletaAsdericel.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Azure.Core.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Azure.Identity.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
-C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Identity.Client.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
@@ -119,6 +37,9 @@ C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Micros
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT.dll
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\System.Drawing.Common.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
@@ -139,3 +60,33 @@ C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\runtim
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.csproj.AssemblyReference.cache
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.AssemblyInfoInputs.cache
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.AssemblyInfo.cs
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.csproj.CoreCompileInputs.cache
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.RazorAssemblyInfo.cache
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.RazorAssemblyInfo.cs
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.sourcelink.json
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\scopedcss\Views\Shared\_LayoutExterno.cshtml.rz.scp.css
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\scopedcss\bundle\AtletaAsdericel.styles.css
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\scopedcss\projectbundle\AtletaAsdericel.bundle.scp.css
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.AtletaAsdericel.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.AtletaAsdericel.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.build.AtletaAsdericel.props
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.AtletaAsdericel.props
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.AtletaAsdericel.props
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAs.E7AE40B7.Up2Date
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.dll
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\refint\AtletaAsdericel.dll
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.pdb
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\AtletaAsdericel.genruntimeconfig.cache
+C:\Users\rafae\Área de Trabalho\Projeto\AtletaAsdericel\obj\Debug\net7.0\ref\AtletaAsdericel.dll
