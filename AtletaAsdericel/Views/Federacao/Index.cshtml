@@ -1,0 +1,65 @@
+﻿@model List<Federacao>
+@{
+    ViewData["Title"] = "Lista de Federações";
+}
+
+<div class="d-flex justify-content-between">
+    <div>
+        <h2>@ViewData["Title"]</h2>
+    </div>
+    <div >
+        <a  asp-action="Criar" class=" btn  btn-primary mb-3 btn-user btn-block fa fa-plus">
+        Novo
+    </a>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-4">Nome</th>
+            <th class="col-4">Sigla</th>
+            <th ></th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var atleta in Model)
+        {
+            <tr>
+                <td>@atleta.Nome</td>
+                <td>@atleta.Sigla</td>
+                <td>
+                    <a href="@Url.Action("Create", new { id = atleta.Id })" class="btn btn-success" title="Editar">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="javascript:void(0);"
+                       class="btn btn-danger btn-fab btn-round"
+                       title="Excluir"
+                       onclick="confirmDelete(@atleta.Id)">
+                        <i class="fa fa-remove"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: "Tem certeza?",
+            text: "Essa ação não pode ser desfeita!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Sim, excluir!",
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/Federacao/Delete/" + id;
+            }
+        });
+    }
+</script>
+
