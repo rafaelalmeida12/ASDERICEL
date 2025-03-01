@@ -3,49 +3,64 @@ using Microsoft.AspNetCore.Identity;
 
 namespace AtletaAsdericel.Helpers
 {
-    public static class ApplicationDbContextSeed
-    {
-        public static async Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
-        {
-            string[] roleNames = { "Admin", "User" };
-            IdentityResult roleResult;
+	public static class ApplicationDbContextSeed
+	{
+		//public static async Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
+		//{
+		//	// Lista de roles que queremos garantir que existam
+		//	var roles = new List<string> { "Admin", "User", "Manager" };
 
-            foreach (var roleName in roleNames)
-            {
-                var roleExist = await roleManager.RoleExistsAsync(roleName);
-                if (!roleExist)
-                {
-                    // Criar os roles e fazer o seed no banco de dados
-                    roleResult = await roleManager.CreateAsync(new IdentityRole(roleName));
-                }
-            }
-        }
+		//	foreach (var roleName in roles)
+		//	{
+		//		if (!await roleManager.RoleExistsAsync(roleName))
+		//		{
+		//			await roleManager.CreateAsync(new IdentityRole(roleName));
+		//		}
+		//	}
+		//}
 
-        public static async Task SeedAdminUserAsync(UserManager<Usuario> userManager, RoleManager<IdentityRole> roleManager)
-        {
-            // Aqui você pode criar um super usuário que irá manter o aplicativo web
-            string userPassword = "Admin@123";
-            var poweruser = new Usuario
-            {
-                UserName = "admin@admin.com",
-                Email = "admin@admin.com",
-                Nome = "admin@admin.com",
-                Senha= userPassword,
-                Perfil= "Admin"
-            };
 
-            var user = await userManager.FindByEmailAsync("admin@admin.com");
+		public static async Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
+		{
+			string[] roleNames = { "Admin", "User" };
+			IdentityResult roleResult;
 
-            if (user == null)
-            {
-                var createPowerUser = await userManager.CreateAsync(poweruser, userPassword);
-                if (createPowerUser.Succeeded)
-                {
-                    // Aqui nós ligamos o novo usuário ao role
-                    await userManager.AddToRoleAsync(poweruser, "Admin");
-                }
-            }
-        }
-    }
+			foreach (var roleName in roleNames)
+			{
+				var roleExist = await roleManager.RoleExistsAsync(roleName);
+				if (!roleExist)
+				{
+					// Criar os roles e fazer o seed no banco de dados
+					roleResult = await roleManager.CreateAsync(new IdentityRole(roleName));
+				}
+			}
+		}
+
+		public static async Task SeedAdminUserAsync(UserManager<Usuario> userManager, RoleManager<IdentityRole> roleManager)
+		{
+			// Aqui você pode criar um super usuário que irá manter o aplicativo web
+			string userPassword = "Admin@123";
+			var poweruser = new Usuario
+			{
+				UserName = "admin@admin.com",
+				Email = "admin@admin.com",
+				Nome = "admin@admin.com",
+				Senha = userPassword,
+				Perfil = "Admin"
+			};
+
+			var user = await userManager.FindByEmailAsync("admin@admin.com");
+
+			if (user == null)
+			{
+				var createPowerUser = await userManager.CreateAsync(poweruser, userPassword);
+				if (createPowerUser.Succeeded)
+				{
+					// Aqui nós ligamos o novo usuário ao role
+					await userManager.AddToRoleAsync(poweruser, "Admin");
+				}
+			}
+		}
+	}
 
 }

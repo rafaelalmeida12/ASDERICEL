@@ -9,9 +9,10 @@ namespace AtletaAsdericel.ViewModels
         {
 
         }
-        public DirigenteCreateViewModel(List<Modalidade> modalidades)
+        public DirigenteCreateViewModel(List<Modalidade> modalidades, List<Federacao> federacoes)
         {
             Modalidades = modalidades;
+            Federacoes = federacoes;
         }
         public string? Pai { get; set; }
         public string Mae { get; set; }

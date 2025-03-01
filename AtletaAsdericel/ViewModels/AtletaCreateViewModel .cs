@@ -9,9 +9,10 @@ namespace AtletaAsdericel.ViewModels
         {
 
         }
-        public AtletaCreateViewModel(List<Modalidade> modalidades)
+        public AtletaCreateViewModel(List<Modalidade> modalidades, List<Federacao> federacoes)
         {
             Modalidades = modalidades;
+            Federacoes = federacoes;
         }
         public string Pai { get; set; }
         public string Mae { get; set; }
@@ -37,10 +38,11 @@ namespace AtletaAsdericel.ViewModels
         public ECamisa Camisa { get; set; }
         public ECalca Calca { get; set; }
         public EEnsino Ensino { get; set; }
-        public string Numero_Registro { get; set; }
+		public ETipoCadastro TipoCadastro { get; set; }
+		public string Numero_Registro { get; set; }
         //relacionamentos
         public int FederacaoId { get; set; }
-        public List<Federacao> Federacao { get; set; }
+        public List<Federacao> Federacoes { get; set; }
         public Endereco Endereco { get; set; }
         public int EscolaId { get; set; }
         public Escola Escola { get; set; }

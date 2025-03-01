@@ -38,7 +38,7 @@ namespace AtletaAsdericel.Models
 
         //relacionamentos
         public int FederacaoId { get; set; }
-        public Federacao Federacao { get; set; }
+        public List<Federacao> Federacoes { get; set; }
         public int EnderecoId { get; set; }
         public Endereco Endereco { get; set; }
         public int ModalidadeId { get; set; }

@@ -26,10 +26,11 @@ namespace AtletaAsdericel.Data
         public DbSet<Prova> Provas { get; set; }
         public DbSet<Responsavel> Responsavel { get; set; }
         public DbSet<Evento> Evento { get; set; }
+        public DbSet<Federacao> Federacao { get; set; }
 
-        //public DbSet<ModalidadeAtleta> ModalidadesAtletas { get; set; }
+		//public DbSet<ModalidadeAtleta> ModalidadesAtletas { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
             modelBuilder.Entity<ModalidadeCategoria>()

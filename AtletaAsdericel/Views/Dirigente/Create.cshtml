@@ -43,12 +43,7 @@
                 <option value="">Selecione o sexo ...</option>
             </select>
         </div>
-        <div class="col-md-3">
-            <select asp-for="FederacaoId" type="text" required asp-items="new SelectList(Model.Federacoes, nameof(Federacao.Id), nameof(Federacao.Sigla))"
-                    class="form-control rounded-pill" placeholder="Selecione">
-                <option value="">Selecione a Federação ...</option>
-            </select>
-        </div>
+     
     </div>
 
     <div class="form-group row">
@@ -92,6 +87,12 @@
         <div class="col-md-3">
             <select asp-for="Ensino" type="text" asp-items="Html.GetEnumSelectList<EEnsino>()" class="form-control rounded-pill" required placeholder="Selecione">
                 <option value="">Selecione o nivel de ensino ...</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select asp-for="FederacaoId" type="text" required asp-items="new SelectList(Model.Federacoes, nameof(Federacao.Id), nameof(Federacao.Sigla))"
+                    class="form-control rounded-pill" placeholder="Selecione">
+                <option value="">Selecione a Federação ...</option>
             </select>
         </div>
     </div>

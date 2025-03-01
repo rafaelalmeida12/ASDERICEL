@@ -1,42 +1,42 @@
 ﻿@model List<Associado>
-
 @{
-    ViewData["Title"] = "Lista de Asasociados Geral";
+	ViewData["Title"] = "Lista de Asasociados Geral";
 }
-
 <div class="d-flex justify-content-between">
-    <div>
-        <h2>@ViewData["Title"]</h2>
-    </div>
-    <div >
-        <a  asp-action="Criar" class=" btn btn-primary fa fa-plus">
-        Novo
-    </a>
-    </div>
+	<div>
+		<h2>@ViewData["Title"]</h2>
+	</div>
+	<div>
+		<a asp-action="Criar" class=" btn btn-primary fa fa-plus">Novo</a>
+	</div>
 </div>
 
 <table class="table">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Data de Nascimento</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var atleta in Model)
-        {
-            <tr>
-                <td>@atleta.Nome</td>
-                <td>@atleta.DataNascimento.ToShortDateString()</td>
-        <td>
-            <a href="@Url.Action("Edit", new { id = atleta.Id })" class="btn btn-success" title="Editar">
-                <i class="fa fa-edit"></i>
-            </a>
-            <a href="@Url.Action("Delete", new { id = atleta.Id })" class="btn btn-danger btn-fab btn-round" title="Excluir">
-                <i class="fa fa-remove"></i>
-            </a>
-        </td>
-            </tr>
-        }
-    </tbody>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>CPF</th>
+			<th>Data de Nascimento</th>
+			<th>Tipo de Cadastro</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var atleta in Model)
+		{
+			<tr>
+				<td>@atleta.Nome</td>
+				<td>@atleta.CPF</td>
+				<td>@atleta.DataNascimento.ToShortDateString()</td>
+				<td>@atleta.TipoCadastro</td>
+				<td>
+					<a href="@Url.Action("Edit", new { id = atleta.Id })" class="btn btn-success" title="Editar">
+						<i class="fa fa-edit"></i>
+					</a>
+					<a href="@Url.Action("Delete", new { id = atleta.Id })" class="btn btn-danger btn-fab btn-round" title="Excluir">
+						<i class="fa fa-remove"></i>
+					</a>
+				</td>
+			</tr>
+		}
+	</tbody>
 </table>

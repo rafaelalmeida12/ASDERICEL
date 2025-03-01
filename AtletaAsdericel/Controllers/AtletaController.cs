@@ -32,7 +32,8 @@ namespace AtletaAsdericel.Controllers
         public ActionResult Create()
         {
             var modalidades = _context.Modalidades.ToList();
-            var model = new AtletaCreateViewModel(modalidades);
+			var federacoes = _context.Federacao.ToList();
+			var model = new AtletaCreateViewModel(modalidades, federacoes);
 
             return View(model);
         }
