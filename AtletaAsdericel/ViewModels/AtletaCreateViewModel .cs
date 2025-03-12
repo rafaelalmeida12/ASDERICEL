@@ -14,7 +14,8 @@ namespace AtletaAsdericel.ViewModels
             Modalidades = modalidades;
             Federacoes = federacoes;
         }
-        public string Pai { get; set; }
+		public int Id { get; set; }
+		public string Pai { get; set; }
         public string Mae { get; set; }
         public string Nome { get; set; }
         public string Profissao { get; set; }
@@ -57,37 +58,5 @@ namespace AtletaAsdericel.ViewModels
         public List<Modalidade> Modalidades { get; set; }
         //demais dados
 
-        public Atleta ToEntity()
-        {
-            var atleta = new Atleta()
-            {
-                Nome = this.Nome,
-                NomeSocial = this.NomeSocial,
-                NomeConhecido = this.NomeConhecido,
-                DataNascimento = this.DataNascimento,
-                Mae = this.Mae,
-                Pai = this.Pai,
-                EstadoCivil = this.EstadoCivil,
-                Sexo = this.Sexo,
-                Profissao = this.Profissao,
-                CPF = this.CPF,
-                CIN_RG = this.CIN_RG,
-                OrgaoEmissor = this.OrgaoEmissor,
-                DataExpedicao = this.DataExpedicao,
-                Passaporte = this.Passaporte,
-                NumeroSUS = this.NumeroSus,
-                TipoSanguineo = this.TipoSanguineo,
-                Ensino = this.Ensino,
-                Peso = this.Peso,
-                Altura = this.Altura,
-                Camisa = this.Camisa,
-                Calca = this.Calca,
-                ModalidadeId = this.ModalidadeId,
-                Endereco = this.Endereco,
-                Escola = this.Escola
-            };
-
-            return atleta;
-        }
     }
 }

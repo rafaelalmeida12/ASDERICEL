@@ -7,24 +7,24 @@
 <h2>Cadastrar Modalidade</h2>
 <hr />
 <form class="user " asp-action="create" method="post">
-    <div class="form-group row mt-4 ">
         <div class="form-group row">
             <div class="col-sm-6 mb-3 ">
                 <input type="text" asp-for=Nome class="form-control form-control-user" placeholder="Nome">
             </div>
             <div class="col-sm-6 mb-3 ">
-                <select multiple="multiple" asp-for="CategoriaIds" id="Select_CategoriasId" type="text" asp-items="Model.Categorias" class="form-control rounded-pill" placeholder="Selecione">
+                <select multiple="multiple" asp-for="CategoriaIds" id="Select_CategoriasId" type="text" asp-items="Model.Categorias"
+                        class="form-control select2" placeholder="Selecione a categoria">
                     <option value="">Selecione a categoria ...</option>
                 </select>
             </div>
             <div class="col-sm-6 mb-3 ">
-                <select multiple="multiple" asp-for="SexoIds" type="text" asp-items="Model.Sexos" class="form-control rounded-pill" placeholder="Selecione">
+                <select multiple="multiple" asp-for="SexoIds" id="Select_SexoIds" type="text" asp-items="Model.Sexos" 
+                class="form-control select2" placeholder="Selecione o sexo">
                     <option value="">Selecione o genero ...</option>
                 </select>
             </div>
         </div>
-    </div>
-    <div class="col-sm-6 mb-3 ">
+    <div class="col-md-12 mb-3 ">
         <button type="submit" class="btn btn-primary btn-user btn-block ">
             Gravar
         </button>
@@ -34,11 +34,21 @@
 <div>
     @Html.ActionLink("Voltar para Lista", "Index")
 </div>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#Select_CategoriasId').multiselect();
+<script>
+    $(document).ready(function () {
+        $('#Select_CategoriasId, #Select_SexoIds').multiselect({
+            nonSelectedText: "Selecione...",
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true,
+            buttonWidth: '100%',
+            includeSelectAllOption: true,
+            selectAllText: "Selecionar todos",
+            allSelectedText: "Todos selecionados",
+            nSelectedText: "selecionados"
+        });
     });
 </script>
+
 @*@section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }*@

@@ -8,102 +8,113 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AtletaAsdericel.Controllers
 {
-    [Authorize]
-    [Route("[controller]")]
-    public class AtletaController : Controller
-    {
-        private readonly ApplicationDbContext _context;
-        public AtletaController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+	[Authorize]
+	[Route("[controller]")]
+	public class AtletaController : Controller
+	{
+		private readonly ApplicationDbContext _context;
+		public AtletaController(ApplicationDbContext context)
+		{
+			_context = context;
+		}
 
-        [HttpGet]
-        public async Task<IActionResult> Index()
-        {
-            var atletas = await _context.Atletas
-                                .Include(e => e.Endereco)
-                                .Include(e => e.Modalidade)
-                                .ToListAsync();
-            return View(atletas);
-        }
+		[HttpGet]
+		public async Task<IActionResult> Index()
+		{
+			var atletas = await _context.Atletas
+								.Include(e => e.Endereco)
+								.Include(e => e.AtletaModalidades)
+								.ToListAsync();
+			return View(atletas);
+		}
 
-        [HttpGet("Criar")]
-        public ActionResult Create()
-        {
-            var modalidades = _context.Modalidades.ToList();
-			var federacoes = _context.Federacao.ToList();
-			var model = new AtletaCreateViewModel(modalidades, federacoes);
+		[HttpGet("Criar/{id?}")]
+		public ActionResult Create(int? id)
+		{
+			var modalidades =new SelectList(_context.Modalidades,"Id","Nome");
+			var federacoes = new SelectList( _context.Federacao,"Id","Nome");
+			if (id.HasValue)
+			{
+				var atleta = _context.Atletas.Find(id.Value);
+				if (atleta == null)
+					return NotFound();
 
-            return View(model);
-        }
+				return View(atleta);
+			}
+			return View(new Atleta(modalidades, federacoes));
+		}
 
-        [ValidateAntiForgeryToken]
-        [HttpPost("Criar")]
-        public ActionResult Create(AtletaCreateViewModel viewModel)
-        {
-            try
-            {
-                _context.Add(viewModel.ToEntity());
-                _context.SaveChanges();
+		[ValidateAntiForgeryToken]
+		[HttpPost("Criar")]
+		public ActionResult Create(Atleta viewModel)
+		{
+			try
+			{
+				if (!ModelState.IsValid)
+					return View(viewModel);
+				if (viewModel.Id==0)
+					_context.Add(viewModel);
+				else
+					_context.Update(viewModel);
 
-                return RedirectToAction(nameof(Index));
-            }
-            catch(Exception e)
-            {
-                return View(viewModel);
-            }
-        }
-        [HttpGet("Termo")]
-        public ActionResult Termo(int id)
-        {
-            //var modalidades = _context.Modalidades.ToList();
-            //var model = new DirigenteCreateViewModel(modalidades);
-            //var dirigente = _context.Dirigentes.FirstOrDefault(i => i.Id == id);
-            //return View(dirigente);
-            return View();
-        }
-        [HttpGet("Editar")]
-        public async Task<ActionResult> Edit(int id)
-        {
-            var atleta = await _context.Atletas.Include(a=>a.Escola).Include(a=>a.Endereco).FirstOrDefaultAsync(e => e.Id == id);
-            ViewBag.Modalidades = _context.Modalidades
-                                             .Select(m => new SelectListItem
-                                             {
-                                                 Value = m.Id.ToString(), 
-                                                 Text = m.Nome 
-                                             }).ToList();
-            return View(atleta);
-        }
+				_context.SaveChanges();
+				return RedirectToAction(nameof(Index));
+			}
+			catch (Exception e)
+			{
+				return View(viewModel);
+			}
+		}
+		[HttpGet("Termo")]
+		public ActionResult Termo(int id)
+		{
+			//var modalidades = _context.Modalidades.ToList();
+			//var model = new DirigenteCreateViewModel(modalidades);
+			//var dirigente = _context.Dirigentes.FirstOrDefault(i => i.Id == id);
+			//return View(dirigente);
+			return View();
+		}
+		[HttpGet("Editar")]
+		public async Task<ActionResult> Edit(int id)
+		{
+			var atleta = await _context.Atletas.Include(a => a.Escola).Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == id);
+			ViewBag.Modalidades = _context.Modalidades
+											 .Select(m => new SelectListItem
+											 {
+												 Value = m.Id.ToString(),
+												 Text = m.Nome
+											 }).ToList();
+			return View(atleta);
+		}
 
-        [HttpPost("Editar")]
-        public async Task<ActionResult> Edit(Atleta atleta)
-        {
-            var atletaBanco = await _context.Atletas.Include(a => a.Escola).Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == atleta.Id);
-            atletaBanco.Atualiza(atleta);
+		[HttpPost("Editar")]
+		public async Task<ActionResult> Edit(Atleta atleta)
+		{
+			var atletaBanco = await _context.Atletas.Include(a => a.Escola).Include(a => a.Endereco).FirstOrDefaultAsync(e => e.Id == atleta.Id);
+			atletaBanco.Atualiza(atleta);
 
-            _context.Update(atletaBanco);
-            await _context.SaveChangesAsync();
+			_context.Update(atletaBanco);
+			await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
-            return View();
-        }
+			return RedirectToAction(nameof(Index));
+			return View();
+		}
 
-        [HttpGet("Delete")]
-        public async Task<ActionResult> Delete(int id)
-        {
-            var atleta = await _context.Atletas.FirstOrDefaultAsync(e => e.Id == id);
-            return View(atleta);
-        }
+		[HttpGet("Delete")]
+		public async Task<ActionResult> Delete(int id)
+		{
+			var atleta = await _context.Atletas.FirstOrDefaultAsync(e => e.Id == id);
+			return View(atleta);
+		}
 
-        [HttpPost("Delete")]
-        public async Task<ActionResult> Delete(Atleta atleta)
-        {
-            var atletaBanco = await _context.Atletas.FirstOrDefaultAsync(e => e.Id == atleta.Id);
-             _context.Remove(atletaBanco);
-            await _context.SaveChangesAsync();
+		[HttpPost("Delete")]
+		public async Task<ActionResult> Delete(Atleta atleta)
+		{
+			var atletaBanco = await _context.Atletas.FirstOrDefaultAsync(e => e.Id == atleta.Id);
+			_context.Remove(atletaBanco);
+			await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
-        }
-    }
+			return RedirectToAction(nameof(Index));
+		}
+	}
 }

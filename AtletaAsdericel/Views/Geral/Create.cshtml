@@ -45,21 +45,7 @@
 				   value="@(Model.DataNascimento != DateTime.MinValue ? Model.DataNascimento.ToString("dd/MM/yyyy") : string.Empty)">
 		</div>
 		<div class="col-md-3">
-			<input type="text" asp-for=Celular class="form-control form-control-user celular" placeholder="Celular">
-		</div>
-	</div>
-	<div class="form-group row mt-4">
-		<div class="col-md-3">
-			<input type="text" asp-for=Email class="form-control form-control-user " placeholder="Email">
-		</div>
-		<div class="col-md-3">
-			<input type="text" asp-for=Instagram class="form-control form-control-user " placeholder="Instagram">
-		</div>
-		<div class="col-md-3">
-			<input type="text" asp-for=Passaporte class="form-control form-control-user " placeholder="Passaporte">
-		</div>
-		<div class="col-md-3">
-			<input type="text" required asp-for=RG class="form-control form-control-user " placeholder="RG">
+			<input type="text" required asp-for=RG class="form-control form-control-user " placeholder="CIN/RG">
 		</div>
 	</div>
 	<div class="form-group row mt-4">
@@ -72,6 +58,20 @@
 		</div>
 		<div class="col-md-3">
 			<input type="text" required asp-for=CPF class="form-control form-control-user cpf" placeholder="Cpf">
+		</div>
+		<div class="col-md-3">
+			<input type="text" asp-for=Celular class="form-control form-control-user celular" placeholder="Celular">
+		</div>
+	</div>
+	<div class="form-group row mt-4">
+		<div class="col-md-3">
+			<input type="text" asp-for=Email class="form-control form-control-user " placeholder="Email">
+		</div>
+		<div class="col-md-3">
+			<input type="text" asp-for=Passaporte class="form-control form-control-user " placeholder="Passaporte">
+		</div>
+		<div class="col-md-3">
+			<input type="text" asp-for=Instagram class="form-control form-control-user " placeholder="Instagram">
 		</div>
 	</div>
 
@@ -103,7 +103,7 @@
 	</div>
 	<div class="form-group row mt-4">
 		<div class="col-md-6 mt-2">
-			<textarea rows="3" asp-for=Observacao class="form-control form-control-user" placeholder="Observações" required></textarea>
+			<textarea rows="3" asp-for=Observacao class="form-control form-control-user" placeholder="OBSERVAÇÕES" ></textarea>
 		</div>
 	</div>
 	<button type="submit" class="btn btn-primary btn-user btn-block ">

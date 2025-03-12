@@ -1,48 +1,51 @@
 ﻿@model List<Atleta>
 @{
-    ViewData["Title"] = "Lista de Atletas";
+	ViewData["Title"] = "Lista de Atletas";
 }
 
 <div class="d-flex justify-content-between">
-    <div>
-        <h2>@ViewData["Title"]</h2>
-    </div>
-    <div >
-        <a  asp-action="Criar" class=" btn  btn-primary mb-3 btn-user btn-block fa fa-plus">
-        Novo
-    </a>
-    </div>
+	<div>
+		<h2>@ViewData["Title"]</h2>
+	</div>
+	<div>
+		<a asp-action="Criar" class=" btn  btn-primary mb-3 btn-user btn-block fa fa-plus">
+			Novo
+		</a>
+	</div>
 </div>
 
 <table class="table">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Data de Nascimento</th>
-            <th>Modalidades</th>
-            <th>Sexo</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var atleta in Model)
-        {
-            <tr>
-                <td>@atleta.Nome</td>
-                <td>@atleta.DataNascimento.ToShortDateString()</td>
-                <td>@atleta.Modalidade.Nome</td>
-                <td>@atleta.Sexo</td>
-                <td>
-                    <a href="@Url.Action("Edit", new { id = atleta.Id })" class="btn btn-success" title="Editar">
-                        <i class="fa fa-edit"></i>
-                    </a>
-                    <a href="@Url.Action("Delete", new { id = atleta.Id })" class="btn btn-danger btn-fab btn-round" title="Excluir">
-                        <i class="fa fa-remove"></i>
-                    </a>
-                    <a href="@Url.Action("Termo", new { id = atleta.Id })" class="btn btn-primary btn-fab btn-round" title="Excluir">
-                        <i class="fa fa-book"></i>
-                    </a>
-                </td>
-            </tr>
-        }
-    </tbody>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Data de Nascimento</th>
+			<th>Modalidades</th>
+			<th>Sexo</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var atleta in Model)
+		{
+			<tr>
+				<td>@atleta.Nome</td>
+				<td>@atleta.DataNascimento.ToShortDateString()</td>
+			@* 	@foreach (var mod in atleta.modalidades)
+				{
+					<td>@mod.Nome</td>
+				} *@
+				<td>@atleta.Sexo</td>
+				<td>
+					<a href="@Url.Action("Criar", new { id = atleta.Id })" class="btn btn-success" title="Editar">
+						<i class="fa fa-edit"></i>
+					</a>
+					<a href="@Url.Action("Delete", new { id = atleta.Id })" class="btn btn-danger btn-fab btn-round" title="Excluir">
+						<i class="fa fa-remove"></i>
+					</a>
+					<a href="@Url.Action("Termo", new { id = atleta.Id })" class="btn btn-primary btn-fab btn-round" title="Excluir">
+						<i class="fa fa-book"></i>
+					</a>
+				</td>
+			</tr>
+		}
+	</tbody>
 </table>
