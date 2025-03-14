@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace AtletaAsdericel.Controllers
 {
@@ -24,6 +25,7 @@ namespace AtletaAsdericel.Controllers
 			var atletas = await _context.Atletas
 								.Include(e => e.Endereco)
 								.Include(e => e.AtletaModalidades)
+								.Include(e => e.AtletaFederacoes)
 								.ToListAsync();
 			return View(atletas);
 		}
@@ -35,7 +37,15 @@ namespace AtletaAsdericel.Controllers
 			var federacoes = new SelectList( _context.Federacao,"Id","Nome");
 			if (id.HasValue)
 			{
-				var atleta = _context.Atletas.Find(id.Value);
+				var atleta = _context.Atletas
+								.Include(e=>e.Escola)
+								.Include(e => e.Endereco)
+								.Include(e => e.AtletaModalidades)
+								.Include(e => e.AtletaFederacoes)
+								.FirstOrDefault(a => a.Id == id.Value);
+
+				atleta.federacoes = federacoes;
+				atleta.modalidades = modalidades;
 				if (atleta == null)
 					return NotFound();
 
@@ -44,14 +54,20 @@ namespace AtletaAsdericel.Controllers
 			return View(new Atleta(modalidades, federacoes));
 		}
 
-		[ValidateAntiForgeryToken]
 		[HttpPost("Criar")]
-		public ActionResult Create(Atleta viewModel)
+		[ValidateAntiForgeryToken]
+		public ActionResult Create(Atleta viewModel, string AtletaFederacoes)
 		{
 			try
 			{
 				if (!ModelState.IsValid)
 					return View(viewModel);
+
+				if (!string.IsNullOrEmpty(AtletaFederacoes))
+				{
+					viewModel.AtletaFederacoes = JsonConvert.DeserializeObject<List<AtletaFederacao>>(AtletaFederacoes);
+				}
+
 				if (viewModel.Id==0)
 					_context.Add(viewModel);
 				else

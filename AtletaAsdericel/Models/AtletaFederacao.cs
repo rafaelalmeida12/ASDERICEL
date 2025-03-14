@@ -4,6 +4,7 @@
 	{
 		public int AtletaId { get; set; }
 		public Atleta Atleta { get; set; }
+		public string NumeroRegistro { get; set; }
 
 		public int FederacaoId { get; set; }
 		public Federacao Federacao { get; set; }
